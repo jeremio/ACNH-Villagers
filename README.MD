@@ -22,6 +22,6 @@ The data comes from `https://acnhapi.com/v1a/villagers`
 The documentation for the API can be found [here](https://acnhapi.com/doc).
 
 #### Disclaimer:
-ACNH Vilagers is a fan made API/Website and claims no ownership of any intellectual property associated with Nintendo or Animal Crossing. All assets found on the site and the repository are the sole property of Nintendo and are only used for non-commercial and educational purpose.
+ACNH Villagers is a fan made API/Website and claims no ownership of any intellectual property associated with Nintendo or Animal Crossing. All assets found on the site and the repository are the sole property of Nintendo and are only used for non-commercial and educational purpose.
 
 Contact: open issue
