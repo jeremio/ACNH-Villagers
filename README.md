@@ -11,7 +11,7 @@ The goal is also to use vue 3, vite, vue-router, vue-i18n and vuetify.
 You can try this app [here](https://acnh-villagers.netlify.app/)
 
 ## Changelog:
-See [CHANGELOG.MD](https://github.com/JereMiO/ACNH-Villagers/blob/master/CHANGELOG.MD).
+See [CHANGELOG.md](https://github.com/JereMiO/ACNH-Villagers/blob/master/CHANGELOG.md).
 
 ## Usage:
 
