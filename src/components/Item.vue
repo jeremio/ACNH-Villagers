@@ -1,41 +1,64 @@
 <template>
-  <div class="oneItem">
-    <router-link :to="/villager/+id">{{ name }}</router-link>
-    <v-img v-if="image" :src="image" width="125" :alt="name" :key="image" class="mx-auto"/>
+  <div id="oneItem">
+    <div
+        @mousemove="updateCoordinates"
+        @mouseover="hover = true"
+        @mouseleave="hover = false">
+      {{ name }}
+    </div>
+    <img loading="lazy" v-if="image" :src="image" width="125" height="125" :alt="name"/>
+    <villager :villager="props.villager" :left="x" :top="y" v-if="hover"></villager>
   </div>
 </template>
 
-<script>
+<script setup>
 import _get from 'lodash/get'
+import Villager from "../pages/Villager.vue";
+import { useI18n } from "vue-i18n";
+import {computed, ref} from 'vue'
 
-export default {
-  name: "Item.vue",
-  props: {
-    villager: {
-      type: Object,
-      default: null
-    }
-  },
-  computed: {
-    name() {
-      let name = _get(this.villager, 'name.name-EUfr', 'inconnu')
-      if (this.$i18n.locale === 'en') {
-        name = _get(this.villager, 'name.name-EUen', 'inconnu')
-      }
-      return name
-    },
-    image() {
-      return _get(this.villager, 'image_uri', null)
-    },
-    id() {
-      return _get(this.villager, 'id', null)
-    }
+const props = defineProps({
+  villager: {
+    type: Object,
+    required: true
+  }
+})
+
+const { locale } = useI18n({
+  inheritLocale: true
+})
+
+const hover = ref(false)
+const x = ref("0px")
+const y = ref("0px")
+
+const name = computed(() => {
+  let name = _get(props.villager, 'name.name-EUfr', 'inconnu')
+  if (locale.value === 'en') {
+    name = _get(props.villager, 'name.name-EUen', 'inconnu')
+  }
+  return name
+
+})
+
+const image = computed(() =>
+    _get(props.villager, 'image_uri', null)
+)
+
+const updateCoordinates = (event) => {
+  if (event && hover) {
+    x.value = event.clientX + 5 + "px";
+    y.value = event.clientY + 2 + 'px';
   }
 }
+
 </script>
 
 <style scoped>
-.oneItem {
-  justify-content: center;
+#oneItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 12px;
 }
 </style>

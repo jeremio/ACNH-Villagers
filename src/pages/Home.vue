@@ -1,77 +1,68 @@
 <template>
-  <v-app>
-    <h1 class="title">{{ $t('title') }}</h1>
-    <div v-if="info" class="content">
+  <div class="home">
+    <div v-if="info">
       <Filters :data="info"></Filters>
-      <Mosaique :data="datafiltered"></Mosaique>
+    </div>
+    <div v-if="info" style="width: 100%;">
+      <Menu></Menu>
+      <div>
+        <Mosaique :data="datafiltered" v-if="datafiltered.length > 0"></Mosaique>
+        <div v-else>Pas de villageois avec ces filtres</div>
+      </div>
     </div>
     <div v-else> Pas de contenu</div>
-  </v-app>
+  </div>
 </template>
 
-<script>
+<script setup>
 import Mosaique from '../components/Mosaique.vue'
 import Filters from '../components/Filters.vue'
-import info from '../assets/villagers.json'
+import Menu from "../components/menu/Menu.vue"
+import infoVillagers from '../assets/villagers.json'
 import _filter from 'lodash/filter'
+import { useStore } from 'vuex'
 
-export default {
-  name: "Home.vue",
-  components: {Mosaique, Filters},
-  data() {
-    return {
-      info: info,
-      selectedGender: 'all',
-      selectedPersonality: 'all',
-      selectedHobby: 'all',
-      selectedSpecies: 'all'
+
+import {computed, ref} from 'vue'
+
+const store = useStore()
+
+const info = ref([...infoVillagers])
+
+const selectedGender = computed(() => store.state.selectedGender)
+const selectedPersonality = computed(() => store.state.selectedPersonality)
+const selectedHobby = computed(() => store.state.selectedHobby)
+const selectedSpecies = computed(() => store.state.selectedSpecies)
+
+const datafiltered = computed(() => {
+  if (info.value) {
+    let array = info.value
+    if (selectedGender.value !== 'all') {
+      let plop = array
+      array = _filter(plop, a => a.gender === selectedGender.value)
     }
-  },
-  computed: {
-    datafiltered() {
-      let array = this.info
-      if (this.selectedGender !== 'all') {
-        let plop = array
-        array = _filter(plop, a => a.gender === this.selectedGender)
-      }
-      if (this.selectedPersonality !== 'all') {
-        let plop2 = array
-        array = _filter(plop2, a => a.personality === this.selectedPersonality)
-      }
-      if (this.selectedHobby !== 'all') {
-        let plop3 = array
-        array = _filter(plop3, a => a.hobby === this.selectedHobby)
-      }
-      if (this.selectedSpecies !== 'all') {
-        let plop4 = array
-        array = _filter(plop4, a => a.species === this.selectedSpecies)
-      }
-      return array
+    if (selectedPersonality.value !== 'all') {
+      let plop2 = array
+      array = _filter(plop2, a => a.personality === selectedPersonality.value)
     }
-  },
-  mounted() {
-    this.emitter.on("toggle-gender", gender => {
-      this.selectedGender = gender
-    });
-    this.emitter.on("toggle-personality", personality => {
-      this.selectedPersonality = personality
-    });
-    this.emitter.on("toggle-hobby", hobby => {
-      this.selectedHobby = hobby
-    });
-    this.emitter.on("toggle-species", species => {
-      this.selectedSpecies = species
-    });
+    if (selectedHobby.value !== 'all') {
+      let plop3 = array
+      array = _filter(plop3, a => a.hobby === selectedHobby.value)
+    }
+    if (selectedSpecies.value !== 'all') {
+      let plop4 = array
+      array = _filter(plop4, a => a.species === selectedSpecies.value)
+    }
+    return array
   }
-}
+  return []
+})
+
 </script>
 
 <style scoped>
-.title {
-  text-align: center;
-}
 
-.content {
+.home {
   display: flex;
   flex-direction: row;
 }

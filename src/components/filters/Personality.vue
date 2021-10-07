@@ -7,30 +7,28 @@
       <label for="allpersonality">{{ $t('all') }}</label>
     </div>
 
-    <div v-for="i in data">
+    <div v-for="i in props.data">
       <input type="radio" :id="i" name="personality" :value="i" @click="toggle($event)">
       <label :for="i">{{ $t('personality.' + i) }}</label>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Personality",
-  props: {
-    data: {
-      type: Array,
-      required: true
-    }
-  },
-  methods: {
-    toggle(event) {
-      this.emitter.emit("toggle-personality", event.target.value);
-    }
+<script setup>
+import {useStore} from 'vuex'
+
+const props = defineProps({
+  data: {
+    type: Array,
+    required: true
   }
+})
+
+const store = useStore()
+
+const toggle = (event) => {
+  store.dispatch('setSelectedPersonality', event.target.value)
 }
+
+
 </script>
-
-<style scoped>
-
-</style>

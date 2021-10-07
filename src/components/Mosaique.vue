@@ -1,31 +1,40 @@
 <template>
-  <div>
-    <v-container>
-      <v-row class="text-center">
-        <v-col v-for="villager in data" v-if="data.length > 0">
-          <Item :villager="villager"></Item>
-        </v-col>
-        <v-col v-else>Pas de villageois avec ces filtres</v-col>
-      </v-row>
-    </v-container>
+  <div class="mosaique">
+    <div v-for="villager in props.data">
+      <Item class="item" :villager="villager"></Item>
+    </div>
   </div>
 </template>
 
-<script>
-import Item from "./Item.vue";
+<script setup>
+import Item from "./Item.vue"
 
-export default {
-  name: "Mosaique",
-  components: {Item},
-  props: {
-    data: {
-      type: Array,
-      required: true
-    }
+const props = defineProps({
+  data: {
+    type: Array,
+    required: true
   }
-}
+})
+
 </script>
 
 <style scoped>
 
+.mosaique {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-around;
+  height: fit-content;
+}
+
+.item {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
 </style>
