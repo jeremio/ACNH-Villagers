@@ -38,7 +38,10 @@ const species = computed(() => {
 
 <style scoped>
 #filters {
-//border: thin solid black; min-width: 175px; background: #60BE8C; text-align: start;
+  border: thin solid black;
+  min-width: 175px;
+  background: #60BE8C;
+  text-align: start;
   max-height: 95vh;
   overflow-y: auto;
   position: sticky;
