@@ -1,20 +1,33 @@
 <template>
   <div class="menu">
-    <h2 class="title">{{ $t('title') }}</h2>
+    <div class="title">
+      {{ $t('title') }}
+    </div>
     <div class="right">
-      <github></github>
-      <lang></lang>
+      <!--      <github></github> -->
+      <NSpace>
+        <NButton @click="blackTheme(true)">
+          Dark
+        </NButton>
+        <NButton @click="blackTheme(false)">
+          Light
+        </NButton>
+        <Lang />
+      </NSpace>
     </div>
   </div>
 </template>
 
 <script setup>
-import Github from "./github/Github.vue"
-import Lang from "./lang/Lang.vue"
+import { NButton, NSpace } from 'naive-ui'
+import Lang from './lang/Lang.vue'
+const emit = defineEmits(['blackTheme'])
+const blackTheme = (color) => {
+  emit('blackTheme', color)
+}
 </script>
 
 <style lang="scss" scoped>
-
 .menu {
   display: grid;
   grid-template-columns: 1fr repeat(1, auto) 1fr;
@@ -23,11 +36,12 @@ import Lang from "./lang/Lang.vue"
 
   .title {
     grid-column-start: 2;
+    font-size: large;
   }
 
   .right {
     margin-left: auto;
-    margin-right: 15px;
+    margin-right: 18px;
   }
 }
 </style>

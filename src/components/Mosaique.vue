@@ -1,40 +1,109 @@
 <template>
   <div class="mosaique">
-    <div v-for="villager in props.data">
-      <Item class="item" :villager="villager"></Item>
-    </div>
+    <NImageGroup :theme-overrides="imageGroupThemeOverrides">
+      <NSpace>
+        <template v-for="villager in props.data" :key="villager">
+          <NPopover trigger="hover" raw>
+            <template #trigger>
+              <NImage
+                lazy :src="image(villager)" width="100" height="100"
+                :alt="name(villager)"
+                :show-toolbar-tooltip="true"
+              >
+                <template #placeholder>
+                  <div
+                    style="
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #8882;
+          "
+                  >
+                    {{ name(villager) }}
+                  </div>
+                </template>
+              </NImage>
+            </template>
+            <div
+              style="
+                  width: 175px;
+                  padding: 10px;
+                  background-color: #3c817f;
+                  transform-origin: inherit;
+            "
+            >
+              <div> {{ name(villager) }}</div>
+              <div> {{ $t('filters.gender') }} : {{ $t(`genders.${gender(villager)}`) }}</div>
+              <div> {{ $t('filters.hobby') }} : {{ $t(`hobbies.${hobby(villager)}`) }}</div>
+              <div> {{ $t('filters.personality') }} : {{ $t(`personality.${personality(villager)}`) }}</div>
+              <div> {{ $t('filters.specie') }} : {{ $t(`species.${species(villager)}`) }}</div>
+              <div> {{ $t('filters.birthday') }} : {{ birthdayString(villager) }}</div>
+            </div>
+          </NPopover>
+        </template>
+      </NSpace>
+    </NImageGroup>
   </div>
 </template>
 
 <script setup>
-import Item from "./Item.vue"
+import _get from 'lodash/get'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
 
 const props = defineProps({
   data: {
     type: Array,
-    required: true
-  }
+    required: true,
+  },
 })
 
+const { locale } = useI18n({
+  inheritLocale: true,
+})
+
+const name = (villager) => {
+  let name = _get(villager, 'name.name-EUfr', 'inconnu')
+  if (locale.value === 'en')
+    name = _get(villager, 'name.name-EUen', 'inconnu')
+
+  return name
+}
+
+const image = villager =>
+  _get(villager, 'image_uri', null)
+
+const imageGroupThemeOverrides = computed(() => {
+  const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
+  const themeOverrides = {
+    toolbarColor: popoverColor,
+    toolbarBoxShadow: boxShadow2,
+    toolbarIconColor: textColor2,
+    toolbarBorderRadius: borderRadius,
+  }
+  return themeOverrides
+})
+
+const hobby = (villager) => {
+  return _get(villager, 'hobby', null)
+}
+
+const gender = (villager) => {
+  return _get(villager, 'gender', null)
+}
+
+const birthdayString = (villager) => {
+  return _get(villager, 'birthday-string', null)
+}
+
+const species = (villager) => {
+  return _get(villager, 'species', null)
+}
+
+const personality = (villager) => {
+  return _get(villager, 'personality', null)
+}
 </script>
-
-<style scoped>
-
-.mosaique {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: space-around;
-  height: fit-content;
-}
-
-.item {
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
-}
-</style>

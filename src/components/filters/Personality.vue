@@ -1,34 +1,39 @@
 <template>
-  <div class="personnality">
-    <b>{{ $t('filters.personalities') }} </b>
-    <div>
-      <input type="radio" id="allpersonality" name="personality" value="all"
-             checked @click="toggle($event)">
-      <label for="allpersonality">{{ $t('all') }}</label>
-    </div>
-
-    <div v-for="i in props.data">
-      <input type="radio" :id="i" name="personality" :value="i" @click="toggle($event)">
-      <label :for="i">{{ $t('personality.' + i) }}</label>
-    </div>
-  </div>
+  <NSpace>
+    <div>{{ $t('filters.personalities') }}</div>
+    <NRadioGroup v-model:value="value" name="personality">
+      <NGrid cols="2" responsive="screen">
+        <NGridItem>
+          <NRadio id="allpersonality" value="all" :label="$t('all')" @change="toggle($event)" />
+        </NGridItem>
+        <NGridItem v-for="i in props.data" :key="i">
+          <NRadio :id="i" :value="i" :label="$t(`personality.${i}`)" @change="toggle($event)" />
+        </NGridItem>
+      </NGrid>
+    </NRadioGroup>
+  </NSpace>
 </template>
 
 <script setup>
-import {useStore} from 'vuex'
+import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
+import { ref } from 'vue'
+import { useGlobalStore } from '../../store/global'
 
 const props = defineProps({
   data: {
     type: Array,
-    required: true
-  }
+    required: true,
+  },
 })
 
-const store = useStore()
+const value = ref('all')
 
-const toggle = (event) => {
-  store.dispatch('setSelectedPersonality', event.target.value)
+const global = useGlobalStore()
+const setSelectedPersonality = (tmp) => {
+  global.selectedPersonality = tmp
 }
 
-
+const toggle = (event) => {
+  setSelectedPersonality(event.target.value)
+}
 </script>
