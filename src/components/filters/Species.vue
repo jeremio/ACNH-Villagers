@@ -29,11 +29,11 @@ const props = defineProps({
 const value = ref('all')
 
 const global = useGlobalStore()
-const setSelectedSpecies = (tmp) => {
+function setSelectedSpecies(tmp) {
   global.selectedSpecies = tmp
 }
 
-const toggle = (event) => {
+function toggle(event) {
   setSelectedSpecies(event.target.value)
 }
 </script>

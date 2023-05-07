@@ -1,5 +1,5 @@
 <template>
-  <NConfigProvider :theme="theme" :locale="frFR" :date-locale="dateFrFR">
+  <NConfigProvider :theme="theme" :locale="mylocal" :date-locale="mydate">
     <NLayout style="height: 100vh">
       <NLayoutHeader style="height: 64px; padding: 24px" bordered>
         <Menu @black-theme="blackTheme" />
@@ -29,48 +29,64 @@
 </template>
 
 <script setup>
-import { NConfigProvider, NLayout, NLayoutHeader, NLayoutSider, darkTheme, dateFrFR, frFR } from 'naive-ui'
+import { NConfigProvider, NLayout, NLayoutHeader, NLayoutSider, darkTheme, dateEnUS, dateFrFR, enUS, frFR } from 'naive-ui'
 import _filter from 'lodash/filter'
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Mosaique from './components/Mosaique.vue'
 import Filters from './components/Filters.vue'
 import Menu from './components/menu/Menu.vue'
 import infoVillagers from './assets/villagers.json'
 import { useGlobalStore } from './store/global'
 
+const { locale } = useI18n()
+
 const { selectedGender, selectedPersonality, selectedHobby, selectedSpecies } = storeToRefs(useGlobalStore())
 
 const theme = ref(darkTheme)
 
-const blackTheme = (color) => {
+function blackTheme(color) {
   if (color)
     theme.value = darkTheme
   else
     theme.value = null
 }
 
-const info = ref([...infoVillagers])
+const info = [...infoVillagers]
+
+const mylocal = computed(() => {
+  if (locale.value === 'fr')
+    return frFR
+  else
+    return enUS
+})
+
+const mydate = computed(() => {
+  if (locale.value === 'fr')
+    return dateFrFR
+  else
+    return dateEnUS
+})
 
 const datafiltered = computed(() => {
-  if (info.value) {
-    let array = info.value
-    if (selectedGender.value !== 'all') {
-      const plop = array
-      array = _filter(plop, a => a.gender === selectedGender.value)
-    }
-    if (selectedPersonality.value !== 'all') {
-      const plop2 = array
-      array = _filter(plop2, a => a.personality === selectedPersonality.value)
-    }
-    if (selectedHobby.value !== 'all') {
-      const plop3 = array
-      array = _filter(plop3, a => a.hobby === selectedHobby.value)
-    }
-    if (selectedSpecies.value !== 'all') {
-      const plop4 = array
-      array = _filter(plop4, a => a.species === selectedSpecies.value)
-    }
+  if (info) {
+    // var startTime = performance.now()
+    let array = info
+    if (selectedGender.value !== 'all')
+      array = _filter(array, a => a.gender === selectedGender.value)
+
+    if (selectedPersonality.value !== 'all')
+      array = _filter(array, a => a.personality === selectedPersonality.value)
+
+    if (selectedHobby.value !== 'all')
+      array = _filter(array, a => a.hobby === selectedHobby.value)
+
+    if (selectedSpecies.value !== 'all')
+      array = _filter(array, a => a.species === selectedSpecies.value)
+
+    // var endTime = performance.now()
+    // console.log(`Call to doSomething took ${endTime - startTime} milliseconds`)
     return array
   }
   return []

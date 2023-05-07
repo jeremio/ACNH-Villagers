@@ -21,8 +21,9 @@
 <script setup>
 import { NButton, NSpace } from 'naive-ui'
 import Lang from './lang/Lang.vue'
+
 const emit = defineEmits(['blackTheme'])
-const blackTheme = (color) => {
+function blackTheme(color) {
   emit('blackTheme', color)
 }
 </script>

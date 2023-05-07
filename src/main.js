@@ -3,9 +3,10 @@ import { createI18n } from 'vue-i18n'
 import { createPinia } from 'pinia'
 
 // General Font
-import 'vfonts/Lato.css'
+// import 'vfonts/Lato.css'
 // Monospace Font
 import 'vfonts/FiraCode.css'
+
 // then it works
 
 import messages from '@intlify/unplugin-vue-i18n/messages'

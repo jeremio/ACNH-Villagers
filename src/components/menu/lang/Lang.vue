@@ -6,6 +6,7 @@
 
 <script setup>
 import { NSelect, NSpace } from 'naive-ui'
+
 const options = [
   { value: 'fr', label: 'FR' },
   { value: 'en', label: 'EN' },

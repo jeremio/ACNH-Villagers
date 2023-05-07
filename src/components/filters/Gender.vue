@@ -29,10 +29,10 @@ const props = defineProps({
 const value = ref('all')
 
 const global = useGlobalStore()
-const setSelectedGender = (tmp) => {
+function setSelectedGender(tmp) {
   global.selectedGender = tmp
 }
-const toggle = (event) => {
+function toggle(event) {
   setSelectedGender(event.target.value)
 }
 </script>

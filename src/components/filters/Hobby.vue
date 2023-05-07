@@ -29,10 +29,10 @@ const props = defineProps({
 const value = ref('all')
 
 const global = useGlobalStore()
-const setSelectedHobby = (tmp) => {
+function setSelectedHobby(tmp) {
   global.selectedHobby = tmp
 }
-const toggle = (event) => {
+function toggle(event) {
   setSelectedHobby(event.target.value)
 }
 </script>
