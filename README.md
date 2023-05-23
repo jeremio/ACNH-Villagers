@@ -1,12 +1,12 @@
 # ACNH Villagers
-### VueJS 3 + ViteJS + Vuex + i18n
+### VueJS 3 + ViteJS + Pinia + i18n
 
 ## Introduction:
 
 ACNH Villagers is a web application which list all villagers in animal crossing new horizons.
 You can filter with gender, hobby, species and personnality.
 
-The goal is also to use vue 3, vite, vuex, vue-i18n.
+The goal is also to use vue 3, vite, pinia, vue-i18n.
 
 This app uses Composition API script setup with JS.
 
