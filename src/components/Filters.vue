@@ -3,7 +3,7 @@
     <Gender :data="genders" />
     <Hobby :data="hobbies" />
     <Personality :data="personalities" />
-    <Species :data="species" />
+    <Specy :data="species" />
   </NSpace>
 </template>
 
@@ -15,7 +15,7 @@ import { computed } from 'vue'
 import Gender from './filters/Gender.vue'
 import Hobby from './filters/Hobby.vue'
 import Personality from './filters/Personality.vue'
-import Species from './filters/Species.vue'
+import Specy from './filters/Specy.vue'
 
 const props = defineProps({
   data: Array,
