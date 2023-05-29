@@ -1,6 +1,6 @@
 <template>
   <NSpace vertical>
-    <NSelect v-model:value="$i18n.locale" size="small" :options="options" />
+    <NSelect v-model:value="$i18n.locale" :options="options" :consistent-menu-width="false" />
   </NSpace>
 </template>
 
