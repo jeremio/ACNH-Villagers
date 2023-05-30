@@ -30,7 +30,6 @@
 
 <script setup>
 import { NConfigProvider, NLayout, NLayoutHeader, NLayoutSider, darkTheme, dateEnUS, dateFrFR, enUS, frFR } from 'naive-ui'
-import _filter from 'lodash/filter'
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -74,16 +73,16 @@ const datafiltered = computed(() => {
     // var startTime = performance.now()
     let array = info
     if (selectedGender.value !== 'all')
-      array = _filter(array, a => a.gender === selectedGender.value)
+      array = array.filter(a => a.gender === selectedGender.value)
 
     if (selectedPersonality.value !== 'all')
-      array = _filter(array, a => a.personality === selectedPersonality.value)
+      array = array.filter(a => a.personality === selectedPersonality.value)
 
     if (selectedHobby.value !== 'all')
-      array = _filter(array, a => a.hobby === selectedHobby.value)
+      array = array.filter(a => a.hobby === selectedHobby.value)
 
     if (selectedSpecies.value !== 'all')
-      array = _filter(array, a => a.species === selectedSpecies.value)
+      array = array.filter(a => a.species === selectedSpecies.value)
 
     // var endTime = performance.now()
     // console.log(`Call to doSomething took ${endTime - startTime} milliseconds`)

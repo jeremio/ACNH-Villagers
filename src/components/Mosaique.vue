@@ -64,9 +64,9 @@ const props = defineProps({
 const { locale } = useI18n()
 
 function name(villager) {
-  let name = _get(villager, 'name.name-EUfr', 'inconnu')
+  let name = villager.name?.['name-EUfr'] ?? 'inconnu'
   if (locale.value === 'en')
-    name = _get(villager, 'name.name-EUen', 'inconnu')
+    name = villager.name?.['name-EUen'] ?? 'inconnu'
 
   return name
 }
@@ -87,22 +87,22 @@ const imageGroupThemeOverrides = computed(() => {
 })
 
 function hobby(villager) {
-  return _get(villager, 'hobby', null)
+  return villager?.hobby ?? null
 }
 
 function gender(villager) {
-  return _get(villager, 'gender', null)
+  return villager?.gender ?? null
 }
 
 function birthdayString(villager) {
-  return _get(villager, 'birthday-string', null)
+  return villager?.['birthday-string'] ?? null
 }
 
 function species(villager) {
-  return _get(villager, 'species', null)
+  return villager?.species ?? null
 }
 
 function personality(villager) {
-  return _get(villager, 'personality', null)
+  return villager?.personality ?? null
 }
 </script>

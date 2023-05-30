@@ -8,8 +8,6 @@
 </template>
 
 <script setup>
-import _map from 'lodash/map'
-import _uniq from 'lodash/uniq'
 import { NSpace } from 'naive-ui'
 import { computed } from 'vue'
 import Gender from './filters/Gender.vue'
@@ -22,15 +20,15 @@ const props = defineProps({
 })
 
 const genders = computed(() => {
-  return _uniq(_map(props.data, 'gender'))
+  return [...new Set(props.data.map( a => a.gender))]
 })
 const hobbies = computed(() => {
-  return _uniq(_map(props.data, 'hobby'))
+  return [...new Set(props.data.map( a => a.hobby))]
 })
 const personalities = computed(() => {
-  return _uniq(_map(props.data, 'personality'))
+  return [...new Set(props.data.map( a => a.personality))]
 })
 const species = computed(() => {
-  return _uniq(_map(props.data, 'species'))
+  return [...new Set(props.data.map( a => a.species))]
 })
 </script>
