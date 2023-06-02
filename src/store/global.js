@@ -1,11 +1,18 @@
-import { defineStore } from 'pinia'
+import {defineStore} from 'pinia'
+import {ref} from "vue";
 
-export const useGlobalStore = defineStore('global', {
-  state: () => ({
-    selectedGender: 'all',
-    selectedPersonality: 'all',
-    selectedHobby: 'all',
-    selectedSpecies: 'all',
-    language: 'fr',
-  }),
+export const useGlobalStore = defineStore('global', () => {
+  const selectedGender = ref('all')
+  const selectedPersonality = ref('all')
+  const selectedHobby = ref('all')
+  const selectedSpecies = ref('all')
+  const language = ref('fr')
+
+  return {
+    selectedGender,
+    selectedPersonality,
+    selectedHobby,
+    selectedSpecies,
+    language
+  }
 })
