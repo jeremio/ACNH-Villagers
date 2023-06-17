@@ -49,7 +49,6 @@
 </template>
 
 <script setup>
-import _get from 'lodash/get'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
@@ -59,6 +58,17 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+})
+
+const imageGroupThemeOverrides = computed(() => {
+  const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
+  const themeOverrides = {
+    toolbarColor: popoverColor,
+    toolbarBoxShadow: boxShadow2,
+    toolbarIconColor: textColor2,
+    toolbarBorderRadius: borderRadius,
+  }
+  return themeOverrides
 })
 
 const { locale } = useI18n()
@@ -72,19 +82,8 @@ function name(villager) {
 }
 
 function image(villager) {
-  return _get(villager, 'image_uri', null)
+  return villager?.image_uri ?? null
 }
-
-const imageGroupThemeOverrides = computed(() => {
-  const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
-  const themeOverrides = {
-    toolbarColor: popoverColor,
-    toolbarBoxShadow: boxShadow2,
-    toolbarIconColor: textColor2,
-    toolbarBorderRadius: borderRadius,
-  }
-  return themeOverrides
-})
 
 function hobby(villager) {
   return villager?.hobby ?? null

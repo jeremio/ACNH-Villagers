@@ -20,15 +20,15 @@ const props = defineProps({
 })
 
 const genders = computed(() => {
-  return [...new Set(props.data.map( a => a.gender))]
+  return [...new Set(props.data.map(a => a.gender))]
 })
 const hobbies = computed(() => {
-  return [...new Set(props.data.map( a => a.hobby))]
+  return [...new Set(props.data.map(a => a.hobby))]
 })
 const personalities = computed(() => {
-  return [...new Set(props.data.map( a => a.personality))]
+  return [...new Set(props.data.map(a => a.personality))]
 })
 const species = computed(() => {
-  return [...new Set(props.data.map( a => a.species))]
+  return [...new Set(props.data.map(a => a.species))]
 })
 </script>
