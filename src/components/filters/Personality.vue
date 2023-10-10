@@ -14,14 +14,15 @@
   </NSpace>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { ref } from 'vue'
 import { useGlobalStore } from '~/store/global'
+import type { PropType } from "vue";
 
 const props = defineProps({
   data: {
-    type: Array,
+    type: Array as PropType<string[]>,
     required: true,
   },
 })
@@ -29,11 +30,11 @@ const props = defineProps({
 const value = ref('all')
 
 const global = useGlobalStore()
-function setSelectedPersonality(tmp) {
+function setSelectedPersonality(tmp: string) {
   global.selectedPersonality = tmp
 }
 
-function toggle(event) {
-  setSelectedPersonality(event.target.value)
+function toggle(event: Event) {
+  setSelectedPersonality((event.target as HTMLInputElement).value)
 }
 </script>

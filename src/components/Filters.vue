@@ -7,16 +7,21 @@
   </NSpace>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { NSpace } from 'naive-ui'
 import { computed } from 'vue'
 import Gender from './filters/Gender.vue'
 import Hobby from './filters/Hobby.vue'
 import Personality from './filters/Personality.vue'
 import Specy from './filters/Specy.vue'
+import type {Character} from '../interfaces/Character'
+import type { PropType } from "vue";
 
 const props = defineProps({
-  data: Array,
+  data: {
+    type: Array as PropType<Character[]>,
+    required: true
+  }
 })
 
 const genders = computed(() => {

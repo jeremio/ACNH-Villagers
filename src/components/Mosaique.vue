@@ -48,14 +48,16 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
+import type {Character} from "../interfaces/Character";
+import type { PropType } from "vue";
 
 const props = defineProps({
   data: {
-    type: Array,
+    type: Array as PropType<Character[]>,
     required: true,
   },
 })
@@ -73,7 +75,7 @@ const imageGroupThemeOverrides = computed(() => {
 
 const { locale } = useI18n()
 
-function name(villager) {
+function name(villager: Character) {
   let name = villager.name?.['name-EUfr'] ?? 'inconnu'
   if (locale.value === 'en')
     name = villager.name?.['name-EUen'] ?? 'inconnu'
@@ -81,27 +83,27 @@ function name(villager) {
   return name
 }
 
-function image(villager) {
-  return villager?.image_uri ?? null
+function image(villager: Character) {
+  return 'villagers/' + villager?.['file-name'] + '.png' ?? null
 }
 
-function hobby(villager) {
+function hobby(villager: Character) {
   return villager?.hobby ?? null
 }
 
-function gender(villager) {
+function gender(villager: Character) {
   return villager?.gender ?? null
 }
 
-function birthdayString(villager) {
+function birthdayString(villager: Character) {
   return villager?.['birthday-string'] ?? null
 }
 
-function species(villager) {
+function species(villager: Character) {
   return villager?.species ?? null
 }
 
-function personality(villager) {
+function personality(villager: Character) {
   return villager?.personality ?? null
 }
 </script>

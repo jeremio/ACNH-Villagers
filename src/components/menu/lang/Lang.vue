@@ -4,7 +4,7 @@
   </NSpace>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { NSelect, NSpace } from 'naive-ui'
 
 const options = [

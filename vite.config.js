@@ -1,7 +1,8 @@
+import { fileURLToPath, URL } from 'node:url'
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import VueI18n from '@intlify/unplugin-vue-i18n/vite'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 // import { VitePWA } from 'vite-plugin-pwa'
 import { visualizer } from 'rollup-plugin-visualizer'
@@ -10,8 +11,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
-    },
+      '~': fileURLToPath(new URL('./src', import.meta.url))    },
   },
   plugins: [
     vue(),
@@ -22,7 +22,7 @@ export default defineConfig({
     //     enabled: true,
     //   },
     // }),
-    VueI18n({
+    VueI18nPlugin({
       runtimeOnly: true,
       compositionOnly: true,
       fullInstall: true,

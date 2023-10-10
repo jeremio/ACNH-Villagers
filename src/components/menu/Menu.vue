@@ -18,12 +18,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { NButton, NSpace } from 'naive-ui'
 import Lang from './lang/Lang.vue'
 
 const emit = defineEmits(['blackTheme'])
-function blackTheme(color) {
+function blackTheme(color: boolean) {
   emit('blackTheme', color)
 }
 </script>

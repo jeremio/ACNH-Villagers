@@ -12,11 +12,12 @@ import 'vfonts/FiraCode.css'
 import messages from '@intlify/unplugin-vue-i18n/messages'
 import App from './App.vue'
 
-const i18n = createI18n({
+const i18n = createI18n<[typeof messages], 'fr' | 'en'>({
   locale: 'fr',
   messages,
   globalInjection: true,
 })
+
 
 const app = createApp(App)
 app.use(i18n)

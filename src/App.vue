@@ -28,8 +28,19 @@
   </NConfigProvider>
 </template>
 
-<script setup>
-import { NConfigProvider, NLayout, NLayoutHeader, NLayoutSider, darkTheme, dateEnUS, dateFrFR, enUS, frFR } from 'naive-ui'
+<script setup lang="ts">
+import {
+  NConfigProvider,
+  NLayout,
+  NLayoutHeader,
+  NLayoutSider,
+  darkTheme,
+  dateEnUS,
+  dateFrFR,
+  enUS,
+  frFR,
+} from 'naive-ui'
+import type { GlobalTheme } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -38,21 +49,22 @@ import Filters from './components/Filters.vue'
 import Menu from './components/menu/Menu.vue'
 import infoVillagers from './assets/villagers.json'
 import { useGlobalStore } from './store/global'
+import type {Character} from "./interfaces/Character"
 
 const { locale } = useI18n()
 
 const { selectedGender, selectedPersonality, selectedHobby, selectedSpecies } = storeToRefs(useGlobalStore())
 
-const theme = ref(darkTheme)
+const theme = ref<GlobalTheme | null>(darkTheme)
 
-function blackTheme(color) {
+function blackTheme(color: boolean) {
   if (color)
     theme.value = darkTheme
   else
     theme.value = null
 }
 
-const info = [...infoVillagers]
+const info = [...infoVillagers] as Character[]
 
 const mylocal = computed(() => {
   if (locale.value === 'fr')
