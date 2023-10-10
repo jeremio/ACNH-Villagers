@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url'
+import { URL, fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -10,8 +10,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
-    alias: {
-      '~': fileURLToPath(new URL('./src', import.meta.url))    },
+    alias: { '~': fileURLToPath(new URL('./src', import.meta.url)) },
   },
   plugins: [
     vue(),

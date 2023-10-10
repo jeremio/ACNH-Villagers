@@ -52,8 +52,8 @@
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
-import type {Character} from "../interfaces/Character";
-import type { PropType } from "vue";
+import type { PropType } from 'vue'
+import type { Character } from '../interfaces/Character'
 
 const props = defineProps({
   data: {
@@ -84,7 +84,7 @@ function name(villager: Character) {
 }
 
 function image(villager: Character) {
-  return 'villagers/' + villager?.['file-name'] + '.png' ?? null
+  return `villagers/${villager?.['file-name']}.png` ?? null
 }
 
 function hobby(villager: Character) {

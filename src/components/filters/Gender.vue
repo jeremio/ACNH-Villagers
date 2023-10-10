@@ -16,9 +16,10 @@
 
 <script setup lang="ts">
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
-import {ref} from 'vue'
+import { ref } from 'vue'
+import type { PropType } from 'vue'
 import { useGlobalStore } from '~/store/global'
-import type { PropType } from "vue";
+
 const props = defineProps({
   data: {
     type: Array as PropType<string[]>,
@@ -29,7 +30,7 @@ const props = defineProps({
 const value = ref('all')
 
 const global = useGlobalStore()
-const setSelectedGender = (tmp: string) => {
+function setSelectedGender(tmp: string) {
   global.selectedGender = tmp
 }
 function toggle(event: Event) {

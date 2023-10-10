@@ -18,7 +18,6 @@ const i18n = createI18n<[typeof messages], 'fr' | 'en'>({
   globalInjection: true,
 })
 
-
 const app = createApp(App)
 app.use(i18n)
 app.use(createPinia())
