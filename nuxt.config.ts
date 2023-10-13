@@ -1,27 +1,25 @@
+import path from 'node:path'
+import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 import { appDescription } from './constants/index'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n'
-import path from "node:path";
-import messages from "@intlify/unplugin-vue-i18n/messages";
-import VueI18nVitePlugin from "@intlify/unplugin-vue-i18n/vite";
 
 export default defineNuxtConfig({
   build: {
     analyze: {},
-    transpile: [/vue-i18n/]
+    transpile: [/vue-i18n/],
   },
   vite: {
     resolve: {
       alias: {
-        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js'
-      }
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
+      },
     },
     plugins: [
       VueI18nVitePlugin({
         include: [
-          path.resolve(__dirname, './locales/**')
-        ]
-     })
-    ]
+          path.resolve(__dirname, './locales/**'),
+        ],
+      }),
+    ],
   },
 
   modules: [

@@ -1,33 +1,3 @@
-<template>
-  <NConfigProvider :theme="theme" :locale="mylocal" :date-locale="mydate">
-    <NLayout style="height: 100vh">
-      <NLayoutHeader style="height: 64px; padding: 24px" bordered>
-        <Menu @black-theme="blackTheme" />
-      </NLayoutHeader>
-      <NLayout position="absolute" style="top: 64px; bottom: 64px" has-sider>
-        <NLayoutSider
-          content-style="padding: 24px;"
-          :native-scrollbar="false"
-          bordered
-        >
-          <div v-if="info">
-            <Filters :data="info" />
-          </div>
-        </NLayoutSider>
-        <NLayout content-style="padding: 24px;" :native-scrollbar="false">
-          <div v-if="!info">
-            Pas de contenu
-          </div>
-          <Mosaique v-if="datafiltered.length > 0" :data="datafiltered" />
-          <div v-else>
-            Pas de villageois avec ces filtres
-          </div>
-        </NLayout>
-      </NLayout>
-    </NLayout>
-  </NConfigProvider>
-</template>
-
 <script setup lang="ts">
 import {
   NConfigProvider,
@@ -103,3 +73,33 @@ const datafiltered = computed(() => {
   return []
 })
 </script>
+
+<template>
+  <NConfigProvider :theme="theme" :locale="mylocal" :date-locale="mydate">
+    <NLayout style="height: 100vh">
+      <NLayoutHeader style="height: 64px; padding: 24px" bordered>
+        <Menu @black-theme="blackTheme" />
+      </NLayoutHeader>
+      <NLayout position="absolute" style="top: 64px; bottom: 64px" has-sider>
+        <NLayoutSider
+          content-style="padding: 24px;"
+          :native-scrollbar="false"
+          bordered
+        >
+          <div v-if="info">
+            <Filters :data="info" />
+          </div>
+        </NLayoutSider>
+        <NLayout content-style="padding: 24px;" :native-scrollbar="false">
+          <div v-if="!info">
+            Pas de contenu
+          </div>
+          <Mosaique v-if="datafiltered.length > 0" :data="datafiltered" />
+          <div v-else>
+            Pas de villageois avec ces filtres
+          </div>
+        </NLayout>
+      </NLayout>
+    </NLayout>
+  </NConfigProvider>
+</template>

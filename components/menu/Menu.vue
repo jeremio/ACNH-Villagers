@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { NButton, NSpace } from 'naive-ui'
+import Lang from './lang/Lang.vue'
+
+const emit = defineEmits(['blackTheme'])
+function blackTheme(color: boolean) {
+  emit('blackTheme', color)
+}
+</script>
+
 <template>
   <div class="menu">
     <div class="title">
@@ -17,16 +27,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { NButton, NSpace } from 'naive-ui'
-import Lang from './lang/Lang.vue'
-
-const emit = defineEmits(['blackTheme'])
-function blackTheme(color: boolean) {
-  emit('blackTheme', color)
-}
-</script>
 
 <style lang="scss" scoped>
 .menu {

@@ -1,12 +1,3 @@
-<template>
-  <NSpace>
-    <Gender :data="genders" />
-    <Hobby :data="hobbies" />
-    <Personality :data="personalities" />
-    <Specy :data="species" />
-  </NSpace>
-</template>
-
 <script setup lang="ts">
 import { NSpace } from 'naive-ui'
 import { computed } from 'vue'
@@ -37,3 +28,12 @@ const species = computed(() => {
   return [...new Set(props.data.map(a => a.species))]
 })
 </script>
+
+<template>
+  <NSpace>
+    <Gender :data="genders" />
+    <Hobby :data="hobbies" />
+    <Personality :data="personalities" />
+    <Specy :data="species" />
+  </NSpace>
+</template>
