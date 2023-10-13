@@ -1,11 +1,12 @@
-import path from 'node:path'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 import { appDescription } from './constants/index'
 
 export default defineNuxtConfig({
   build: {
     analyze: {},
-    transpile: [/vue-i18n/],
+    transpile: ['vue-i18n'],
   },
   vite: {
     resolve: {
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
     plugins: [
       VueI18nVitePlugin({
         include: [
-          path.resolve(__dirname, './locales/**'),
+          resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json'),
         ],
       }),
     ],
