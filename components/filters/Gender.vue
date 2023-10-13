@@ -1,13 +1,13 @@
 <template>
   <NSpace>
-    <div>{{ $t('filters.hobbies') }}</div>
-    <NRadioGroup v-model:value="value" name="hobby">
+    <div>{{ $t('filters.genders') }}</div>
+    <NRadioGroup v-model:value="value" name="gender">
       <NGrid cols="2" responsive="screen">
         <NGridItem>
-          <NRadio id="allhobby" value="all" :label="$t('all')" @change="toggle($event)" />
+          <NRadio id="allgender" value="all" :label="$t('all')" @change="toggle($event)" />
         </NGridItem>
         <NGridItem v-for="i in props.data" :key="i">
-          <NRadio :id="i" :value="i" :label="$t(`hobbies.${i}`)" @change="toggle($event)" />
+          <NRadio :id="i" :value="i" :label="$t(`genders.${i}`)" @change="toggle($event)" />
         </NGridItem>
       </NGrid>
     </NRadioGroup>
@@ -18,7 +18,7 @@
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { ref } from 'vue'
 import type { PropType } from 'vue'
-import { useGlobalStore } from '~/store/global'
+import { useGlobalStore } from '../../store/global'
 
 const props = defineProps({
   data: {
@@ -30,10 +30,10 @@ const props = defineProps({
 const value = ref('all')
 
 const global = useGlobalStore()
-function setSelectedHobby(tmp: string) {
-  global.selectedHobby = tmp
+function setSelectedGender(tmp: string) {
+  global.selectedGender = tmp
 }
 function toggle(event: Event) {
-  setSelectedHobby((event.target as HTMLInputElement).value)
+  setSelectedGender((event.target as HTMLInputElement).value)
 }
 </script>

@@ -6,3 +6,8 @@ dist-ssr
 .idea
 dev-dist
 stats.html
+*.log
+.output
+.nuxt
+.env
+.idea/

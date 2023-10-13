@@ -18,7 +18,7 @@
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { ref } from 'vue'
 import type { PropType } from 'vue'
-import { useGlobalStore } from '~/store/global'
+import { useGlobalStore } from '../../store/global'
 
 const props = defineProps({
   data: {
