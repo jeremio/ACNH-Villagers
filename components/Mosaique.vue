@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
 import type { PropType } from 'vue'
-import type { Character } from '../interfaces/Character'
+import type { Character } from '~/interfaces/Character'
 
 const props = defineProps({
   data: {

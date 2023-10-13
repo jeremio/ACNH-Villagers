@@ -2,11 +2,11 @@
 import { NSpace } from 'naive-ui'
 import { computed } from 'vue'
 import type { PropType } from 'vue'
-import type { Character } from '../interfaces/Character'
 import Gender from './filters/Gender.vue'
 import Hobby from './filters/Hobby.vue'
 import Personality from './filters/Personality.vue'
 import Specy from './filters/Specy.vue'
+import type { Character } from '~/interfaces/Character'
 
 const props = defineProps({
   data: {
