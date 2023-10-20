@@ -26,7 +26,6 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode',
     '@bg-dev/nuxt-naiveui',
   ],
 
@@ -45,9 +44,9 @@ export default defineNuxtConfig({
   //   typedPages: true,
   // },
 
-  colorMode: {
-    classSuffix: '',
-  },
+  // colorMode: {
+  //   classSuffix: '',
+  // },
 
   nitro: {
     esbuild: {
