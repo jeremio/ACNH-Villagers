@@ -20,12 +20,17 @@ import Menu from './components/menu/Menu.vue'
 import infoVillagers from './assets/villagers.json'
 import { useGlobalStore } from './store/global'
 import type { Character } from './interfaces/Character'
+import { appName } from '~/constants'
 
 const { locale } = useI18n()
 
 const { selectedGender, selectedPersonality, selectedHobby, selectedSpecies } = storeToRefs(useGlobalStore())
 
 const theme = ref<GlobalTheme | null>(darkTheme)
+
+useHead({
+  title: appName,
+})
 
 function blackTheme(color: boolean) {
   if (color)
