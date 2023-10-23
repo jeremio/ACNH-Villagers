@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
+import type { GlobalThemeOverrides } from 'naive-ui'
+import { NImage, NImageGroup, NSpace, useThemeVars } from 'naive-ui'
 import type { PropType } from 'vue'
 import type { Character } from '~/interfaces/Character'
 
@@ -14,7 +15,7 @@ const props = defineProps({
 
 const imageGroupThemeOverrides = computed(() => {
   const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
-  const themeOverrides = {
+  const themeOverrides: NonNullable<GlobalThemeOverrides['Image']> = {
     toolbarColor: popoverColor,
     toolbarBoxShadow: boxShadow2,
     toolbarIconColor: textColor2,
@@ -66,24 +67,11 @@ function personality(villager: Character) {
           <NPopover trigger="hover" raw>
             <template #trigger>
               <NImage
-                lazy :src="image(villager)" width="100" height="100"
+                :lazy="true"
+                :src="image(villager)" width="100" height="100"
                 :alt="name(villager)"
                 :show-toolbar-tooltip="true"
               >
-                <template #placeholder>
-                  <div
-                    style="
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #8882;
-          "
-                  >
-                    {{ name(villager) }}
-                  </div>
-                </template>
               </NImage>
             </template>
             <div
