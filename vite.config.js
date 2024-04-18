@@ -1,5 +1,5 @@
 import { URL, fileURLToPath } from 'node:url'
-import path from 'node:path'
+import { dirname, resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
@@ -25,7 +25,7 @@ export default defineConfig({
       runtimeOnly: true,
       compositionOnly: true,
       fullInstall: true,
-      include: [path.resolve(__dirname, './src/locales/**')],
+      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
     }),
   ],
   define: { 'process.env': {} },

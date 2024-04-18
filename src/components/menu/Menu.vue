@@ -28,7 +28,7 @@ function blackTheme(color: boolean) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .menu {
   display: grid;
   grid-template-columns: 1fr repeat(1, auto) 1fr;
