@@ -2,7 +2,7 @@
   <div class="mosaique">
     <NImageGroup :theme-overrides="imageGroupThemeOverrides">
       <NSpace>
-        <template v-for="villager in props.data" :key="villager">
+        <template v-for="villager in characters" :key="villager">
           <NPopover trigger="hover" raw>
             <template #trigger>
               <NImage
@@ -50,17 +50,13 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import type { PropType } from 'vue'
 import { computed } from 'vue'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
 import type { Character } from '~/interfaces/Character'
 
-const props = defineProps({
-  data: {
-    type: Array as PropType<Character[]>,
-    required: true,
-  },
-})
+defineProps<{
+  characters: Character[]
+}>()
 
 const imageGroupThemeOverrides = computed(() => {
   const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value

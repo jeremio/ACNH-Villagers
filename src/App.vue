@@ -11,14 +11,14 @@
           bordered
         >
           <div v-if="info">
-            <Filters :data="info" />
+            <Filters :characters="info" />
           </div>
         </NLayoutSider>
         <NLayout content-style="padding: 24px;" :native-scrollbar="false">
           <div v-if="!info">
             Pas de contenu
           </div>
-          <Mosaique v-if="datafiltered.length > 0" :data="datafiltered" />
+          <Mosaique v-if="datafiltered.length > 0" :characters="datafiltered" />
           <div v-else>
             Pas de villageois avec ces filtres
           </div>

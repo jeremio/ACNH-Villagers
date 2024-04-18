@@ -6,7 +6,7 @@
         <NGridItem>
           <NRadio id="allpersonality" value="all" :label="$t('all')" @change="toggle($event)" />
         </NGridItem>
-        <NGridItem v-for="i in props.data" :key="i">
+        <NGridItem v-for="i in data" :key="i">
           <NRadio :id="i" :value="i" :label="$t(`personality.${i}`)" @change="toggle($event)" />
         </NGridItem>
       </NGrid>
@@ -17,15 +17,11 @@
 <script setup lang="ts">
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { ref } from 'vue'
-import type { PropType } from 'vue'
 import { useGlobalStore } from '~/store/global'
 
-const props = defineProps({
-  data: {
-    type: Array as PropType<string[]>,
-    required: true,
-  },
-})
+defineProps<{
+  data: string[]
+}>()
 
 const value = ref('all')
 
