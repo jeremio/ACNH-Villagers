@@ -50,10 +50,10 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import type { PropType } from 'vue'
 import { computed } from 'vue'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
-import type { PropType } from 'vue'
-import type { Character } from '../interfaces/Character'
+import type { Character } from '~/interfaces/Character'
 
 const props = defineProps({
   data: {
@@ -64,13 +64,12 @@ const props = defineProps({
 
 const imageGroupThemeOverrides = computed(() => {
   const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
-  const themeOverrides = {
+  return {
     toolbarColor: popoverColor,
     toolbarBoxShadow: boxShadow2,
     toolbarIconColor: textColor2,
     toolbarBorderRadius: borderRadius,
   }
-  return themeOverrides
 })
 
 const { locale } = useI18n()
