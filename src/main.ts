@@ -10,7 +10,7 @@ import 'vfonts/FiraCode.css'
 // then it works
 
 import messages from '@intlify/unplugin-vue-i18n/messages'
-import App from './App.vue'
+import App from '~/App.vue'
 
 const i18n = createI18n({
   locale: 'fr',

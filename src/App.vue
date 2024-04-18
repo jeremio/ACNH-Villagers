@@ -44,12 +44,12 @@ import type { GlobalTheme } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Mosaique from './components/Mosaique.vue'
-import Filters from './components/Filters.vue'
-import Menu from './components/menu/Menu.vue'
-import infoVillagers from './assets/villagers.json'
-import { useGlobalStore } from './store/global'
-import type { Character } from './interfaces/Character'
+import Mosaique from '~/components/Mosaique.vue'
+import Filters from '~/components/Filters.vue'
+import Menu from '~/components/menu/Menu.vue'
+import infoVillagers from '~/assets/villagers.json'
+import { useGlobalStore } from '~/store/global'
+import type { Character } from '~/interfaces/Character'
 
 const { locale } = useI18n()
 
