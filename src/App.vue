@@ -15,10 +15,10 @@
           </div>
         </NLayoutSider>
         <NLayout content-style="padding: 24px;" :native-scrollbar="false">
-          <div v-if="!info">
+          <div v-if="!info.length">
             Pas de contenu
           </div>
-          <Mosaique v-if="datafiltered.length > 0" :characters="datafiltered" />
+          <Mosaique v-else-if="datafiltered.length" :characters="datafiltered" />
           <div v-else>
             Pas de villageois avec ces filtres
           </div>
@@ -57,49 +57,32 @@ const { selectedGender, selectedPersonality, selectedHobby, selectedSpecies } = 
 
 const theme = ref<GlobalTheme | null>(darkTheme)
 
-function blackTheme(color: boolean) {
-  if (color)
-    theme.value = darkTheme
-  else
-    theme.value = null
+const blackTheme = (color: boolean) => theme.value = color ? darkTheme : null
+
+const info: Character[] = [...infoVillagers]
+
+function filterByProperty(array: Character[], property: keyof Character, value: string) {
+  return array.filter(item => item[property] === value)
 }
 
-const info = [...infoVillagers] as Character[]
+const mylocal = computed(() => locale.value === 'fr' ? frFR : enUS)
 
-const mylocal = computed(() => {
-  if (locale.value === 'fr')
-    return frFR
-  else
-    return enUS
-})
-
-const mydate = computed(() => {
-  if (locale.value === 'fr')
-    return dateFrFR
-  else
-    return dateEnUS
-})
+const mydate = computed(() => locale.value === 'fr' ? dateFrFR : dateEnUS)
 
 const datafiltered = computed(() => {
-  if (info) {
-    // var startTime = performance.now()
-    let array = info
-    if (selectedGender.value !== 'all')
-      array = array.filter(a => a.gender === selectedGender.value)
+  let array = info
+  if (selectedGender.value !== 'all')
+    array = filterByProperty(array, 'gender', selectedGender.value)
 
-    if (selectedPersonality.value !== 'all')
-      array = array.filter(a => a.personality === selectedPersonality.value)
+  if (selectedPersonality.value !== 'all')
+    array = filterByProperty(array, 'personality', selectedPersonality.value)
 
-    if (selectedHobby.value !== 'all')
-      array = array.filter(a => a.hobby === selectedHobby.value)
+  if (selectedHobby.value !== 'all')
+    array = filterByProperty(array, 'hobby', selectedHobby.value)
 
-    if (selectedSpecies.value !== 'all')
-      array = array.filter(a => a.species === selectedSpecies.value)
+  if (selectedSpecies.value !== 'all')
+    array = filterByProperty(array, 'specy', selectedSpecies.value)
 
-    // var endTime = performance.now()
-    // console.log(`Call to doSomething took ${endTime - startTime} milliseconds`)
-    return array
-  }
-  return []
+  return array
 })
 </script>

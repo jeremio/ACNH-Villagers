@@ -27,7 +27,7 @@
     "Play": "Play",
     "Music": "Music"
   },
-  "personality": {
+  "personalities": {
     "Cranky": "Cranky",
     "Jock": "Jock",
     "Peppy": "Peppy",

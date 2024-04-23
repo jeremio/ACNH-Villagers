@@ -2,7 +2,7 @@
   <div class="mosaique">
     <NImageGroup :theme-overrides="imageGroupThemeOverrides">
       <NSpace>
-        <template v-for="villager in characters" :key="villager">
+        <template v-for="villager in characters" :key="villager.id">
           <NPopover trigger="hover" raw>
             <template #trigger>
               <NImage
@@ -11,35 +11,19 @@
                 :show-toolbar-tooltip="true"
               >
                 <template #placeholder>
-                  <div
-                    style="
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #8882;
-          "
-                  >
+                  <div class="placeholder">
                     {{ name(villager) }}
                   </div>
                 </template>
               </NImage>
             </template>
-            <div
-              style="
-                  width: 175px;
-                  padding: 10px;
-                  background-color: #3c817f;
-                  transform-origin: inherit;
-            "
-            >
-              <div> {{ name(villager) }}</div>
-              <div> {{ $t('filters.gender') }} : {{ $t(`genders.${gender(villager)}`) }}</div>
-              <div> {{ $t('filters.hobby') }} : {{ $t(`hobbies.${hobby(villager)}`) }}</div>
-              <div> {{ $t('filters.personality') }} : {{ $t(`personality.${personality(villager)}`) }}</div>
-              <div> {{ $t('filters.specie') }} : {{ $t(`species.${species(villager)}`) }}</div>
-              <div> {{ $t('filters.birthday') }} : {{ birthdayString(villager) }}</div>
+            <div class="popover-content">
+              <div>{{ name(villager) }}</div>
+              <div>{{ $t('filters.gender') }}: {{ getLocalizedText('genders', gender(villager)) }}</div>
+              <div>{{ $t('filters.hobby') }}: {{ getLocalizedText('hobbies', hobby(villager)) }}</div>
+              <div>{{ $t('filters.personality') }}: {{ getLocalizedText('personalities', personality(villager)) }}</div>
+              <div>{{ $t('filters.specie') }}: {{ getLocalizedText('species', species(villager)) }}</div>
+              <div>{{ $t('filters.birthday') }}: {{ birthdayString(villager) }}</div>
             </div>
           </NPopover>
         </template>
@@ -58,6 +42,8 @@ defineProps<{
   characters: Character[]
 }>()
 
+const { t } = useI18n()
+
 const imageGroupThemeOverrides = computed(() => {
   const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
   return {
@@ -70,35 +56,43 @@ const imageGroupThemeOverrides = computed(() => {
 
 const { locale } = useI18n()
 
+function getLocalizedText(category: string, key: string | null) {
+  if (!key)
+    return null
+  return t(`${category}.${key}`)
+}
+
 function name(villager: Character) {
-  let name = villager.name?.['name-EUfr'] ?? 'inconnu'
-  if (locale.value === 'en')
-    name = villager.name?.['name-EUen'] ?? 'inconnu'
-
-  return name
+  return villager.name?.[locale.value === 'en' ? 'name-EUen' : 'name-EUfr'] ?? 'inconnu'
 }
 
-function image(villager: Character) {
-  return `villagers/${villager?.['file-name']}.png` ?? null
-}
+const image = (villager: Character) => `villagers/${villager?.['file-name']}.png` ?? null
 
-function hobby(villager: Character) {
-  return villager?.hobby ?? null
-}
+const hobby = (villager: Character) => villager?.hobby ?? null
 
-function gender(villager: Character) {
-  return villager?.gender ?? null
-}
+const gender = (villager: Character) => villager?.gender ?? null
 
-function birthdayString(villager: Character) {
-  return villager?.['birthday-string'] ?? null
-}
+const birthdayString = (villager: Character) => villager?.['birthday-string'] ?? null
 
-function species(villager: Character) {
-  return villager?.species ?? null
-}
+const species = (villager: Character) => villager?.specy ?? null
 
-function personality(villager: Character) {
-  return villager?.personality ?? null
-}
+const personality = (villager: Character) => villager?.personality ?? null
 </script>
+
+<style scoped>
+.placeholder {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8882;
+}
+
+.popover-content {
+  width: 175px;
+  padding: 10px;
+  background-color: #3c817f;
+  transform-origin: inherit;
+}
+</style>

@@ -27,7 +27,7 @@
     "Play": "Jeu",
     "Music": "Musique"
   },
-  "personality": {
+  "personalities": {
     "Cranky": "Versatile",
     "Jock": "Sportif",
     "Peppy": "Vif",

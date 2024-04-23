@@ -7,7 +7,7 @@
           <NRadio id="allpersonality" value="all" :label="$t('all')" @change="toggle($event)" />
         </NGridItem>
         <NGridItem v-for="i in data" :key="i">
-          <NRadio :id="i" :value="i" :label="$t(`personality.${i}`)" @change="toggle($event)" />
+          <NRadio :id="i" :value="i" :label="$t(`personalities.${i}`)" @change="toggle($event)" />
         </NGridItem>
       </NGrid>
     </NRadioGroup>

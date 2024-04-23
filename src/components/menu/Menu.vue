@@ -4,7 +4,6 @@
       {{ $t('title') }}
     </div>
     <div class="right">
-      <!--      <github></github> -->
       <NSpace>
         <NButton @click="blackTheme(true)">
           Dark
@@ -23,6 +22,7 @@ import { NButton, NSpace } from 'naive-ui'
 import Lang from '~/components/menu/lang/Lang.vue'
 
 const emit = defineEmits(['blackTheme'])
+
 function blackTheme(color: boolean) {
   emit('blackTheme', color)
 }

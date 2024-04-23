@@ -20,16 +20,14 @@ const props = defineProps<{
   characters: Character[]
 }>()
 
-const genders = computed(() => {
-  return [...new Set(props.characters.map(a => a.gender))]
-})
-const hobbies = computed(() => {
-  return [...new Set(props.characters.map(a => a.hobby))]
-})
-const personalities = computed(() => {
-  return [...new Set(props.characters.map(a => a.personality))]
-})
-const species = computed(() => {
-  return [...new Set(props.characters.map(a => a.species))]
-})
+type CharacterProperty = keyof Character
+
+function getUniqueValues(property: CharacterProperty) {
+  return [...new Set(props.characters.map(a => a[property]))] as string[]
+}
+
+const genders = computed(() => getUniqueValues('gender'))
+const hobbies = computed(() => getUniqueValues('hobby'))
+const personalities = computed(() => getUniqueValues('personality'))
+const species = computed(() => getUniqueValues('specy'))
 </script>
