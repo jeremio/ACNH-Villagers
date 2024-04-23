@@ -81,7 +81,7 @@ const datafiltered = computed(() => {
     array = filterByProperty(array, 'hobby', selectedHobby.value)
 
   if (selectedSpecies.value !== 'all')
-    array = filterByProperty(array, 'specy', selectedSpecies.value)
+    array = filterByProperty(array, 'specie', selectedSpecies.value)
 
   return array
 })

@@ -1,5 +1,6 @@
 {
   "name": "list-villagers",
+  "description": "display villagers on acnh",
   "type": "module",
   "version": "1.0.1",
   "scripts": {

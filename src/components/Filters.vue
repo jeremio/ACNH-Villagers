@@ -3,7 +3,7 @@
     <Gender :data="genders" />
     <Hobby :data="hobbies" />
     <Personality :data="personalities" />
-    <Specy :data="species" />
+    <Specie :data="species" />
   </NSpace>
 </template>
 
@@ -13,7 +13,7 @@ import { computed } from 'vue'
 import Gender from '~/components/filters/Gender.vue'
 import Hobby from '~/components/filters/Hobby.vue'
 import Personality from '~/components/filters/Personality.vue'
-import Specy from '~/components/filters/Specy.vue'
+import Specie from '~/components/filters/Specie.vue'
 import type { Character } from '~/interfaces/Character'
 
 const props = defineProps<{
@@ -29,5 +29,5 @@ function getUniqueValues(property: CharacterProperty) {
 const genders = computed(() => getUniqueValues('gender'))
 const hobbies = computed(() => getUniqueValues('hobby'))
 const personalities = computed(() => getUniqueValues('personality'))
-const species = computed(() => getUniqueValues('specy'))
+const species = computed(() => getUniqueValues('specie'))
 </script>

@@ -20,7 +20,7 @@ export interface Character {
   'personality': string
   'birthday-string': string
   'birthday': string
-  'specy': string
+  'specie': string
   'gender': string
   'subtype': string
   'hobby': string
