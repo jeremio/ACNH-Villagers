@@ -43,9 +43,9 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
+const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
 
 const imageGroupThemeOverrides = computed(() => {
-  const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
   return {
     toolbarColor: popoverColor,
     toolbarBoxShadow: boxShadow2,
