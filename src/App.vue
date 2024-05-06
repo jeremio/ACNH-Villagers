@@ -61,9 +61,7 @@ const blackTheme = (color: boolean) => theme.value = color ? darkTheme : null
 
 const info: Character[] = [...infoVillagers]
 
-function filterByProperty(array: Character[], property: keyof Character, value: string) {
-  return array.filter(item => item[property] === value)
-}
+const filterByProperty = (array: Character[], property: keyof Character, value: string) => array.filter(item => item[property] === value)
 
 const mylocal = computed(() => locale.value === 'fr' ? frFR : enUS)
 

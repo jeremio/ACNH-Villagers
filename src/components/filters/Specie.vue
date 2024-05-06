@@ -26,11 +26,6 @@ defineProps<{
 const value = ref('all')
 
 const global = useGlobalStore()
-function setSelectedSpecies(tmp: string) {
-  global.selectedSpecies = tmp
-}
 
-function toggle(event: Event) {
-  setSelectedSpecies((event.target as HTMLInputElement).value)
-}
+const toggle = (event: Event) => global.selectedSpecies = ((event.target as HTMLInputElement).value)
 </script>

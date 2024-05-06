@@ -23,9 +23,7 @@ import Lang from '~/components/menu/lang/Lang.vue'
 
 const emit = defineEmits(['blackTheme'])
 
-function blackTheme(color: boolean) {
-  emit('blackTheme', color)
-}
+const blackTheme = (color: boolean) => emit('blackTheme', color)
 </script>
 
 <style scoped>

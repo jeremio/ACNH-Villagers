@@ -22,9 +22,7 @@ const props = defineProps<{
 
 type CharacterProperty = keyof Character
 
-function getUniqueValues(property: CharacterProperty) {
-  return [...new Set(props.characters.map(a => a[property]))] as string[]
-}
+const getUniqueValues = (property: CharacterProperty) => [...new Set(props.characters.map(a => a[property]))] as string[]
 
 const genders = computed(() => getUniqueValues('gender'))
 const hobbies = computed(() => getUniqueValues('hobby'))

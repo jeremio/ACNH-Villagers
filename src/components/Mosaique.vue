@@ -62,11 +62,9 @@ function getLocalizedText(category: string, key: string | null) {
   return t(`${category}.${key}`)
 }
 
-function name(villager: Character) {
-  return villager.name?.[locale.value === 'en' ? 'name-EUen' : 'name-EUfr'] ?? 'inconnu'
-}
+const name = (villager: Character) => villager.name?.[locale.value === 'en' ? 'name-EUen' : 'name-EUfr'] ?? 'inconnu'
 
-const image = (villager: Character) => `villagers/${villager?.['file-name']}.png` ?? null
+const image = (villager: Character) => villager['file-name'] ? `villagers/${villager['file-name']}.png` : ''
 
 const hobby = (villager: Character) => villager?.hobby ?? null
 

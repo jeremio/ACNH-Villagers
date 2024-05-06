@@ -26,10 +26,6 @@ defineProps<{
 const value = ref('all')
 
 const global = useGlobalStore()
-function setSelectedHobby(tmp: string) {
-  global.selectedHobby = tmp
-}
-function toggle(event: Event) {
-  setSelectedHobby((event.target as HTMLInputElement).value)
-}
+
+const toggle = (event: Event) => global.selectedHobby = ((event.target as HTMLInputElement).value)
 </script>

@@ -26,11 +26,6 @@ defineProps<{
 const value = ref('all')
 
 const global = useGlobalStore()
-function setSelectedPersonality(tmp: string) {
-  global.selectedPersonality = tmp
-}
 
-function toggle(event: Event) {
-  setSelectedPersonality((event.target as HTMLInputElement).value)
-}
+const toggle = (event: Event) => global.selectedPersonality = ((event.target as HTMLInputElement).value)
 </script>
