@@ -18,8 +18,8 @@
 </template>
 
 <script setup lang="ts">
+import Lang from '@/components/menu/lang/Lang.vue'
 import { NButton, NSpace } from 'naive-ui'
-import Lang from '~/components/menu/lang/Lang.vue'
 
 const emit = defineEmits(['blackTheme'])
 

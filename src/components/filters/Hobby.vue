@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
+import { useGlobalStore } from '@/store/global'
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { ref } from 'vue'
-import { useGlobalStore } from '~/store/global'
 
 defineProps<{
   data: string[]

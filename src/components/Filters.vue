@@ -8,13 +8,13 @@
 </template>
 
 <script setup lang="ts">
+import type { Character } from '@/interfaces/Character'
+import Gender from '@/components/filters/Gender.vue'
+import Hobby from '@/components/filters/Hobby.vue'
+import Personality from '@/components/filters/Personality.vue'
+import Specie from '@/components/filters/Specie.vue'
 import { NSpace } from 'naive-ui'
 import { computed } from 'vue'
-import Gender from '~/components/filters/Gender.vue'
-import Hobby from '~/components/filters/Hobby.vue'
-import Personality from '~/components/filters/Personality.vue'
-import Specie from '~/components/filters/Specie.vue'
-import type { Character } from '~/interfaces/Character'
 
 const props = defineProps<{
   characters: Character[]

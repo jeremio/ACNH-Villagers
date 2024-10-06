@@ -33,10 +33,10 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { computed } from 'vue'
+import type { Character } from '@/interfaces/Character'
 import { NImage, NImageGroup, NPopover, NSpace, useThemeVars } from 'naive-ui'
-import type { Character } from '~/interfaces/Character'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 defineProps<{
   characters: Character[]

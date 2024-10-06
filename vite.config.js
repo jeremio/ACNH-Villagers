@@ -1,20 +1,21 @@
-import { URL, fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 
 // import { VitePWA } from 'vite-plugin-pwa'
-import { visualizer } from 'rollup-plugin-visualizer'
+// import { visualizer } from 'rollup-plugin-visualizer'
 
-// https://vitejs.dev/config/
+import Inspect from 'vite-plugin-inspect'
+import VueDevTools from 'vite-plugin-vue-devtools'
+
 export default defineConfig({
-  resolve: {
-    alias: { '~': fileURLToPath(new URL('./src', import.meta.url)) },
-  },
   plugins: [
     vue(),
-    visualizer(),
+    Inspect(),
+    VueDevTools(),
+    // visualizer(),
     // VitePWA({
     //   registerType: 'autoUpdate',
     //   devOptions: {
@@ -28,6 +29,7 @@ export default defineConfig({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
     }),
   ],
-  define: { 'process.env': {} },
-
+  resolve: {
+    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+  },
 })
