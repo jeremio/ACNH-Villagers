@@ -19,11 +19,11 @@
             </template>
             <div class="popover-content">
               <div>{{ name(villager) }}</div>
-              <div>{{ $t('filters.gender') }} : {{ getLocalizedText('genders', gender(villager)) }}</div>
-              <div>{{ $t('filters.hobby') }} : {{ getLocalizedText('hobbies', hobby(villager)) }}</div>
-              <div>{{ $t('filters.personality') }} : {{ getLocalizedText('personalities', personality(villager)) }}</div>
-              <div>{{ $t('filters.specie') }} : {{ getLocalizedText('species', species(villager)) }}</div>
-              <div>{{ $t('filters.birthday') }} : {{ birthdayString(villager) }}</div>
+              <div>{{ t('filters.gender') }} : {{ getLocalizedText('genders', gender(villager)) }}</div>
+              <div>{{ t('filters.hobby') }} : {{ getLocalizedText('hobbies', hobby(villager)) }}</div>
+              <div>{{ t('filters.personality') }} : {{ getLocalizedText('personalities', personality(villager)) }}</div>
+              <div>{{ t('filters.specie') }} : {{ getLocalizedText('species', species(villager)) }}</div>
+              <div>{{ t('filters.birthday') }} : {{ birthdayString(villager) }}</div>
             </div>
           </NPopover>
         </template>

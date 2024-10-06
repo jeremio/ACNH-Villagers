@@ -23,9 +23,6 @@ export default defineConfig({
     //   },
     // }),
     VueI18nPlugin({
-      runtimeOnly: true,
-      compositionOnly: true,
-      fullInstall: true,
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
     }),
   ],

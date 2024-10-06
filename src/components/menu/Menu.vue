@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <div class="title">
-      {{ $t('title') }}
+      {{ t('title') }}
     </div>
     <div class="right">
       <NSpace>
@@ -20,9 +20,10 @@
 <script setup lang="ts">
 import Lang from '@/components/menu/lang/Lang.vue'
 import { NButton, NSpace } from 'naive-ui'
+import { useI18n } from 'vue-i18n'
 
 const emit = defineEmits(['blackTheme'])
-
+const { t } = useI18n()
 const blackTheme = (color: boolean) => emit('blackTheme', color)
 </script>
 
