@@ -22,7 +22,7 @@
               <div>{{ t('filters.gender') }} : {{ getLocalizedText('genders', gender(villager)) }}</div>
               <div>{{ t('filters.hobby') }} : {{ getLocalizedText('hobbies', hobby(villager)) }}</div>
               <div>{{ t('filters.personality') }} : {{ getLocalizedText('personalities', personality(villager)) }}</div>
-              <div>{{ t('filters.specie') }} : {{ getLocalizedText('species', species(villager)) }}</div>
+              <div>{{ t('filters.specie') }} : {{ getLocalizedText('species', specie(villager)) }}</div>
               <div>{{ t('filters.birthday') }} : {{ birthdayString(villager) }}</div>
             </div>
           </NPopover>
@@ -72,7 +72,7 @@ const gender = (villager: Character) => villager?.gender ?? null
 
 const birthdayString = (villager: Character) => villager?.['birthday-string'] ?? null
 
-const species = (villager: Character) => villager?.specie ?? null
+const specie = (villager: Character) => villager?.specie ?? null
 
 const personality = (villager: Character) => villager?.personality ?? null
 </script>

@@ -4,7 +4,7 @@
 ## Introduction:
 
 ACNH Villagers is a web application which list all villagers in animal crossing new horizons.
-You can filter with gender, hobby, species and personnality.
+You can filter with gender, hobby, specie and personnality.
 
 The goal is also to use vue 3, vite, pinia, vue-i18n.
 

@@ -32,7 +32,7 @@
 import type { Character } from '@/interfaces/Character'
 import type { GlobalTheme } from 'naive-ui'
 import infoVillagers from '@/assets/villagers.json'
-import Filters from '@/components/Filters.vue'
+import Filters from '@/components/filters/Filters.vue'
 import Menu from '@/components/menu/Menu.vue'
 import Mosaique from '@/components/Mosaique.vue'
 import { useGlobalStore } from '@/store/global'
@@ -53,7 +53,7 @@ import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
 
-const { selectedGender, selectedPersonality, selectedHobby, selectedSpecies } = storeToRefs(useGlobalStore())
+const { selectedGender, selectedPersonality, selectedHobby, selectedSpecie } = storeToRefs(useGlobalStore())
 
 const theme = ref<GlobalTheme | null>(darkTheme)
 
@@ -78,8 +78,8 @@ const datafiltered = computed(() => {
   if (selectedHobby.value !== 'all')
     array = filterByProperty(array, 'hobby', selectedHobby.value)
 
-  if (selectedSpecies.value !== 'all')
-    array = filterByProperty(array, 'specie', selectedSpecies.value)
+  if (selectedSpecie.value !== 'all')
+    array = filterByProperty(array, 'specie', selectedSpecie.value)
 
   return array
 })

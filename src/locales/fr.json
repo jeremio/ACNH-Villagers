@@ -5,14 +5,14 @@
   "names": "Noms",
   "all": "Tous",
   "filters": {
-    "genders": "Genres",
     "gender": "Genre",
-    "hobbies": "Hobbys",
+    "genders": "Genres",
     "hobby": "Hobby",
-    "personalities": "Personnalités",
+    "hobbies": "Hobbys",
     "personality": "Personnalité",
-    "species": "Espèces",
+    "personalities": "Personnalités",
     "specie": "Espèce",
+    "species": "Espèces",
     "birthday": "Naissance"
   },
   "genders": {
