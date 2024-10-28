@@ -56,25 +56,51 @@ const imageGroupThemeOverrides = computed(() => {
 
 const { locale } = useI18n()
 
-function getLocalizedText(category: string, key: string | null) {
-  if (!key)
-    return null
-  return t(`${category}.${key}`)
+function getLocalizedText(category: string, key: string): string {
+  if (!key || key === '')
+    return t('unknown')
+
+  try {
+    const translation = t(`${category}.${key}`)
+    return translation || t('unknown') // En cas de clé de traduction manquante, t() peut retourner la clé elle-même ou ''
+  }
+  catch {
+    return t('unknown')
+  }
 }
 
-const name = (villager: Character) => villager.name?.[locale.value === 'en' ? 'name-EUen' : 'name-EUfr'] ?? 'inconnu'
+function name(villager: Character): string {
+  if (!villager?.name) {
+    return t('unknown')
+  }
 
-const image = (villager: Character) => villager['file-name'] ? `villagers/${villager['file-name']}.png` : ''
+  const nameKey = locale.value === 'en' ? 'name-EUen' : 'name-EUfr'
+  return villager.name[nameKey] ?? t('unknown')
+}
 
-const hobby = (villager: Character) => villager?.hobby ?? null
+function image(villager: Character): string {
+  return villager?.['file-name'] ? `villagers/${villager['file-name']}.png` : ''
+}
 
-const gender = (villager: Character) => villager?.gender ?? null
+function birthdayString(villager: Character): string {
+  return villager?.['birthday-string'] ?? t('unknown')
+}
 
-const birthdayString = (villager: Character) => villager?.['birthday-string'] ?? null
+function hobby(villager: Character): string {
+  return villager?.hobby ?? ''
+}
 
-const specie = (villager: Character) => villager?.specie ?? null
+function gender(villager: Character): string {
+  return villager?.gender ?? ''
+}
 
-const personality = (villager: Character) => villager?.personality ?? null
+function specie(villager: Character): string {
+  return villager?.specie ?? ''
+}
+
+function personality(villager: Character): string {
+  return villager?.personality ?? ''
+}
 </script>
 
 <style scoped>
