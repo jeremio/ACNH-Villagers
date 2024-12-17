@@ -1,17 +1,15 @@
+import App from '@/App.vue'
+import messages from '@intlify/unplugin-vue-i18n/messages'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
+
 import router from './router'
 
 // General Font
 // import 'vfonts/Lato.css'
 // Monospace Font
 import 'vfonts/FiraCode.css'
-
-// then it works
-
-import App from '@/App.vue'
-import messages from '@intlify/unplugin-vue-i18n/messages'
 
 const i18n = createI18n({
   locale: 'fr',
