@@ -13,22 +13,22 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "pinia": "^2.3.0",
+    "pinia": "^2.3.1",
     "vue": "^3.5.13",
-    "vue-i18n": "^11.0.0",
+    "vue-i18n": "^11.1.1",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.12.1",
-    "@intlify/unplugin-vue-i18n": "^6.0.2",
+    "@antfu/eslint-config": "^4.1.1",
+    "@intlify/unplugin-vue-i18n": "^6.0.3",
     "@vitejs/plugin-vue": "^5.2.1",
-    "eslint": "^9.17.0",
-    "naive-ui": "^2.40.4",
-    "rollup-plugin-visualizer": "^5.12.0",
-    "typescript": "^5.7.2",
+    "eslint": "^9.20.0",
+    "naive-ui": "^2.41.0",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "typescript": "^5.7.3",
     "vfonts": "^0.0.3",
-    "vite": "^6.0.6",
-    "vite-plugin-vue-devtools": "^7.6.8",
+    "vite": "^6.1.0",
+    "vite-plugin-vue-devtools": "^7.7.1",
     "vue-tsc": "^2.2.0"
   },
   "browserslist": [
