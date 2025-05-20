@@ -1,0 +1,58 @@
+name: CI Checks
+
+on:
+  push:
+    branches: [master] # ou le nom de votre branche principale si différent
+  pull_request:
+    branches: [master] # ou le nom de votre branche principale si différent
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Utiliser la dernière version d'Ubuntu disponible
+
+    strategy:
+      matrix:
+        node-version: [22.x] # Spécifiez la version de Node.js que vous utilisez. Ajustez si besoin.
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Action pour récupérer votre code
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4 # Action pour configurer Node.js
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm # Activer le cache pour npm pour accélérer les installations futures
+
+      - name: Install dependencies
+        run: npm ci # Utiliser 'ci' pour une installation propre et reproductible
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run TypeScript type check
+        run: npm run type-check
+
+      - name: Build project and generate visualizer report
+        run: npm run build # Utilise votre script qui devrait activer rollup-plugin-visualizer
+
+      - name: Display build folder size
+        run: |
+          echo "Build output in 'dist/':"
+          ls -lh dist/
+          echo "Total size of 'dist/' folder:"
+          du -sh dist/
+
+      - name: Upload visualizer report
+        uses: actions/upload-artifact@v4
+        with:
+          name: visualizer-report
+          # Adaptez le chemin si votre rapport visualizer a un nom différent ou est dans un autre dossier.
+          # rollup-plugin-visualizer génère souvent 'stats.html' ou 'report.html'
+          # à la racine du projet ou dans le répertoire de sortie (dist).
+          path: |
+            stats.html
+            dist/stats.html
+            report.html
+            dist/report.html
+          if-no-files-found: warn # Affiche un avertissement si le fichier n'est pas trouvé, au lieu de faire échouer le job.
