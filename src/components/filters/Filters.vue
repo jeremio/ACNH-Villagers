@@ -20,11 +20,11 @@
 </template>
 
 <script setup lang="ts">
-import type { Character } from '@/interfaces/Character'
 import type { ComputedRef } from 'vue'
-import GenericFilter from '@/components/filters/GenericFilter.vue'
+import type { Character } from '@/interfaces/Character'
 import { NSpace } from 'naive-ui'
 import { computed } from 'vue'
+import GenericFilter from '@/components/filters/GenericFilter.vue'
 
 interface FilterableProperties {
   gender: string

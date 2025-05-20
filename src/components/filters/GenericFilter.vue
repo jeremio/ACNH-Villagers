@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import { useFilter } from '@/composables/useFilter'
 import { NGrid, NGridItem, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
+import { useFilter } from '@/composables/useFilter'
 
 const props = defineProps<{
   type: 'gender' | 'hobby' | 'personality' | 'specie'

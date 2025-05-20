@@ -29,13 +29,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Character } from '@/interfaces/Character'
 import type { GlobalTheme } from 'naive-ui'
-import infoVillagers from '@/assets/villagers.json'
-import Filters from '@/components/filters/Filters.vue'
-import Menu from '@/components/menu/Menu.vue'
-import Mosaique from '@/components/Mosaique.vue'
-import { useGlobalStore } from '@/store/global'
+import type { Character } from '@/interfaces/Character'
 import {
   darkTheme,
   dateEnUS,
@@ -50,6 +45,11 @@ import {
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import infoVillagers from '@/assets/villagers.json'
+import Filters from '@/components/filters/Filters.vue'
+import Menu from '@/components/menu/Menu.vue'
+import Mosaique from '@/components/Mosaique.vue'
+import { useGlobalStore } from '@/store/global'
 
 const { locale } = useI18n()
 

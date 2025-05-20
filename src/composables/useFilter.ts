@@ -1,6 +1,6 @@
 import type { Ref } from 'vue'
-import { useGlobalStore } from '@/store/global'
 import { ref } from 'vue'
+import { useGlobalStore } from '@/store/global'
 
 type FilterType = 'gender' | 'hobby' | 'personality' | 'specie'
 
