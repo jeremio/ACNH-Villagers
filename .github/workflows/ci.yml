@@ -22,10 +22,18 @@ jobs:
         uses: actions/setup-node@v4 # Action pour configurer Node.js
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm # Activer le cache pour npm pour accélérer les installations futures
+          cache: npm
 
-      - name: Install dependencies
-        run: npm ci # Utiliser 'ci' pour une installation propre et reproductible
+      - name: Install dependencies with timing
+        run: npm ci --timing=true # Ajout de --timing=true
+
+      - name: Display npm debug log
+        run: | # Nouvelle étape pour afficher le log
+          echo "Contents of npm-debug.log:"
+          cat npm-debug.log || echo "npm-debug.log not found."
+        # `cat` échouera si le fichier n'existe pas, donc on ajoute un fallback.
+        # Le fichier est généralement créé à la racine du projet.
+        # S'il est créé ailleurs, ajustez le chemin vers npm-debug.log.
 
       - name: Run linter
         run: npm run lint
