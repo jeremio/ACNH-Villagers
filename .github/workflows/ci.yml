@@ -18,31 +18,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4 # Action pour récupérer votre code
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10.11.0 # Correspond à votre packageManager
+
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4 # Action pour configurer Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm
+          cache: pnpm # Important: garder pour le caching des dépendances pnpm
 
-      - name: Install dependencies with timing
-        run: npm ci --timing=true # Ajout de --timing=true
+      - name: Verify pnpm installation
+        run: pnpm --version
 
-      - name: Display npm debug log
-        run: | # Nouvelle étape pour afficher le log
-          echo "Contents of npm-debug.log:"
-          cat npm-debug.log || echo "npm-debug.log not found."
-        # `cat` échouera si le fichier n'existe pas, donc on ajoute un fallback.
-        # Le fichier est généralement créé à la racine du projet.
-        # S'il est créé ailleurs, ajustez le chemin vers npm-debug.log.
+      - name: Install dependencies
+        run: pnpm install # Utiliser pnpm pour installer les dépendances
+        # En CI, pnpm install utilisera automatiquement le lockfile (pnpm-lock.yaml),
+        # similaire à `npm ci`. L'option --frozen-lockfile est implicite.
 
       - name: Run linter
-        run: npm run lint
+        run: pnpm run lint # Les scripts npm fonctionnent de la même manière avec pnpm
 
       - name: Run TypeScript type check
-        run: npm run type-check
+        run: pnpm run type-check
 
       - name: Build project and generate visualizer report
-        run: npm run build # Utilise votre script qui devrait activer rollup-plugin-visualizer
+        run: pnpm run build # Utilise votre script qui devrait activer rollup-plugin-visualizer
 
       - name: Display build folder size
         run: |
