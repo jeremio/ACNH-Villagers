@@ -19,7 +19,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.1",
+    "@antfu/eslint-config": "^4.13.2",
     "@intlify/unplugin-vue-i18n": "^6.0.8",
     "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^9.27.0",
