@@ -19,7 +19,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.1",
+    "@antfu/eslint-config": "^4.13.2",
     "@intlify/unplugin-vue-i18n": "^6.0.8",
     "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^9.27.0",
@@ -27,7 +27,7 @@
     "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "^5.8.3",
     "vfonts": "^0.0.3",
-    "vite": "npm:rolldown-vite@^6.3.11",
+    "vite": "npm:rolldown-vite@^6.3.12",
     "vite-plugin-vue-devtools": "^7.7.6",
     "vue-tsc": "^2.2.10"
   },
