@@ -24,7 +24,7 @@
     "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^9.29.0",
     "naive-ui": "^2.42.0",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "rollup-plugin-visualizer": "^6.0.3",
     "typescript": "^5.8.3",
     "vfonts": "^0.0.3",
     "vite": "7.0.0-beta.2",
