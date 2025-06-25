@@ -1,7 +1,6 @@
 import type { Character } from '@/interfaces/Character'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
-import infoVillagers from '@/assets/villagers.json'
 
 export const useGlobalStore = defineStore('global', () => {
   // State
@@ -13,8 +12,18 @@ export const useGlobalStore = defineStore('global', () => {
   const language = ref('fr')
 
   // Actions
-  function setVillagers() {
-    villagers.value = [...infoVillagers] as Character[]
+  async function setVillagers() {
+    try {
+      const response = await fetch('/villagers.json')
+      if (!response.ok)
+        throw new Error('Network response was not ok')
+
+      const data = await response.json()
+      villagers.value = data as Character[]
+    }
+    catch (error) {
+      console.error('There has been a problem with your fetch operation:', error)
+    }
   }
 
   // Getters

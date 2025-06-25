@@ -1,0 +1,5087 @@
+[
+  {
+    "id": 1,
+    "file-name": "ant00",
+    "name": {
+      "name-EUen": "Cyrano",
+      "name-EUfr": "Cyrano"
+    },
+    "personality": "Cranky",
+    "birthday-string": "March 9th",
+    "specie": "Anteater",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 2,
+    "file-name": "ant01",
+    "name": {
+      "name-EUen": "Antonio",
+      "name-EUfr": "Antonio"
+    },
+    "personality": "Jock",
+    "birthday-string": "October 20th",
+    "specie": "Anteater",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 3,
+    "file-name": "ant02",
+    "name": {
+      "name-EUen": "Pango",
+      "name-EUfr": "Mathilda"
+    },
+    "personality": "Peppy",
+    "birthday-string": "November 9th",
+    "specie": "Anteater",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 4,
+    "file-name": "ant03",
+    "name": {
+      "name-EUen": "Anabelle",
+      "name-EUfr": "Anabelle"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 16th",
+    "specie": "Anteater",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 5,
+    "file-name": "ant06",
+    "name": {
+      "name-EUen": "Snooty",
+      "name-EUfr": "Tarina"
+    },
+    "personality": "Snooty",
+    "birthday-string": "October 24th",
+    "specie": "Anteater",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 6,
+    "file-name": "ant08",
+    "name": {
+      "name-EUen": "Annalisa",
+      "name-EUfr": "Roberta"
+    },
+    "personality": "Normal",
+    "birthday-string": "February 6th",
+    "specie": "Anteater",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 7,
+    "file-name": "ant09",
+    "name": {
+      "name-EUen": "Olaf",
+      "name-EUfr": "Blair"
+    },
+    "personality": "Smug",
+    "birthday-string": "May 19th",
+    "specie": "Anteater",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 8,
+    "file-name": "bea00",
+    "name": {
+      "name-EUen": "Teddy",
+      "name-EUfr": "Teddy"
+    },
+    "personality": "Jock",
+    "birthday-string": "September 26th",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 9,
+    "file-name": "bea01",
+    "name": {
+      "name-EUen": "Pinky",
+      "name-EUfr": "Rosine"
+    },
+    "personality": "Peppy",
+    "birthday-string": "September 9th",
+    "specie": "Bear",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 10,
+    "file-name": "bea02",
+    "name": {
+      "name-EUen": "Curt",
+      "name-EUfr": "Curt"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 1st",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 11,
+    "file-name": "bea03",
+    "name": {
+      "name-EUen": "Chow",
+      "name-EUfr": "Chulin"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 22nd",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 12,
+    "file-name": "bea05",
+    "name": {
+      "name-EUen": "Nate",
+      "name-EUfr": "Nathan"
+    },
+    "personality": "Lazy",
+    "birthday-string": "August 16th",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 13,
+    "file-name": "bea06",
+    "name": {
+      "name-EUen": "Groucho",
+      "name-EUfr": "Ronchon"
+    },
+    "personality": "Cranky",
+    "birthday-string": "October 23rd",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 14,
+    "file-name": "bea07",
+    "name": {
+      "name-EUen": "Tutu",
+      "name-EUfr": "Tutu"
+    },
+    "personality": "Peppy",
+    "birthday-string": "September 15th",
+    "specie": "Bear",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 15,
+    "file-name": "bea08",
+    "name": {
+      "name-EUen": "Ursala",
+      "name-EUfr": "Oursula"
+    },
+    "personality": "Uchi",
+    "birthday-string": "January 16th",
+    "specie": "Bear",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 16,
+    "file-name": "bea09",
+    "name": {
+      "name-EUen": "Grizzly",
+      "name-EUfr": "Grizzly"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 31st",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 17,
+    "file-name": "bea10",
+    "name": {
+      "name-EUen": "Paula",
+      "name-EUfr": "Wendy"
+    },
+    "personality": "Uchi",
+    "birthday-string": "March 22nd",
+    "specie": "Bear",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 18,
+    "file-name": "bea11",
+    "name": {
+      "name-EUen": "Ike",
+      "name-EUfr": "Isaac"
+    },
+    "personality": "Cranky",
+    "birthday-string": "May 16th",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 19,
+    "file-name": "bea12",
+    "name": {
+      "name-EUen": "Charlise",
+      "name-EUfr": "Zabou"
+    },
+    "personality": "Uchi",
+    "birthday-string": "April 17th",
+    "specie": "Bear",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 20,
+    "file-name": "bea13",
+    "name": {
+      "name-EUen": "Beardo",
+      "name-EUfr": "Eustache"
+    },
+    "personality": "Smug",
+    "birthday-string": "September 27th",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 21,
+    "file-name": "bea14",
+    "name": {
+      "name-EUen": "Klaus",
+      "name-EUfr": "Klaus"
+    },
+    "personality": "Smug",
+    "birthday-string": "March 31st",
+    "specie": "Bear",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 22,
+    "file-name": "bea15",
+    "name": {
+      "name-EUen": "Megan",
+      "name-EUfr": "Candy"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 13th",
+    "specie": "Bear",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 23,
+    "file-name": "brd00",
+    "name": {
+      "name-EUen": "Jay",
+      "name-EUfr": "Gérard"
+    },
+    "personality": "Jock",
+    "birthday-string": "July 17th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 24,
+    "file-name": "brd01",
+    "name": {
+      "name-EUen": "Robin",
+      "name-EUfr": "Robie"
+    },
+    "personality": "Snooty",
+    "birthday-string": "December 4th",
+    "specie": "Bird",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 25,
+    "file-name": "brd02",
+    "name": {
+      "name-EUen": "Anchovy",
+      "name-EUfr": "Miguel"
+    },
+    "personality": "Lazy",
+    "birthday-string": "March 4th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 26,
+    "file-name": "brd03",
+    "name": {
+      "name-EUen": "Twiggy",
+      "name-EUfr": "Titi"
+    },
+    "personality": "Peppy",
+    "birthday-string": "July 13th",
+    "specie": "Bird",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 27,
+    "file-name": "brd04",
+    "name": {
+      "name-EUen": "Jitters",
+      "name-EUfr": "Gilbert"
+    },
+    "personality": "Jock",
+    "birthday-string": "February 2nd",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 28,
+    "file-name": "brd05",
+    "name": {
+      "name-EUen": "Piper",
+      "name-EUfr": "Neige"
+    },
+    "personality": "Peppy",
+    "birthday-string": "April 18th",
+    "specie": "Bird",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 29,
+    "file-name": "brd06",
+    "name": {
+      "name-EUen": "Admiral",
+      "name-EUfr": "Maréchal"
+    },
+    "personality": "Cranky",
+    "birthday-string": "January 27th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 30,
+    "file-name": "brd08",
+    "name": {
+      "name-EUen": "Midge",
+      "name-EUfr": "Michèle"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 12th",
+    "specie": "Bird",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 31,
+    "file-name": "brd11",
+    "name": {
+      "name-EUen": "Jakey",
+      "name-EUfr": "Jacob"
+    },
+    "personality": "Lazy",
+    "birthday-string": "August 24th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 32,
+    "file-name": "brd15",
+    "name": {
+      "name-EUen": "Lucha",
+      "name-EUfr": "Condor"
+    },
+    "personality": "Smug",
+    "birthday-string": "December 12th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 33,
+    "file-name": "brd16",
+    "name": {
+      "name-EUen": "Jacques",
+      "name-EUfr": "Jacky"
+    },
+    "personality": "Smug",
+    "birthday-string": "June 22nd",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 34,
+    "file-name": "brd17",
+    "name": {
+      "name-EUen": "Peck",
+      "name-EUfr": "Pec"
+    },
+    "personality": "Jock",
+    "birthday-string": "July 25th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 35,
+    "file-name": "brd18",
+    "name": {
+      "name-EUen": "Sparro",
+      "name-EUfr": "Darius"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 20th",
+    "specie": "Bird",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 36,
+    "file-name": "bul00",
+    "name": {
+      "name-EUen": "Angus",
+      "name-EUfr": "Angus"
+    },
+    "personality": "Cranky",
+    "birthday-string": "April 30th",
+    "specie": "Bull",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 37,
+    "file-name": "bul01",
+    "name": {
+      "name-EUen": "Rodeo",
+      "name-EUfr": "Flèche"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 29th",
+    "specie": "Bull",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 38,
+    "file-name": "bul03",
+    "name": {
+      "name-EUen": "Stu",
+      "name-EUfr": "Beubeu"
+    },
+    "personality": "Lazy",
+    "birthday-string": "April 20th",
+    "specie": "Bull",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 39,
+    "file-name": "bul05",
+    "name": {
+      "name-EUen": "T-Bone",
+      "name-EUfr": "Steakos"
+    },
+    "personality": "Cranky",
+    "birthday-string": "May 20th",
+    "specie": "Bull",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 40,
+    "file-name": "bul07",
+    "name": {
+      "name-EUen": "Coach",
+      "name-EUfr": "Arnold"
+    },
+    "personality": "Jock",
+    "birthday-string": "April 29th",
+    "specie": "Bull",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 41,
+    "file-name": "bul08",
+    "name": {
+      "name-EUen": "Vic",
+      "name-EUfr": "Toto"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 29th",
+    "specie": "Bull",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 42,
+    "file-name": "cat00",
+    "name": {
+      "name-EUen": "Bob",
+      "name-EUfr": "Robert"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 1st",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 43,
+    "file-name": "cat01",
+    "name": {
+      "name-EUen": "Mitzi",
+      "name-EUfr": "Mistigri"
+    },
+    "personality": "Normal",
+    "birthday-string": "September 25th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 44,
+    "file-name": "cat02",
+    "name": {
+      "name-EUen": "Rosie",
+      "name-EUfr": "Rosie"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 27th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 45,
+    "file-name": "cat03",
+    "name": {
+      "name-EUen": "Olivia",
+      "name-EUfr": "Olivia"
+    },
+    "personality": "Snooty",
+    "birthday-string": "February 3rd",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Music"
+
+  },
+  {
+    "id": 46,
+    "file-name": "cat04",
+    "name": {
+      "name-EUen": "Kiki",
+      "name-EUfr": "Kiki"
+    },
+    "personality": "Normal",
+    "birthday-string": "October 8th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 47,
+    "file-name": "cat05",
+    "name": {
+      "name-EUen": "Tangy",
+      "name-EUfr": "Marine"
+    },
+    "personality": "Peppy",
+    "birthday-string": "June 17th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 48,
+    "file-name": "cat06",
+    "name": {
+      "name-EUen": "Punchy",
+      "name-EUfr": "Cédric"
+    },
+    "personality": "Lazy",
+    "birthday-string": "April 11th",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 49,
+    "file-name": "cat07",
+    "name": {
+      "name-EUen": "Purrl",
+      "name-EUfr": "Perle"
+    },
+    "personality": "Snooty",
+    "birthday-string": "May 29th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 50,
+    "file-name": "cat08",
+    "name": {
+      "name-EUen": "Moe",
+      "name-EUfr": "Momo"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 12th",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 51,
+    "file-name": "cat09",
+    "name": {
+      "name-EUen": "Kabuki",
+      "name-EUfr": "Kabuki"
+    },
+    "personality": "Cranky",
+    "birthday-string": "November 29th",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 52,
+    "file-name": "cat10",
+    "name": {
+      "name-EUen": "Kid Cat",
+      "name-EUfr": "Câlin"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 1st",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 53,
+    "file-name": "cat11",
+    "name": {
+      "name-EUen": "Monique",
+      "name-EUfr": "Monique"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 30th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 54,
+    "file-name": "cat12",
+    "name": {
+      "name-EUen": "Tabby",
+      "name-EUfr": "Tigri"
+    },
+    "personality": "Peppy",
+    "birthday-string": "August 13th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 55,
+    "file-name": "cat13",
+    "name": {
+      "name-EUen": "Stinky",
+      "name-EUfr": "Tupux"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 17th",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 56,
+    "file-name": "cat14",
+    "name": {
+      "name-EUen": "Kitty",
+      "name-EUfr": "Kitty"
+    },
+    "personality": "Snooty",
+    "birthday-string": "February 15th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 57,
+    "file-name": "cat15",
+    "name": {
+      "name-EUen": "Tom",
+      "name-EUfr": "Tom"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 10th",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 58,
+    "file-name": "cat16",
+    "name": {
+      "name-EUen": "Merry",
+      "name-EUfr": "Suzy"
+    },
+    "personality": "Peppy",
+    "birthday-string": "June 29th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 59,
+    "file-name": "cat17",
+    "name": {
+      "name-EUen": "Felicity",
+      "name-EUfr": "Maud"
+    },
+    "personality": "Peppy",
+    "birthday-string": "March 30th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 60,
+    "file-name": "cat18",
+    "name": {
+      "name-EUen": "Lolly",
+      "name-EUfr": "Linette"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 27th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 61,
+    "file-name": "cat19",
+    "name": {
+      "name-EUen": "Ankha",
+      "name-EUfr": "Neferti"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 22nd",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 62,
+    "file-name": "cat20",
+    "name": {
+      "name-EUen": "Rudy",
+      "name-EUfr": "Rougepif"
+    },
+    "personality": "Jock",
+    "birthday-string": "December 20th",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 63,
+    "file-name": "cat21",
+    "name": {
+      "name-EUen": "Katt",
+      "name-EUfr": "Kat"
+    },
+    "personality": "Uchi",
+    "birthday-string": "April 27th",
+    "specie": "Cat",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 64,
+    "file-name": "cat23",
+    "name": {
+      "name-EUen": "Raymond",
+      "name-EUfr": "Raymond"
+    },
+    "personality": "Smug",
+    "birthday-string": "October 1st",
+    "specie": "Cat",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 65,
+    "file-name": "cbr00",
+    "name": {
+      "name-EUen": "Bluebear",
+      "name-EUfr": "Myrtille"
+    },
+    "personality": "Peppy",
+    "birthday-string": "June 24th",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 66,
+    "file-name": "cbr01",
+    "name": {
+      "name-EUen": "Maple",
+      "name-EUfr": "Léa"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 15th",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 67,
+    "file-name": "cbr02",
+    "name": {
+      "name-EUen": "Poncho",
+      "name-EUfr": "Théo"
+    },
+    "personality": "Jock",
+    "birthday-string": "January 2nd",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 68,
+    "file-name": "cbr03",
+    "name": {
+      "name-EUen": "Pudge",
+      "name-EUfr": "Gradub"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 11th",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 69,
+    "file-name": "cbr04",
+    "name": {
+      "name-EUen": "Kody",
+      "name-EUfr": "Bill"
+    },
+    "personality": "Jock",
+    "birthday-string": "September 28th",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 70,
+    "file-name": "cbr05",
+    "name": {
+      "name-EUen": "Stitches",
+      "name-EUfr": "Miro"
+    },
+    "personality": "Lazy",
+    "birthday-string": "February 10th",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 71,
+    "file-name": "cbr06",
+    "name": {
+      "name-EUen": "Vladimir",
+      "name-EUfr": "Vladimir"
+    },
+    "personality": "Cranky",
+    "birthday-string": "August 2nd",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 72,
+    "file-name": "cbr07",
+    "name": {
+      "name-EUen": "Murphy",
+      "name-EUfr": "Eddie"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 29th",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 73,
+    "file-name": "cbr09",
+    "name": {
+      "name-EUen": "Olive",
+      "name-EUfr": "Grisa"
+    },
+    "personality": "Normal",
+    "birthday-string": "July 12th",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 74,
+    "file-name": "cbr10",
+    "name": {
+      "name-EUen": "Cheri",
+      "name-EUfr": "Rosalie"
+    },
+    "personality": "Peppy",
+    "birthday-string": "March 17th",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 75,
+    "file-name": "cbr13",
+    "name": {
+      "name-EUen": "June",
+      "name-EUfr": "Agnès"
+    },
+    "personality": "Normal",
+    "birthday-string": "May 21st",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 76,
+    "file-name": "cbr14",
+    "name": {
+      "name-EUen": "Pekoe",
+      "name-EUfr": "Pauline"
+    },
+    "personality": "Normal",
+    "birthday-string": "May 18th",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 77,
+    "file-name": "cbr15",
+    "name": {
+      "name-EUen": "Chester",
+      "name-EUfr": "Placide"
+    },
+    "personality": "Lazy",
+    "birthday-string": "August 6th",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 78,
+    "file-name": "cbr16",
+    "name": {
+      "name-EUen": "Barold",
+      "name-EUfr": "Manu"
+    },
+    "personality": "Lazy",
+    "birthday-string": "March 2nd",
+    "specie": "Cub",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 79,
+    "file-name": "cbr17",
+    "name": {
+      "name-EUen": "Tammy",
+      "name-EUfr": "Vanessa"
+    },
+    "personality": "Uchi",
+    "birthday-string": "June 23rd",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 80,
+    "file-name": "cbr19",
+    "name": {
+      "name-EUen": "Judy",
+      "name-EUfr": "Laura"
+    },
+    "personality": "Snooty",
+    "birthday-string": "March 10th",
+    "specie": "Cub",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 81,
+    "file-name": "chn00",
+    "name": {
+      "name-EUen": "Goose",
+      "name-EUfr": "Pouli"
+    },
+    "personality": "Jock",
+    "birthday-string": "October 4th",
+    "specie": "Chicken",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 82,
+    "file-name": "chn01",
+    "name": {
+      "name-EUen": "Benedict",
+      "name-EUfr": "Dimitri"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 10th",
+    "specie": "Chicken",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 83,
+    "file-name": "chn02",
+    "name": {
+      "name-EUen": "Egbert",
+      "name-EUfr": "Herbert"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 14th",
+    "specie": "Chicken",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 84,
+    "file-name": "chn05",
+    "name": {
+      "name-EUen": "Ava",
+      "name-EUfr": "Eva"
+    },
+    "personality": "Normal",
+    "birthday-string": "April 28th",
+    "specie": "Chicken",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 85,
+    "file-name": "chn09",
+    "name": {
+      "name-EUen": "Becky",
+      "name-EUfr": "Sonya"
+    },
+    "personality": "Snooty",
+    "birthday-string": "December 9th",
+    "specie": "Chicken",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 86,
+    "file-name": "chn10",
+    "name": {
+      "name-EUen": "Plucky",
+      "name-EUfr": "Poulette"
+    },
+    "personality": "Uchi",
+    "birthday-string": "October 12th",
+    "specie": "Chicken",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 87,
+    "file-name": "chn11",
+    "name": {
+      "name-EUen": "Knox",
+      "name-EUfr": "Wolfram"
+    },
+    "personality": "Cranky",
+    "birthday-string": "November 23rd",
+    "specie": "Chicken",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 88,
+    "file-name": "chn12",
+    "name": {
+      "name-EUen": "Broffina",
+      "name-EUfr": "Jo"
+    },
+    "personality": "Snooty",
+    "birthday-string": "October 24th",
+    "specie": "Chicken",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 89,
+    "file-name": "chn13",
+    "name": {
+      "name-EUen": "Ken",
+      "name-EUfr": "Ken"
+    },
+    "personality": "Smug",
+    "birthday-string": "December 23rd",
+    "specie": "Chicken",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 90,
+    "file-name": "cow00",
+    "name": {
+      "name-EUen": "Patty",
+      "name-EUfr": "Margaux"
+    },
+    "personality": "Peppy",
+    "birthday-string": "May 10th",
+    "specie": "Cow",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 91,
+    "file-name": "cow01",
+    "name": {
+      "name-EUen": "Tipper",
+      "name-EUfr": "Valé"
+    },
+    "personality": "Snooty",
+    "birthday-string": "August 25th",
+    "specie": "Cow",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 92,
+    "file-name": "cow06",
+    "name": {
+      "name-EUen": "Norma",
+      "name-EUfr": "Norma"
+    },
+    "personality": "Normal",
+    "birthday-string": "September 20th",
+    "specie": "Cow",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 93,
+    "file-name": "cow07",
+    "name": {
+      "name-EUen": "Naomi",
+      "name-EUfr": "Maiko"
+    },
+    "personality": "Snooty",
+    "birthday-string": "February 28th",
+    "specie": "Cow",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 94,
+    "file-name": "crd00",
+    "name": {
+      "name-EUen": "Alfonso",
+      "name-EUfr": "Alphonse"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 9th",
+    "specie": "Alligator",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 95,
+    "file-name": "crd01",
+    "name": {
+      "name-EUen": "Alli",
+      "name-EUfr": "Allie"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 8th",
+    "specie": "Alligator",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 96,
+    "file-name": "crd02",
+    "name": {
+      "name-EUen": "Boots",
+      "name-EUfr": "Croko"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 7th",
+    "specie": "Alligator",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 97,
+    "file-name": "crd04",
+    "name": {
+      "name-EUen": "Del",
+      "name-EUfr": "Hector"
+    },
+    "personality": "Cranky",
+    "birthday-string": "May 27th",
+    "specie": "Alligator",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 98,
+    "file-name": "crd06",
+    "name": {
+      "name-EUen": "Sly",
+      "name-EUfr": "Chuck"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 15th",
+    "specie": "Alligator",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 99,
+    "file-name": "crd07",
+    "name": {
+      "name-EUen": "Gayle",
+      "name-EUfr": "Odile"
+    },
+    "personality": "Normal",
+    "birthday-string": "May 17th",
+    "specie": "Alligator",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 100,
+    "file-name": "crd08",
+    "name": {
+      "name-EUen": "Drago",
+      "name-EUfr": "Drago"
+    },
+    "personality": "Lazy",
+    "birthday-string": "February 12th",
+    "specie": "Alligator",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 101,
+    "file-name": "der00",
+    "name": {
+      "name-EUen": "Fauna",
+      "name-EUfr": "Bibi"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 26th",
+    "specie": "Deer",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 102,
+    "file-name": "der01",
+    "name": {
+      "name-EUen": "Bam",
+      "name-EUfr": "Nacer"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 7th",
+    "specie": "Deer",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 103,
+    "file-name": "der02",
+    "name": {
+      "name-EUen": "Zell",
+      "name-EUfr": "Régis"
+    },
+    "personality": "Smug",
+    "birthday-string": "June 7th",
+    "specie": "Deer",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 104,
+    "file-name": "der03",
+    "name": {
+      "name-EUen": "Bruce",
+      "name-EUfr": "Boubou"
+    },
+    "personality": "Cranky",
+    "birthday-string": "May 26th",
+    "specie": "Deer",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 105,
+    "file-name": "der04",
+    "name": {
+      "name-EUen": "Deirdre",
+      "name-EUfr": "Bichoune"
+    },
+    "personality": "Uchi",
+    "birthday-string": "May 4th",
+    "specie": "Deer",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 106,
+    "file-name": "der05",
+    "name": {
+      "name-EUen": "Lopez",
+      "name-EUfr": "Jon"
+    },
+    "personality": "Smug",
+    "birthday-string": "August 20th",
+    "specie": "Deer",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 107,
+    "file-name": "der06",
+    "name": {
+      "name-EUen": "Fuchsia",
+      "name-EUfr": "Rosanne"
+    },
+    "personality": "Uchi",
+    "birthday-string": "September 19th",
+    "specie": "Deer",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 108,
+    "file-name": "der07",
+    "name": {
+      "name-EUen": "Beau",
+      "name-EUfr": "Stefaon"
+    },
+    "personality": "Lazy",
+    "birthday-string": "April 5th",
+    "specie": "Deer",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 109,
+    "file-name": "der08",
+    "name": {
+      "name-EUen": "Diana",
+      "name-EUfr": "Didi"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 4th",
+    "specie": "Deer",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 110,
+    "file-name": "der09",
+    "name": {
+      "name-EUen": "Erik",
+      "name-EUfr": "Abraham"
+    },
+    "personality": "Lazy",
+    "birthday-string": "July 27th",
+    "specie": "Deer",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 111,
+    "file-name": "dog00",
+    "name": {
+      "name-EUen": "Goldie",
+      "name-EUfr": "Mirza"
+    },
+    "personality": "Normal",
+    "birthday-string": "December 27th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 112,
+    "file-name": "dog01",
+    "name": {
+      "name-EUen": "Butch",
+      "name-EUfr": "Avril"
+    },
+    "personality": "Cranky",
+    "birthday-string": "November 1st",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 113,
+    "file-name": "dog02",
+    "name": {
+      "name-EUen": "Lucky",
+      "name-EUfr": "Ramsès"
+    },
+    "personality": "Lazy",
+    "birthday-string": "November 4th",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 114,
+    "file-name": "dog03",
+    "name": {
+      "name-EUen": "Biskit",
+      "name-EUfr": "Crocket"
+    },
+    "personality": "Lazy",
+    "birthday-string": "May 13th",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 115,
+    "file-name": "dog04",
+    "name": {
+      "name-EUen": "Bones",
+      "name-EUfr": "Nonos"
+    },
+    "personality": "Lazy",
+    "birthday-string": "August 4th",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 116,
+    "file-name": "dog05",
+    "name": {
+      "name-EUen": "Portia",
+      "name-EUfr": "Dalma"
+    },
+    "personality": "Snooty",
+    "birthday-string": "October 25th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 117,
+    "file-name": "dog06",
+    "name": {
+      "name-EUen": "Walker",
+      "name-EUfr": "George"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 10th",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 118,
+    "file-name": "dog07",
+    "name": {
+      "name-EUen": "Daisy",
+      "name-EUfr": "Naomie"
+    },
+    "personality": "Normal",
+    "birthday-string": "November 16th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 119,
+    "file-name": "dog08",
+    "name": {
+      "name-EUen": "Cookie",
+      "name-EUfr": "Cookie"
+    },
+    "personality": "Peppy",
+    "birthday-string": "June 18th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 120,
+    "file-name": "dog09",
+    "name": {
+      "name-EUen": "Maddie",
+      "name-EUfr": "Olympe"
+    },
+    "personality": "Peppy",
+    "birthday-string": "January 11th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 121,
+    "file-name": "dog10",
+    "name": {
+      "name-EUen": "Bea",
+      "name-EUfr": "Béa"
+    },
+    "personality": "Normal",
+    "birthday-string": "October 15th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 122,
+    "file-name": "dog14",
+    "name": {
+      "name-EUen": "Mac",
+      "name-EUfr": "Brutus"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 11th",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 123,
+    "file-name": "dog15",
+    "name": {
+      "name-EUen": "Marcel",
+      "name-EUfr": "Ismaël"
+    },
+    "personality": "Lazy",
+    "birthday-string": "December 31st",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 124,
+    "file-name": "dog16",
+    "name": {
+      "name-EUen": "Benjamin",
+      "name-EUfr": "Bernardo"
+    },
+    "personality": "Lazy",
+    "birthday-string": "August 3rd",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 125,
+    "file-name": "dog17",
+    "name": {
+      "name-EUen": "Cherry",
+      "name-EUfr": "Anna"
+    },
+    "personality": "Uchi",
+    "birthday-string": "May 11th",
+    "specie": "Dog",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 126,
+    "file-name": "dog18",
+    "name": {
+      "name-EUen": "Shep",
+      "name-EUfr": "Mehdi"
+    },
+    "personality": "Smug",
+    "birthday-string": "November 24th",
+    "specie": "Dog",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 127,
+    "file-name": "duk00",
+    "name": {
+      "name-EUen": "Bill",
+      "name-EUfr": "Choco"
+    },
+    "personality": "Jock",
+    "birthday-string": "February 1st",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 128,
+    "file-name": "duk01",
+    "name": {
+      "name-EUen": "Joey",
+      "name-EUfr": "Joseph"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 3rd",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 129,
+    "file-name": "duk02",
+    "name": {
+      "name-EUen": "Pate",
+      "name-EUfr": "Terrine"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 23rd",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 130,
+    "file-name": "duk03",
+    "name": {
+      "name-EUen": "Maelle",
+      "name-EUfr": "Maëlle"
+    },
+    "personality": "Snooty",
+    "birthday-string": "April 8th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 131,
+    "file-name": "duk04",
+    "name": {
+      "name-EUen": "Deena",
+      "name-EUfr": "Mina"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 27th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 132,
+    "file-name": "duk05",
+    "name": {
+      "name-EUen": "Pompom",
+      "name-EUfr": "Pompon"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 11th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 133,
+    "file-name": "duk06",
+    "name": {
+      "name-EUen": "Mallary",
+      "name-EUfr": "Mallory"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 17th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 134,
+    "file-name": "duk07",
+    "name": {
+      "name-EUen": "Freckles",
+      "name-EUfr": "Caro"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 19th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 135,
+    "file-name": "duk08",
+    "name": {
+      "name-EUen": "Derwin",
+      "name-EUfr": "Prof"
+    },
+    "personality": "Lazy",
+    "birthday-string": "May 25th",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 136,
+    "file-name": "duk09",
+    "name": {
+      "name-EUen": "Drake",
+      "name-EUfr": "Colvert"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 25th",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 137,
+    "file-name": "duk10",
+    "name": {
+      "name-EUen": "Scoot",
+      "name-EUfr": "Scooter"
+    },
+    "personality": "Jock",
+    "birthday-string": "June 13th",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 138,
+    "file-name": "duk11",
+    "name": {
+      "name-EUen": "Weber",
+      "name-EUfr": "Bébert"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 30th",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 139,
+    "file-name": "duk12",
+    "name": {
+      "name-EUen": "Miranda",
+      "name-EUfr": "Maëllis"
+    },
+    "personality": "Snooty",
+    "birthday-string": "April 23rd",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 140,
+    "file-name": "duk13",
+    "name": {
+      "name-EUen": "Ketchup",
+      "name-EUfr": "Ketchup"
+    },
+    "personality": "Peppy",
+    "birthday-string": "July 27th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 141,
+    "file-name": "duk15",
+    "name": {
+      "name-EUen": "Gloria",
+      "name-EUfr": "Déborah"
+    },
+    "personality": "Snooty",
+    "birthday-string": "August 12th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 142,
+    "file-name": "duk16",
+    "name": {
+      "name-EUen": "Molly",
+      "name-EUfr": "Molly"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 7th",
+    "specie": "Duck",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 143,
+    "file-name": "duk17",
+    "name": {
+      "name-EUen": "Quillson",
+      "name-EUfr": "Narcisse"
+    },
+    "personality": "Smug",
+    "birthday-string": "December 22nd",
+    "specie": "Duck",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 144,
+    "file-name": "elp00",
+    "name": {
+      "name-EUen": "Opal",
+      "name-EUfr": "Opaline"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 20th",
+    "specie": "Elephant",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 145,
+    "file-name": "elp01",
+    "name": {
+      "name-EUen": "Dizzy",
+      "name-EUfr": "Pachy"
+    },
+    "personality": "Lazy",
+    "birthday-string": "July 14th",
+    "specie": "Elephant",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 146,
+    "file-name": "elp02",
+    "name": {
+      "name-EUen": "Big Top",
+      "name-EUfr": "Miles"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 3rd",
+    "specie": "Elephant",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 147,
+    "file-name": "elp03",
+    "name": {
+      "name-EUen": "Eloise",
+      "name-EUfr": "Éloïse"
+    },
+    "personality": "Snooty",
+    "birthday-string": "December 8th",
+    "specie": "Elephant",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 148,
+    "file-name": "elp04",
+    "name": {
+      "name-EUen": "Margie",
+      "name-EUfr": "Maguy"
+    },
+    "personality": "Normal",
+    "birthday-string": "January 28th",
+    "specie": "Elephant",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 149,
+    "file-name": "elp05",
+    "name": {
+      "name-EUen": "Paolo",
+      "name-EUfr": "Paolo"
+    },
+    "personality": "Lazy",
+    "birthday-string": "May 5th",
+    "specie": "Elephant",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 150,
+    "file-name": "elp06",
+    "name": {
+      "name-EUen": "Axel",
+      "name-EUfr": "Axel"
+    },
+    "personality": "Jock",
+    "birthday-string": "March 23rd",
+    "specie": "Elephant",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 151,
+    "file-name": "elp07",
+    "name": {
+      "name-EUen": "Ellie",
+      "name-EUfr": "Ella"
+    },
+    "personality": "Normal",
+    "birthday-string": "May 12th",
+    "specie": "Elephant",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 152,
+    "file-name": "elp09",
+    "name": {
+      "name-EUen": "Tucker",
+      "name-EUfr": "Barry"
+    },
+    "personality": "Lazy",
+    "birthday-string": "September 7th",
+    "specie": "Elephant",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 153,
+    "file-name": "elp10",
+    "name": {
+      "name-EUen": "Tia",
+      "name-EUfr": "Fanny"
+    },
+    "personality": "Normal",
+    "birthday-string": "November 18th",
+    "specie": "Elephant",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 154,
+    "file-name": "elp12",
+    "name": {
+      "name-EUen": "Cyd",
+      "name-EUfr": "Punk"
+    },
+    "personality": "Cranky",
+    "birthday-string": "June 9th",
+    "specie": "Elephant",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 155,
+    "file-name": "flg00",
+    "name": {
+      "name-EUen": "Lily",
+      "name-EUfr": "Raina"
+    },
+    "personality": "Normal",
+    "birthday-string": "February 4th",
+    "specie": "Frog",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 156,
+    "file-name": "flg01",
+    "name": {
+      "name-EUen": "Ribbot",
+      "name-EUfr": "Crabot"
+    },
+    "personality": "Jock",
+    "birthday-string": "February 13th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 157,
+    "file-name": "flg02",
+    "name": {
+      "name-EUen": "Frobert",
+      "name-EUfr": "Verbert"
+    },
+    "personality": "Jock",
+    "birthday-string": "February 8th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 158,
+    "file-name": "flg03",
+    "name": {
+      "name-EUen": "Camofrog",
+      "name-EUfr": "Milos"
+    },
+    "personality": "Cranky",
+    "birthday-string": "June 5th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 159,
+    "file-name": "flg04",
+    "name": {
+      "name-EUen": "Drift",
+      "name-EUfr": "Gordon"
+    },
+    "personality": "Jock",
+    "birthday-string": "October 9th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 160,
+    "file-name": "flg05",
+    "name": {
+      "name-EUen": "Wart Jr.",
+      "name-EUfr": "Crakos"
+    },
+    "personality": "Cranky",
+    "birthday-string": "August 21st",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 161,
+    "file-name": "flg06",
+    "name": {
+      "name-EUen": "Puddles",
+      "name-EUfr": "Rénata"
+    },
+    "personality": "Peppy",
+    "birthday-string": "January 13th",
+    "specie": "Frog",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 162,
+    "file-name": "flg07",
+    "name": {
+      "name-EUen": "Jeremiah",
+      "name-EUfr": "Jérémie"
+    },
+    "personality": "Lazy",
+    "birthday-string": "July 8th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 163,
+    "file-name": "flg09",
+    "name": {
+      "name-EUen": "Tad",
+      "name-EUfr": "Rénato"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 3rd",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 164,
+    "file-name": "flg10",
+    "name": {
+      "name-EUen": "Cousteau",
+      "name-EUfr": "Figaro"
+    },
+    "personality": "Jock",
+    "birthday-string": "December 17th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 165,
+    "file-name": "flg11",
+    "name": {
+      "name-EUen": "Huck",
+      "name-EUfr": "Bajoue"
+    },
+    "personality": "Smug",
+    "birthday-string": "July 9th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 166,
+    "file-name": "flg12",
+    "name": {
+      "name-EUen": "Prince",
+      "name-EUfr": "Prince"
+    },
+    "personality": "Lazy",
+    "birthday-string": "July 21st",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 167,
+    "file-name": "flg13",
+    "name": {
+      "name-EUen": "Jambette",
+      "name-EUfr": "Gambette"
+    },
+    "personality": "Normal",
+    "birthday-string": "October 27th",
+    "specie": "Frog",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 168,
+    "file-name": "flg15",
+    "name": {
+      "name-EUen": "Raddle",
+      "name-EUfr": "Fabien"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 6th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 169,
+    "file-name": "flg16",
+    "name": {
+      "name-EUen": "Gigi",
+      "name-EUfr": "Gloria"
+    },
+    "personality": "Snooty",
+    "birthday-string": "August 11th",
+    "specie": "Frog",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 170,
+    "file-name": "flg17",
+    "name": {
+      "name-EUen": "Croque",
+      "name-EUfr": "Carlos"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 18th",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 171,
+    "file-name": "flg18",
+    "name": {
+      "name-EUen": "Diva",
+      "name-EUfr": "Violette"
+    },
+    "personality": "Uchi",
+    "birthday-string": "October 2nd",
+    "specie": "Frog",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 172,
+    "file-name": "flg19",
+    "name": {
+      "name-EUen": "Henry",
+      "name-EUfr": "Henri"
+    },
+    "personality": "Smug",
+    "birthday-string": "September 21st",
+    "specie": "Frog",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 173,
+    "file-name": "goa00",
+    "name": {
+      "name-EUen": "Chevre",
+      "name-EUfr": "Biquette"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 6th",
+    "specie": "Goat",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 174,
+    "file-name": "goa01",
+    "name": {
+      "name-EUen": "Nan",
+      "name-EUfr": "Nana"
+    },
+    "personality": "Normal",
+    "birthday-string": "August 24th",
+    "specie": "Goat",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 175,
+    "file-name": "goa02",
+    "name": {
+      "name-EUen": "Billy",
+      "name-EUfr": "Seguin"
+    },
+    "personality": "Jock",
+    "birthday-string": "March 25th",
+    "specie": "Goat",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 176,
+    "file-name": "goa04",
+    "name": {
+      "name-EUen": "Gruff",
+      "name-EUfr": "Grognon"
+    },
+    "personality": "Cranky",
+    "birthday-string": "August 29th",
+    "specie": "Goat",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 177,
+    "file-name": "goa06",
+    "name": {
+      "name-EUen": "Velma",
+      "name-EUfr": "Véra"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 14th",
+    "specie": "Goat",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 178,
+    "file-name": "goa07",
+    "name": {
+      "name-EUen": "Kidd",
+      "name-EUfr": "Moktar"
+    },
+    "personality": "Smug",
+    "birthday-string": "June 28th",
+    "specie": "Goat",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 179,
+    "file-name": "goa08",
+    "name": {
+      "name-EUen": "Pashmina",
+      "name-EUfr": "Chavrina"
+    },
+    "personality": "Uchi",
+    "birthday-string": "December 26th",
+    "specie": "Goat",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 180,
+    "file-name": "goa09",
+    "name": {
+      "name-EUen": "Sherb",
+      "name-EUfr": "Capri"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 18th",
+    "specie": "Goat",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 181,
+    "file-name": "gor00",
+    "name": {
+      "name-EUen": "Cesar",
+      "name-EUfr": "César"
+    },
+    "personality": "Cranky",
+    "birthday-string": "September 6th",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 182,
+    "file-name": "gor01",
+    "name": {
+      "name-EUen": "Peewee",
+      "name-EUfr": "Gogo"
+    },
+    "personality": "Cranky",
+    "birthday-string": "September 11th",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 183,
+    "file-name": "gor02",
+    "name": {
+      "name-EUen": "Boone",
+      "name-EUfr": "Babouin"
+    },
+    "personality": "Jock",
+    "birthday-string": "September 12th",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 184,
+    "file-name": "gor04",
+    "name": {
+      "name-EUen": "Louie",
+      "name-EUfr": "Louis"
+    },
+    "personality": "Jock",
+    "birthday-string": "March 26th",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 185,
+    "file-name": "gor05",
+    "name": {
+      "name-EUen": "Boyd",
+      "name-EUfr": "Primo"
+    },
+    "personality": "Cranky",
+    "birthday-string": "October 1st",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 186,
+    "file-name": "gor07",
+    "name": {
+      "name-EUen": "Violet",
+      "name-EUfr": "Gaëlle"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 1st",
+    "specie": "Gorilla",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 187,
+    "file-name": "gor08",
+    "name": {
+      "name-EUen": "Al",
+      "name-EUfr": "Gustave"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 18th",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 188,
+    "file-name": "gor09",
+    "name": {
+      "name-EUen": "Rocket",
+      "name-EUfr": "Gertrude"
+    },
+    "personality": "Uchi",
+    "birthday-string": "April 14th",
+    "specie": "Gorilla",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 189,
+    "file-name": "gor10",
+    "name": {
+      "name-EUen": "Hans",
+      "name-EUfr": "Loran"
+    },
+    "personality": "Smug",
+    "birthday-string": "December 5th",
+    "specie": "Gorilla",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 190,
+    "file-name": "ham00",
+    "name": {
+      "name-EUen": "Hamlet",
+      "name-EUfr": "Jojo"
+    },
+    "personality": "Jock",
+    "birthday-string": "May 30th",
+    "specie": "Hamster",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 191,
+    "file-name": "ham01",
+    "name": {
+      "name-EUen": "Apple",
+      "name-EUfr": "Esther"
+    },
+    "personality": "Peppy",
+    "birthday-string": "September 24th",
+    "specie": "Hamster",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 192,
+    "file-name": "ham02",
+    "name": {
+      "name-EUen": "Graham",
+      "name-EUfr": "Graham"
+    },
+    "personality": "Smug",
+    "birthday-string": "June 20th",
+    "specie": "Hamster",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 193,
+    "file-name": "ham03",
+    "name": {
+      "name-EUen": "Rodney",
+      "name-EUfr": "Chico"
+    },
+    "personality": "Smug",
+    "birthday-string": "November 10th",
+    "specie": "Hamster",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 194,
+    "file-name": "ham04",
+    "name": {
+      "name-EUen": "Soleil",
+      "name-EUfr": "Stella"
+    },
+    "personality": "Snooty",
+    "birthday-string": "August 9th",
+    "specie": "Hamster",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 195,
+    "file-name": "ham05",
+    "name": {
+      "name-EUen": "Clay",
+      "name-EUfr": "Guido"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 19th",
+    "specie": "Hamster",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 196,
+    "file-name": "ham06",
+    "name": {
+      "name-EUen": "Flurry",
+      "name-EUfr": "Emma"
+    },
+    "personality": "Normal",
+    "birthday-string": "January 30th",
+    "specie": "Hamster",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 197,
+    "file-name": "ham07",
+    "name": {
+      "name-EUen": "Hamphrey",
+      "name-EUfr": "Charles"
+    },
+    "personality": "Cranky",
+    "birthday-string": "February 25th",
+    "specie": "Hamster",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 198,
+    "file-name": "hip00",
+    "name": {
+      "name-EUen": "Rocco",
+      "name-EUfr": "Bebel"
+    },
+    "personality": "Cranky",
+    "birthday-string": "August 18th",
+    "specie": "Hippo",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 199,
+    "file-name": "hip02",
+    "name": {
+      "name-EUen": "Bubbles",
+      "name-EUfr": "Hippy"
+    },
+    "personality": "Peppy",
+    "birthday-string": "September 18th",
+    "specie": "Hippo",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 200,
+    "file-name": "hip03",
+    "name": {
+      "name-EUen": "Bertha",
+      "name-EUfr": "Bertha"
+    },
+    "personality": "Normal",
+    "birthday-string": "April 25th",
+    "specie": "Hippo",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 201,
+    "file-name": "hip04",
+    "name": {
+      "name-EUen": "Biff",
+      "name-EUfr": "Biff"
+    },
+    "personality": "Jock",
+    "birthday-string": "March 29th",
+    "specie": "Hippo",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 202,
+    "file-name": "hip05",
+    "name": {
+      "name-EUen": "Bitty",
+      "name-EUfr": "Potama"
+    },
+    "personality": "Snooty",
+    "birthday-string": "October 6th",
+    "specie": "Hippo",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 203,
+    "file-name": "hip08",
+    "name": {
+      "name-EUen": "Harry",
+      "name-EUfr": "Bob"
+    },
+    "personality": "Cranky",
+    "birthday-string": "January 7th",
+    "specie": "Hippo",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 204,
+    "file-name": "hip09",
+    "name": {
+      "name-EUen": "Hippeux",
+      "name-EUfr": "Paulito"
+    },
+    "personality": "Smug",
+    "birthday-string": "October 15th",
+    "specie": "Hippo",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 205,
+    "file-name": "hrs00",
+    "name": {
+      "name-EUen": "Buck",
+      "name-EUfr": "Daniel"
+    },
+    "personality": "Jock",
+    "birthday-string": "April 4th",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 206,
+    "file-name": "hrs01",
+    "name": {
+      "name-EUen": "Victoria",
+      "name-EUfr": "Victoria"
+    },
+    "personality": "Peppy",
+    "birthday-string": "July 11th",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 207,
+    "file-name": "hrs02",
+    "name": {
+      "name-EUen": "Savannah",
+      "name-EUfr": "Savana"
+    },
+    "personality": "Normal",
+    "birthday-string": "January 25th",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 208,
+    "file-name": "hrs03",
+    "name": {
+      "name-EUen": "Elmer",
+      "name-EUfr": "Martin"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 5th",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 209,
+    "file-name": "hrs04",
+    "name": {
+      "name-EUen": "Roscoe",
+      "name-EUfr": "Rosco"
+    },
+    "personality": "Cranky",
+    "birthday-string": "June 16th",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 210,
+    "file-name": "hrs05",
+    "name": {
+      "name-EUen": "Winnie",
+      "name-EUfr": "Anne"
+    },
+    "personality": "Peppy",
+    "birthday-string": "January 31st",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 211,
+    "file-name": "hrs06",
+    "name": {
+      "name-EUen": "Ed",
+      "name-EUfr": "Édouard"
+    },
+    "personality": "Smug",
+    "birthday-string": "September 16th",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 212,
+    "file-name": "hrs07",
+    "name": {
+      "name-EUen": "Cleo",
+      "name-EUfr": "Cléa"
+    },
+    "personality": "Snooty",
+    "birthday-string": "February 9th",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 213,
+    "file-name": "hrs08",
+    "name": {
+      "name-EUen": "Peaches",
+      "name-EUfr": "Prune"
+    },
+    "personality": "Normal",
+    "birthday-string": "November 28th",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 214,
+    "file-name": "hrs09",
+    "name": {
+      "name-EUen": "Annalise",
+      "name-EUfr": "Âne-lise"
+    },
+    "personality": "Snooty",
+    "birthday-string": "December 2nd",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 215,
+    "file-name": "hrs10",
+    "name": {
+      "name-EUen": "Clyde",
+      "name-EUfr": "Dorian"
+    },
+    "personality": "Lazy",
+    "birthday-string": "May 1st",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 216,
+    "file-name": "hrs11",
+    "name": {
+      "name-EUen": "Colton",
+      "name-EUfr": "Tony"
+    },
+    "personality": "Smug",
+    "birthday-string": "May 22nd",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 217,
+    "file-name": "hrs12",
+    "name": {
+      "name-EUen": "Papi",
+      "name-EUfr": "Bourrico"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 10th",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 218,
+    "file-name": "hrs13",
+    "name": {
+      "name-EUen": "Julian",
+      "name-EUfr": "Lico"
+    },
+    "personality": "Smug",
+    "birthday-string": "March 15th",
+    "specie": "Horse",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 219,
+    "file-name": "hrs16",
+    "name": {
+      "name-EUen": "Reneigh",
+      "name-EUfr": "Jennifer"
+    },
+    "personality": "Uchi",
+    "birthday-string": "June 4th",
+    "specie": "Horse",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 220,
+    "file-name": "kal00",
+    "name": {
+      "name-EUen": "Yuka",
+      "name-EUfr": "Calypso"
+    },
+    "personality": "Snooty",
+    "birthday-string": "July 20th",
+    "specie": "Koala",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 221,
+    "file-name": "kal01",
+    "name": {
+      "name-EUen": "Alice",
+      "name-EUfr": "Alice"
+    },
+    "personality": "Normal",
+    "birthday-string": "August 19th",
+    "specie": "Koala",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 222,
+    "file-name": "kal02",
+    "name": {
+      "name-EUen": "Melba",
+      "name-EUfr": "Melba"
+    },
+    "personality": "Normal",
+    "birthday-string": "April 12th",
+    "specie": "Koala",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 223,
+    "file-name": "kal03",
+    "name": {
+      "name-EUen": "Sydney",
+      "name-EUfr": "Koaline"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 21st",
+    "specie": "Koala",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 224,
+    "file-name": "kal04",
+    "name": {
+      "name-EUen": "Gonzo",
+      "name-EUfr": "Gonzo"
+    },
+    "personality": "Cranky",
+    "birthday-string": "October 13th",
+    "specie": "Koala",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 225,
+    "file-name": "kal05",
+    "name": {
+      "name-EUen": "Ozzie",
+      "name-EUfr": "Koko"
+    },
+    "personality": "Lazy",
+    "birthday-string": "May 7th",
+    "specie": "Koala",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 226,
+    "file-name": "kal08",
+    "name": {
+      "name-EUen": "Canberra",
+      "name-EUfr": "Kolala"
+    },
+    "personality": "Uchi",
+    "birthday-string": "May 14th",
+    "specie": "Koala",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 227,
+    "file-name": "kal09",
+    "name": {
+      "name-EUen": "Lyman",
+      "name-EUfr": "Kalyptus"
+    },
+    "personality": "Jock",
+    "birthday-string": "October 12th",
+    "specie": "Koala",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 228,
+    "file-name": "kal10",
+    "name": {
+      "name-EUen": "Eugene",
+      "name-EUfr": "Jamy"
+    },
+    "personality": "Smug",
+    "birthday-string": "October 26th",
+    "specie": "Koala",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 229,
+    "file-name": "kgr00",
+    "name": {
+      "name-EUen": "Kitt",
+      "name-EUfr": "Poquette"
+    },
+    "personality": "Normal",
+    "birthday-string": "October 11th",
+    "specie": "Kangaroo",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 230,
+    "file-name": "kgr01",
+    "name": {
+      "name-EUen": "Mathilda",
+      "name-EUfr": "Mathilde"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 12th",
+    "specie": "Kangaroo",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 231,
+    "file-name": "kgr02",
+    "name": {
+      "name-EUen": "Carrie",
+      "name-EUfr": "Kanga"
+    },
+    "personality": "Normal",
+    "birthday-string": "December 5th",
+    "specie": "Kangaroo",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 232,
+    "file-name": "kgr05",
+    "name": {
+      "name-EUen": "Astrid",
+      "name-EUfr": "Rhona"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 8th",
+    "specie": "Kangaroo",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 233,
+    "file-name": "kgr06",
+    "name": {
+      "name-EUen": "Sylvia",
+      "name-EUfr": "Madsi"
+    },
+    "personality": "Uchi",
+    "birthday-string": "May 3rd",
+    "specie": "Kangaroo",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 234,
+    "file-name": "kgr08",
+    "name": {
+      "name-EUen": "Walt",
+      "name-EUfr": "Walt"
+    },
+    "personality": "Cranky",
+    "birthday-string": "April 24th",
+    "specie": "Kangaroo",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 235,
+    "file-name": "kgr09",
+    "name": {
+      "name-EUen": "Rooney",
+      "name-EUfr": "Mike"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 1st",
+    "specie": "Kangaroo",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 236,
+    "file-name": "kgr10",
+    "name": {
+      "name-EUen": "Marcie",
+      "name-EUfr": "Selma"
+    },
+    "personality": "Normal",
+    "birthday-string": "May 31st",
+    "specie": "Kangaroo",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 237,
+    "file-name": "lon00",
+    "name": {
+      "name-EUen": "Bud",
+      "name-EUfr": "Léonard"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 8th",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 238,
+    "file-name": "lon01",
+    "name": {
+      "name-EUen": "Elvis",
+      "name-EUfr": "Elvis"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 23rd",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 239,
+    "file-name": "lon02",
+    "name": {
+      "name-EUen": "Rex",
+      "name-EUfr": "Léo"
+    },
+    "personality": "Lazy",
+    "birthday-string": "July 24th",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 240,
+    "file-name": "lon04",
+    "name": {
+      "name-EUen": "Leopold",
+      "name-EUfr": "Leandro"
+    },
+    "personality": "Smug",
+    "birthday-string": "August 14th",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 241,
+    "file-name": "lon06",
+    "name": {
+      "name-EUen": "Mott",
+      "name-EUfr": "Aimé"
+    },
+    "personality": "Jock",
+    "birthday-string": "July 10th",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 242,
+    "file-name": "lon07",
+    "name": {
+      "name-EUen": "Rory",
+      "name-EUfr": "Hercule"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 7th",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 243,
+    "file-name": "lon08",
+    "name": {
+      "name-EUen": "Lionel",
+      "name-EUfr": "Léopold"
+    },
+    "personality": "Smug",
+    "birthday-string": "July 29th",
+    "specie": "Lion",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 244,
+    "file-name": "mnk01",
+    "name": {
+      "name-EUen": "Nana",
+      "name-EUfr": "Mireille"
+    },
+    "personality": "Normal",
+    "birthday-string": "August 23rd",
+    "specie": "Monkey",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 245,
+    "file-name": "mnk02",
+    "name": {
+      "name-EUen": "Simon",
+      "name-EUfr": "Simon"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 19th",
+    "specie": "Monkey",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 246,
+    "file-name": "mnk03",
+    "name": {
+      "name-EUen": "Tammi",
+      "name-EUfr": "Lili"
+    },
+    "personality": "Peppy",
+    "birthday-string": "April 2nd",
+    "specie": "Monkey",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 247,
+    "file-name": "mnk04",
+    "name": {
+      "name-EUen": "Monty",
+      "name-EUfr": "Lourant"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 7th",
+    "specie": "Monkey",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 248,
+    "file-name": "mnk05",
+    "name": {
+      "name-EUen": "Elise",
+      "name-EUfr": "Élise"
+    },
+    "personality": "Snooty",
+    "birthday-string": "March 21st",
+    "specie": "Monkey",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 249,
+    "file-name": "mnk06",
+    "name": {
+      "name-EUen": "Flip",
+      "name-EUfr": "Rudy"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 21st",
+    "specie": "Monkey",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 250,
+    "file-name": "mnk07",
+    "name": {
+      "name-EUen": "Shari",
+      "name-EUfr": "Luna"
+    },
+    "personality": "Uchi",
+    "birthday-string": "April 10th",
+    "specie": "Monkey",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 251,
+    "file-name": "mnk08",
+    "name": {
+      "name-EUen": "Deli",
+      "name-EUfr": "Magogo"
+    },
+    "personality": "Lazy",
+    "birthday-string": "May 24th",
+    "specie": "Monkey",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 252,
+    "file-name": "mus00",
+    "name": {
+      "name-EUen": "Dora",
+      "name-EUfr": "Dora"
+    },
+    "personality": "Normal",
+    "birthday-string": "February 18th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 253,
+    "file-name": "mus01",
+    "name": {
+      "name-EUen": "Limberg",
+      "name-EUfr": "Gruyère"
+    },
+    "personality": "Cranky",
+    "birthday-string": "October 17th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 254,
+    "file-name": "mus02",
+    "name": {
+      "name-EUen": "Bella",
+      "name-EUfr": "Belle"
+    },
+    "personality": "Peppy",
+    "birthday-string": "December 28th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 255,
+    "file-name": "mus03",
+    "name": {
+      "name-EUen": "Bree",
+      "name-EUfr": "Quenotte"
+    },
+    "personality": "Snooty",
+    "birthday-string": "July 7th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 256,
+    "file-name": "mus04",
+    "name": {
+      "name-EUen": "Samson",
+      "name-EUfr": "Samson"
+    },
+    "personality": "Jock",
+    "birthday-string": "July 5th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 257,
+    "file-name": "mus05",
+    "name": {
+      "name-EUen": "Rod",
+      "name-EUfr": "Marcel"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 14th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 258,
+    "file-name": "mus08",
+    "name": {
+      "name-EUen": "Candi",
+      "name-EUfr": "Sucrette"
+    },
+    "personality": "Peppy",
+    "birthday-string": "April 13th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 259,
+    "file-name": "mus09",
+    "name": {
+      "name-EUen": "Rizzo",
+      "name-EUfr": "Sourizzi"
+    },
+    "personality": "Cranky",
+    "birthday-string": "January 17th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 260,
+    "file-name": "mus10",
+    "name": {
+      "name-EUen": "Anicotti",
+      "name-EUfr": "Annie"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 24th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 261,
+    "file-name": "mus12",
+    "name": {
+      "name-EUen": "Broccolo",
+      "name-EUfr": "Steven"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 30th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 262,
+    "file-name": "mus14",
+    "name": {
+      "name-EUen": "Moose",
+      "name-EUfr": "Joachim"
+    },
+    "personality": "Jock",
+    "birthday-string": "September 13th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 263,
+    "file-name": "mus15",
+    "name": {
+      "name-EUen": "Bettina",
+      "name-EUfr": "Sabrina"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 12th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 264,
+    "file-name": "mus16",
+    "name": {
+      "name-EUen": "Greta",
+      "name-EUfr": "Greta"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 5th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 265,
+    "file-name": "mus17",
+    "name": {
+      "name-EUen": "Penelope",
+      "name-EUfr": "Missy"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 5th",
+    "specie": "Mouse",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 266,
+    "file-name": "mus18",
+    "name": {
+      "name-EUen": "Chadder",
+      "name-EUfr": "Mozzar"
+    },
+    "personality": "Smug",
+    "birthday-string": "December 15th",
+    "specie": "Mouse",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 267,
+    "file-name": "ocp00",
+    "name": {
+      "name-EUen": "Octavian",
+      "name-EUfr": "Octave"
+    },
+    "personality": "Cranky",
+    "birthday-string": "September 20th",
+    "specie": "Octopus",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 268,
+    "file-name": "ocp01",
+    "name": {
+      "name-EUen": "Marina",
+      "name-EUfr": "Marina"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 26th",
+    "specie": "Octopus",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 269,
+    "file-name": "ocp02",
+    "name": {
+      "name-EUen": "Zucker",
+      "name-EUfr": "Marvin"
+    },
+    "personality": "Lazy",
+    "birthday-string": "March 8th",
+    "specie": "Octopus",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 270,
+    "file-name": "ost00",
+    "name": {
+      "name-EUen": "Queenie",
+      "name-EUfr": "Reine"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 13th",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 271,
+    "file-name": "ost01",
+    "name": {
+      "name-EUen": "Gladys",
+      "name-EUfr": "Gladys"
+    },
+    "personality": "Normal",
+    "birthday-string": "January 15th",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 272,
+    "file-name": "ost02",
+    "name": {
+      "name-EUen": "Sandy",
+      "name-EUfr": "Ottie"
+    },
+    "personality": "Normal",
+    "birthday-string": "October 21st",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 273,
+    "file-name": "ost03",
+    "name": {
+      "name-EUen": "Sprocket",
+      "name-EUfr": "Laflèche"
+    },
+    "personality": "Jock",
+    "birthday-string": "December 1st",
+    "specie": "Ostrich",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 274,
+    "file-name": "ost05",
+    "name": {
+      "name-EUen": "Julia",
+      "name-EUfr": "Julie"
+    },
+    "personality": "Snooty",
+    "birthday-string": "July 31st",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 275,
+    "file-name": "ost06",
+    "name": {
+      "name-EUen": "Cranston",
+      "name-EUfr": "Gabin"
+    },
+    "personality": "Lazy",
+    "birthday-string": "September 23rd",
+    "specie": "Ostrich",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 276,
+    "file-name": "ost07",
+    "name": {
+      "name-EUen": "Phil",
+      "name-EUfr": "Phil"
+    },
+    "personality": "Smug",
+    "birthday-string": "November 27th",
+    "specie": "Ostrich",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 277,
+    "file-name": "ost08",
+    "name": {
+      "name-EUen": "Blanche",
+      "name-EUfr": "Sophie"
+    },
+    "personality": "Snooty",
+    "birthday-string": "December 21st",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 278,
+    "file-name": "ost09",
+    "name": {
+      "name-EUen": "Flora",
+      "name-EUfr": "Justine"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 9th",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 279,
+    "file-name": "ost10",
+    "name": {
+      "name-EUen": "Phoebe",
+      "name-EUfr": "Faustine"
+    },
+    "personality": "Uchi",
+    "birthday-string": "April 22nd",
+    "specie": "Ostrich",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 280,
+    "file-name": "pbr00",
+    "name": {
+      "name-EUen": "Apollo",
+      "name-EUfr": "Apollon"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 4th",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 281,
+    "file-name": "pbr01",
+    "name": {
+      "name-EUen": "Amelia",
+      "name-EUfr": "Aurélie"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 19th",
+    "specie": "Eagle",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 282,
+    "file-name": "pbr02",
+    "name": {
+      "name-EUen": "Pierce",
+      "name-EUfr": "Napoléon"
+    },
+    "personality": "Jock",
+    "birthday-string": "January 8th",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 283,
+    "file-name": "pbr03",
+    "name": {
+      "name-EUen": "Buzz",
+      "name-EUfr": "Phébus"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 7th",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 284,
+    "file-name": "pbr05",
+    "name": {
+      "name-EUen": "Avery",
+      "name-EUfr": "Faust"
+    },
+    "personality": "Cranky",
+    "birthday-string": "February 22nd",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 285,
+    "file-name": "pbr06",
+    "name": {
+      "name-EUen": "Frank",
+      "name-EUfr": "Greggae"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 30th",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 286,
+    "file-name": "pbr07",
+    "name": {
+      "name-EUen": "Sterling",
+      "name-EUfr": "Manfred"
+    },
+    "personality": "Jock",
+    "birthday-string": "December 11th",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 287,
+    "file-name": "pbr08",
+    "name": {
+      "name-EUen": "Keaton",
+      "name-EUfr": "Enzo"
+    },
+    "personality": "Smug",
+    "birthday-string": "June 1st",
+    "specie": "Eagle",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 288,
+    "file-name": "pbr09",
+    "name": {
+      "name-EUen": "Celia",
+      "name-EUfr": "Garance"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 25th",
+    "specie": "Eagle",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 289,
+    "file-name": "pgn00",
+    "name": {
+      "name-EUen": "Aurora",
+      "name-EUfr": "Aurore"
+    },
+    "personality": "Normal",
+    "birthday-string": "January 27th",
+    "specie": "Penguin",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 290,
+    "file-name": "pgn01",
+    "name": {
+      "name-EUen": "Roald",
+      "name-EUfr": "Reynald"
+    },
+    "personality": "Jock",
+    "birthday-string": "January 5th",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 291,
+    "file-name": "pgn02",
+    "name": {
+      "name-EUen": "Cube",
+      "name-EUfr": "Cube"
+    },
+    "personality": "Lazy",
+    "birthday-string": "January 29th",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 292,
+    "file-name": "pgn03",
+    "name": {
+      "name-EUen": "Hopper",
+      "name-EUfr": "Victor"
+    },
+    "personality": "Cranky",
+    "birthday-string": "April 6th",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 293,
+    "file-name": "pgn04",
+    "name": {
+      "name-EUen": "Friga",
+      "name-EUfr": "Friga"
+    },
+    "personality": "Snooty",
+    "birthday-string": "October 16th",
+    "specie": "Penguin",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 294,
+    "file-name": "pgn05",
+    "name": {
+      "name-EUen": "Gwen",
+      "name-EUfr": "Gwen"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 23rd",
+    "specie": "Penguin",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 295,
+    "file-name": "pgn06",
+    "name": {
+      "name-EUen": "Puck",
+      "name-EUfr": "Hervé"
+    },
+    "personality": "Lazy",
+    "birthday-string": "February 21st",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 296,
+    "file-name": "pgn09",
+    "name": {
+      "name-EUen": "Wade",
+      "name-EUfr": "Miglou"
+    },
+    "personality": "Lazy",
+    "birthday-string": "October 30th",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 297,
+    "file-name": "pgn10",
+    "name": {
+      "name-EUen": "Boomer",
+      "name-EUfr": "Ethan"
+    },
+    "personality": "Lazy",
+    "birthday-string": "February 7th",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 298,
+    "file-name": "pgn11",
+    "name": {
+      "name-EUen": "Iggly",
+      "name-EUfr": "Urbain"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 2nd",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 299,
+    "file-name": "pgn12",
+    "name": {
+      "name-EUen": "Tex",
+      "name-EUfr": "Émilien"
+    },
+    "personality": "Smug",
+    "birthday-string": "October 6th",
+    "specie": "Penguin",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 300,
+    "file-name": "pgn13",
+    "name": {
+      "name-EUen": "Flo",
+      "name-EUfr": "Nora"
+    },
+    "personality": "Uchi",
+    "birthday-string": "September 2nd",
+    "specie": "Penguin",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 301,
+    "file-name": "pgn14",
+    "name": {
+      "name-EUen": "Sprinkle",
+      "name-EUfr": "Laurie"
+    },
+    "personality": "Peppy",
+    "birthday-string": "February 20th",
+    "specie": "Penguin",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 302,
+    "file-name": "pig00",
+    "name": {
+      "name-EUen": "Curly",
+      "name-EUfr": "Tirbou"
+    },
+    "personality": "Jock",
+    "birthday-string": "July 26th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 303,
+    "file-name": "pig01",
+    "name": {
+      "name-EUen": "Truffles",
+      "name-EUfr": "Trufa"
+    },
+    "personality": "Peppy",
+    "birthday-string": "July 28th",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 304,
+    "file-name": "pig02",
+    "name": {
+      "name-EUen": "Rasher",
+      "name-EUfr": "Salami"
+    },
+    "personality": "Cranky",
+    "birthday-string": "April 7th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 305,
+    "file-name": "pig03",
+    "name": {
+      "name-EUen": "Hugh",
+      "name-EUfr": "Bonno"
+    },
+    "personality": "Lazy",
+    "birthday-string": "December 30th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 306,
+    "file-name": "pig04",
+    "name": {
+      "name-EUen": "Lucy",
+      "name-EUfr": "Lucie"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 2nd",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 307,
+    "file-name": "pig05",
+    "name": {
+      "name-EUen": "Crackle",
+      "name-EUfr": "Justin"
+    },
+    "personality": "Lazy",
+    "birthday-string": "September 3rd",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 308,
+    "file-name": "pig08",
+    "name": {
+      "name-EUen": "Cobb",
+      "name-EUfr": "Porken"
+    },
+    "personality": "Jock",
+    "birthday-string": "October 7th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 309,
+    "file-name": "pig09",
+    "name": {
+      "name-EUen": "Boris",
+      "name-EUfr": "Boris"
+    },
+    "personality": "Cranky",
+    "birthday-string": "November 6th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 310,
+    "file-name": "pig10",
+    "name": {
+      "name-EUen": "Maggie",
+      "name-EUfr": "Marjorie"
+    },
+    "personality": "Normal",
+    "birthday-string": "September 3rd",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 311,
+    "file-name": "pig11",
+    "name": {
+      "name-EUen": "Peggy",
+      "name-EUfr": "Rose"
+    },
+    "personality": "Peppy",
+    "birthday-string": "May 23rd",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 312,
+    "file-name": "pig13",
+    "name": {
+      "name-EUen": "Gala",
+      "name-EUfr": "Camille"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 5th",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 313,
+    "file-name": "pig14",
+    "name": {
+      "name-EUen": "Chops",
+      "name-EUfr": "Aaron"
+    },
+    "personality": "Smug",
+    "birthday-string": "October 13th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 314,
+    "file-name": "pig15",
+    "name": {
+      "name-EUen": "Kevin",
+      "name-EUfr": "Jean-Bon"
+    },
+    "personality": "Jock",
+    "birthday-string": "April 26th",
+    "specie": "Pig",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 315,
+    "file-name": "pig16",
+    "name": {
+      "name-EUen": "Pancetti",
+      "name-EUfr": "Lydie"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 14th",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 316,
+    "file-name": "pig17",
+    "name": {
+      "name-EUen": "Agnes",
+      "name-EUfr": "Pansy"
+    },
+    "personality": "Uchi",
+    "birthday-string": "April 21st",
+    "specie": "Pig",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 317,
+    "file-name": "rbt00",
+    "name": {
+      "name-EUen": "Bunnie",
+      "name-EUfr": "Clara"
+    },
+    "personality": "Peppy",
+    "birthday-string": "May 9th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 318,
+    "file-name": "rbt01",
+    "name": {
+      "name-EUen": "Dotty",
+      "name-EUfr": "Dorothée"
+    },
+    "personality": "Peppy",
+    "birthday-string": "March 14th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 319,
+    "file-name": "rbt02",
+    "name": {
+      "name-EUen": "Coco",
+      "name-EUfr": "Coco"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 1st",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 320,
+    "file-name": "rbt03",
+    "name": {
+      "name-EUen": "Snake",
+      "name-EUfr": "Jeannot"
+    },
+    "personality": "Jock",
+    "birthday-string": "November 3rd",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 321,
+    "file-name": "rbt04",
+    "name": {
+      "name-EUen": "Gaston",
+      "name-EUfr": "Gaston"
+    },
+    "personality": "Cranky",
+    "birthday-string": "October 28th",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 322,
+    "file-name": "rbt05",
+    "name": {
+      "name-EUen": "Gabi",
+      "name-EUfr": "Gaby"
+    },
+    "personality": "Peppy",
+    "birthday-string": "December 16th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 323,
+    "file-name": "rbt06",
+    "name": {
+      "name-EUen": "Pippy",
+      "name-EUfr": "Nadia"
+    },
+    "personality": "Peppy",
+    "birthday-string": "June 14th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 324,
+    "file-name": "rbt07",
+    "name": {
+      "name-EUen": "Tiffany",
+      "name-EUfr": "Tiphaine"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 9th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 325,
+    "file-name": "rbt08",
+    "name": {
+      "name-EUen": "Genji",
+      "name-EUfr": "Kali"
+    },
+    "personality": "Jock",
+    "birthday-string": "January 21st",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 326,
+    "file-name": "rbt09",
+    "name": {
+      "name-EUen": "Ruby",
+      "name-EUfr": "Rubis"
+    },
+    "personality": "Peppy",
+    "birthday-string": "December 25th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 327,
+    "file-name": "rbt10",
+    "name": {
+      "name-EUen": "Doc",
+      "name-EUfr": "Doc"
+    },
+    "personality": "Lazy",
+    "birthday-string": "March 16th",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 328,
+    "file-name": "rbt11",
+    "name": {
+      "name-EUen": "Claude",
+      "name-EUfr": "Claude"
+    },
+    "personality": "Lazy",
+    "birthday-string": "December 3rd",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 329,
+    "file-name": "rbt12",
+    "name": {
+      "name-EUen": "Francine",
+      "name-EUfr": "Nadine"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 22nd",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 330,
+    "file-name": "rbt13",
+    "name": {
+      "name-EUen": "Chrissy",
+      "name-EUfr": "Kristine"
+    },
+    "personality": "Peppy",
+    "birthday-string": "August 28th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 331,
+    "file-name": "rbt14",
+    "name": {
+      "name-EUen": "Hopkins",
+      "name-EUfr": "Grignote"
+    },
+    "personality": "Lazy",
+    "birthday-string": "March 11th",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 332,
+    "file-name": "rbt15",
+    "name": {
+      "name-EUen": "O'Hare",
+      "name-EUfr": "Civet"
+    },
+    "personality": "Smug",
+    "birthday-string": "July 24th",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 333,
+    "file-name": "rbt16",
+    "name": {
+      "name-EUen": "Carmen",
+      "name-EUfr": "Zoé"
+    },
+    "personality": "Peppy",
+    "birthday-string": "January 6th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 334,
+    "file-name": "rbt17",
+    "name": {
+      "name-EUen": "Bonbon",
+      "name-EUfr": "Sylvette"
+    },
+    "personality": "Peppy",
+    "birthday-string": "March 3rd",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 335,
+    "file-name": "rbt18",
+    "name": {
+      "name-EUen": "Cole",
+      "name-EUfr": "Épicure"
+    },
+    "personality": "Lazy",
+    "birthday-string": "August 10th",
+    "specie": "Rabbit",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 336,
+    "file-name": "rbt19",
+    "name": {
+      "name-EUen": "Mira",
+      "name-EUfr": "Grisette"
+    },
+    "personality": "Uchi",
+    "birthday-string": "July 6th",
+    "specie": "Rabbit",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 337,
+    "file-name": "rhn00",
+    "name": {
+      "name-EUen": "Tank",
+      "name-EUfr": "Ben"
+    },
+    "personality": "Jock",
+    "birthday-string": "May 6th",
+    "specie": "Rhino",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 338,
+    "file-name": "rhn01",
+    "name": {
+      "name-EUen": "Rhonda",
+      "name-EUfr": "Renée"
+    },
+    "personality": "Normal",
+    "birthday-string": "January 24th",
+    "specie": "Rhino",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 339,
+    "file-name": "rhn02",
+    "name": {
+      "name-EUen": "Spike",
+      "name-EUfr": "Rhino"
+    },
+    "personality": "Cranky",
+    "birthday-string": "June 17th",
+    "specie": "Rhino",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 340,
+    "file-name": "rhn04",
+    "name": {
+      "name-EUen": "Hornsby",
+      "name-EUfr": "Cornio"
+    },
+    "personality": "Lazy",
+    "birthday-string": "March 20th",
+    "specie": "Rhino",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 341,
+    "file-name": "rhn07",
+    "name": {
+      "name-EUen": "Merengue",
+      "name-EUfr": "Patty"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 19th",
+    "specie": "Rhino",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 342,
+    "file-name": "rhn08",
+    "name": {
+      "name-EUen": "Renée",
+      "name-EUfr": "Rina"
+    },
+    "personality": "Uchi",
+    "birthday-string": "May 28th",
+    "specie": "Rhino",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 343,
+    "file-name": "shp00",
+    "name": {
+      "name-EUen": "Vesta",
+      "name-EUfr": "Hélaine"
+    },
+    "personality": "Normal",
+    "birthday-string": "April 16th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 344,
+    "file-name": "shp01",
+    "name": {
+      "name-EUen": "Baabara",
+      "name-EUfr": "Bêêtty"
+    },
+    "personality": "Snooty",
+    "birthday-string": "March 28th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 345,
+    "file-name": "shp02",
+    "name": {
+      "name-EUen": "Eunice",
+      "name-EUfr": "Bérénice"
+    },
+    "personality": "Normal",
+    "birthday-string": "April 3rd",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 346,
+    "file-name": "shp03",
+    "name": {
+      "name-EUen": "Stella",
+      "name-EUfr": "Bigoudi"
+    },
+    "personality": "Normal",
+    "birthday-string": "April 9th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 347,
+    "file-name": "shp04",
+    "name": {
+      "name-EUen": "Cashmere",
+      "name-EUfr": "Cashmir"
+    },
+    "personality": "Snooty",
+    "birthday-string": "April 2nd",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 348,
+    "file-name": "shp07",
+    "name": {
+      "name-EUen": "Willow",
+      "name-EUfr": "Maï"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 26th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 349,
+    "file-name": "shp08",
+    "name": {
+      "name-EUen": "Curlos",
+      "name-EUfr": "Tonton"
+    },
+    "personality": "Smug",
+    "birthday-string": "May 8th",
+    "specie": "Sheep",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 350,
+    "file-name": "shp09",
+    "name": {
+      "name-EUen": "Wendy",
+      "name-EUfr": "Karen"
+    },
+    "personality": "Peppy",
+    "birthday-string": "August 15th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 351,
+    "file-name": "shp10",
+    "name": {
+      "name-EUen": "Timbra",
+      "name-EUfr": "Sélène"
+    },
+    "personality": "Snooty",
+    "birthday-string": "October 21st",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 352,
+    "file-name": "shp11",
+    "name": {
+      "name-EUen": "Frita",
+      "name-EUfr": "Clarabêl"
+    },
+    "personality": "Uchi",
+    "birthday-string": "July 16th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 353,
+    "file-name": "shp12",
+    "name": {
+      "name-EUen": "Muffy",
+      "name-EUfr": "Charlène"
+    },
+    "personality": "Uchi",
+    "birthday-string": "February 14th",
+    "specie": "Sheep",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 354,
+    "file-name": "shp13",
+    "name": {
+      "name-EUen": "Pietro",
+      "name-EUfr": "Pietro"
+    },
+    "personality": "Smug",
+    "birthday-string": "April 19th",
+    "specie": "Sheep",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 355,
+    "file-name": "shp15",
+    "name": {
+      "name-EUen": "Dom",
+      "name-EUfr": "Bouloche"
+    },
+    "personality": "Jock",
+    "birthday-string": "March 18th",
+    "specie": "Sheep",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 356,
+    "file-name": "squ00",
+    "name": {
+      "name-EUen": "Peanut",
+      "name-EUfr": "Rachida"
+    },
+    "personality": "Peppy",
+    "birthday-string": "June 8th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 357,
+    "file-name": "squ01",
+    "name": {
+      "name-EUen": "Blaire",
+      "name-EUfr": "Cachou"
+    },
+    "personality": "Snooty",
+    "birthday-string": "July 3rd",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 358,
+    "file-name": "squ02",
+    "name": {
+      "name-EUen": "Filbert",
+      "name-EUfr": "Filibert"
+    },
+    "personality": "Lazy",
+    "birthday-string": "June 3rd",
+    "specie": "Squirrel",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 359,
+    "file-name": "squ03",
+    "name": {
+      "name-EUen": "Pecan",
+      "name-EUfr": "Pécan"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 10th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 360,
+    "file-name": "squ04",
+    "name": {
+      "name-EUen": "Nibbles",
+      "name-EUfr": "Lola"
+    },
+    "personality": "Peppy",
+    "birthday-string": "July 19th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 361,
+    "file-name": "squ05",
+    "name": {
+      "name-EUen": "Agent S",
+      "name-EUfr": "Ninjette"
+    },
+    "personality": "Peppy",
+    "birthday-string": "July 2nd",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 362,
+    "file-name": "squ06",
+    "name": {
+      "name-EUen": "Caroline",
+      "name-EUfr": "Isabelle"
+    },
+    "personality": "Normal",
+    "birthday-string": "July 15th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 363,
+    "file-name": "squ07",
+    "name": {
+      "name-EUen": "Sally",
+      "name-EUfr": "Damia"
+    },
+    "personality": "Normal",
+    "birthday-string": "June 19th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 364,
+    "file-name": "squ08",
+    "name": {
+      "name-EUen": "Static",
+      "name-EUfr": "Électro"
+    },
+    "personality": "Cranky",
+    "birthday-string": "July 9th",
+    "specie": "Squirrel",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 365,
+    "file-name": "squ09",
+    "name": {
+      "name-EUen": "Mint",
+      "name-EUfr": "Amande"
+    },
+    "personality": "Snooty",
+    "birthday-string": "May 2nd",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 366,
+    "file-name": "squ10",
+    "name": {
+      "name-EUen": "Ricky",
+      "name-EUfr": "Rocky"
+    },
+    "personality": "Cranky",
+    "birthday-string": "September 14th",
+    "specie": "Squirrel",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 367,
+    "file-name": "squ11",
+    "name": {
+      "name-EUen": "Cally",
+      "name-EUfr": "Célia"
+    },
+    "personality": "Normal",
+    "birthday-string": "September 4th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 368,
+    "file-name": "squ13",
+    "name": {
+      "name-EUen": "Tasha",
+      "name-EUfr": "Nadeige"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 30th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 369,
+    "file-name": "squ14",
+    "name": {
+      "name-EUen": "Sylvana",
+      "name-EUfr": "Mounia"
+    },
+    "personality": "Normal",
+    "birthday-string": "October 22nd",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Nature"
+  },
+  {
+    "id": 370,
+    "file-name": "squ15",
+    "name": {
+      "name-EUen": "Poppy",
+      "name-EUfr": "Irène"
+    },
+    "personality": "Normal",
+    "birthday-string": "August 5th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 371,
+    "file-name": "squ16",
+    "name": {
+      "name-EUen": "Sheldon",
+      "name-EUfr": "Roy"
+    },
+    "personality": "Jock",
+    "birthday-string": "February 26th",
+    "specie": "Squirrel",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 372,
+    "file-name": "squ17",
+    "name": {
+      "name-EUen": "Marshal",
+      "name-EUfr": "Mathéo"
+    },
+    "personality": "Smug",
+    "birthday-string": "September 29th",
+    "specie": "Squirrel",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 373,
+    "file-name": "squ18",
+    "name": {
+      "name-EUen": "Hazel",
+      "name-EUfr": "Pamela"
+    },
+    "personality": "Uchi",
+    "birthday-string": "August 30th",
+    "specie": "Squirrel",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 374,
+    "file-name": "tig00",
+    "name": {
+      "name-EUen": "Rolf",
+      "name-EUfr": "Ralf"
+    },
+    "personality": "Cranky",
+    "birthday-string": "August 22nd",
+    "specie": "Tiger",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 375,
+    "file-name": "tig01",
+    "name": {
+      "name-EUen": "Rowan",
+      "name-EUfr": "Marito"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 26th",
+    "specie": "Tiger",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 376,
+    "file-name": "tig02",
+    "name": {
+      "name-EUen": "Tybalt",
+      "name-EUfr": "Jeff"
+    },
+    "personality": "Jock",
+    "birthday-string": "August 19th",
+    "specie": "Tiger",
+    "gender": "Male",
+    "hobby": "Play"
+  },
+  {
+    "id": 377,
+    "file-name": "tig03",
+    "name": {
+      "name-EUen": "Bangle",
+      "name-EUfr": "Bengale"
+    },
+    "personality": "Peppy",
+    "birthday-string": "August 27th",
+    "specie": "Tiger",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 378,
+    "file-name": "tig04",
+    "name": {
+      "name-EUen": "Leonardo",
+      "name-EUfr": "Dolph"
+    },
+    "personality": "Jock",
+    "birthday-string": "May 15th",
+    "specie": "Tiger",
+    "gender": "Male",
+    "hobby": "Fitness"
+  },
+  {
+    "id": 379,
+    "file-name": "tig05",
+    "name": {
+      "name-EUen": "Claudia",
+      "name-EUfr": "Vanina"
+    },
+    "personality": "Snooty",
+    "birthday-string": "November 22nd",
+    "specie": "Tiger",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 380,
+    "file-name": "tig06",
+    "name": {
+      "name-EUen": "Bianca",
+      "name-EUfr": "Noémie"
+    },
+    "personality": "Peppy",
+    "birthday-string": "December 13th",
+    "specie": "Tiger",
+    "gender": "Female",
+    "hobby": "Play"
+  },
+  {
+    "id": 381,
+    "file-name": "wol00",
+    "name": {
+      "name-EUen": "Chief",
+      "name-EUfr": "Chef"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 19th",
+    "specie": "Wolf",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 382,
+    "file-name": "wol01",
+    "name": {
+      "name-EUen": "Lobo",
+      "name-EUfr": "Lobo"
+    },
+    "personality": "Cranky",
+    "birthday-string": "November 5th",
+    "specie": "Wolf",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 383,
+    "file-name": "wol02",
+    "name": {
+      "name-EUen": "Wolfgang",
+      "name-EUfr": "Wolfgang"
+    },
+    "personality": "Cranky",
+    "birthday-string": "November 25th",
+    "specie": "Wolf",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 384,
+    "file-name": "wol03",
+    "name": {
+      "name-EUen": "Whitney",
+      "name-EUfr": "Blanche"
+    },
+    "personality": "Snooty",
+    "birthday-string": "September 17th",
+    "specie": "Wolf",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 385,
+    "file-name": "wol04",
+    "name": {
+      "name-EUen": "Dobie",
+      "name-EUfr": "Loupiot"
+    },
+    "personality": "Cranky",
+    "birthday-string": "February 17th",
+    "specie": "Wolf",
+    "gender": "Male",
+    "hobby": "Nature"
+  },
+  {
+    "id": 386,
+    "file-name": "wol05",
+    "name": {
+      "name-EUen": "Freya",
+      "name-EUfr": "Luppa"
+    },
+    "personality": "Snooty",
+    "birthday-string": "December 14th",
+    "specie": "Wolf",
+    "gender": "Female",
+    "hobby": "Fashion"
+  },
+  {
+    "id": 387,
+    "file-name": "wol06",
+    "name": {
+      "name-EUen": "Fang",
+      "name-EUfr": "Pierrot"
+    },
+    "personality": "Cranky",
+    "birthday-string": "December 18th",
+    "specie": "Wolf",
+    "gender": "Male",
+    "hobby": "Education"
+  },
+  {
+    "id": 388,
+    "file-name": "wol08",
+    "name": {
+      "name-EUen": "Vivian",
+      "name-EUfr": "Viviane"
+    },
+    "personality": "Snooty",
+    "birthday-string": "January 26th",
+    "specie": "Wolf",
+    "gender": "Female",
+    "hobby": "Education"
+  },
+  {
+    "id": 389,
+    "file-name": "wol09",
+    "name": {
+      "name-EUen": "Skye",
+      "name-EUfr": "Marilou"
+    },
+    "personality": "Normal",
+    "birthday-string": "March 24th",
+    "specie": "Wolf",
+    "gender": "Female",
+    "hobby": "Music"
+  },
+  {
+    "id": 390,
+    "file-name": "wol10",
+    "name": {
+      "name-EUen": "Kyle",
+      "name-EUfr": "Gary"
+    },
+    "personality": "Smug",
+    "birthday-string": "December 6th",
+    "specie": "Wolf",
+    "gender": "Male",
+    "hobby": "Music"
+  },
+  {
+    "id": 391,
+    "file-name": "wol12",
+    "name": {
+      "name-EUen": "Audie",
+      "name-EUfr": "Monica"
+    },
+    "personality": "Peppy",
+    "birthday-string": "August 31st",
+    "specie": "Wolf",
+    "gender": "Female",
+    "hobby": "Fitness"
+
+  }
+]
