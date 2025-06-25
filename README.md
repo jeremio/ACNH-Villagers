@@ -1,5 +1,8 @@
 # ACNH Villagers
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://app.netlify.com/sites/acnh-villagers/deploys)
+[![npm version](https://badge.fury.io/js/list-villagers.svg)](https://badge.fury.io/js/list-villagers)
+
 ### VueJS 3 + ViteJS + Pinia + i18n
 
 ## Introduction:
@@ -19,13 +22,31 @@ You can try this app [here](https://acnh-villagers.netlify.app/)
 
 See [CHANGELOG.md](https://github.com/JereMiO/ACNH-Villagers/blob/master/CHANGELOG.md).
 
+## Project Setup
+
+```sh
+pnpm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+pnpm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+pnpm run build
+```
+
 ## Usage:
 
 All the JSON data from this API is under CC BY 4.0 license, the images and music assets are the sole property of Nintendo.
 
-The data comes from `https://acnhapi.com/v1a/villagers`
+The data for this project is sourced from a local `villagers.json` file, which is a snapshot from the [ACNH API](https://acnhapi.com/doc). This approach is used to avoid repeated API calls and ensure offline availability.
 
-The documentation for the API can be found [here](https://acnhapi.com/doc).
+The documentation for the original API can be found [here](https://acnhapi.com/doc).
 
 ## Disclaimer:
 

@@ -24,16 +24,22 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} | Villagers ANCH` || 'Villagers ANCH'
+  if (to.meta.title)
+    document.title = `${to.meta.title as string} | Villagers ANCH`
+  else
+    document.title = 'Villagers ANCH'
+
   // Définir ou mettre à jour la description de la page
-  let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement | null
+  let metaDescription = document.querySelector('meta[name="description"]')
+
   if (!metaDescription) {
     metaDescription = document.createElement('meta')
-    metaDescription.name = 'description'
+    metaDescription.setAttribute('name', 'description')
     document.head.appendChild(metaDescription)
   }
 
-  metaDescription.setAttribute('content', (to.meta.metaDesc as string) || 'liste villageois, habitants, animaux, voisins disponibles dans le jeu')
+  const description = (to.meta.metaDesc as string) || 'liste villageois, habitants, animaux, voisins disponibles dans le jeu'
+  metaDescription.setAttribute('content', description)
 
   next()
 })

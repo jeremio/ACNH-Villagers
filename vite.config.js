@@ -6,18 +6,28 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
-export default defineConfig({
-  plugins: [
+export default defineConfig(({ mode }) => {
+  const plugins = [
     vue(),
     VueDevTools(),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
     }),
-    visualizer(),
-  ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+  ]
+
+  if (mode === 'analyze') {
+    plugins.push(visualizer({
+      open: true,
+      filename: 'stats.html',
+    }))
+  }
+
+  return {
+    plugins,
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
     },
-  },
+  }
 })

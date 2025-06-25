@@ -16,6 +16,8 @@
     "species": "Species",
     "birthday": "Birthday"
   },
+  "noContent": "No content",
+  "noVillagerWithFilters": "No villager with these filters",
   "genders": {
     "Male": "Male",
     "Female": "Female"

@@ -1,8 +1,8 @@
 {
   "name": "list-villagers",
   "type": "module",
-  "version": "1.0.1",
-  "packageManager": "pnpm@10.12.1",
+  "version": "2.0.0",
+  "packageManager": "pnpm@10.12.3",
   "description": "display villagers on acnh",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "pinia": "^3.0.3",
@@ -21,13 +22,13 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.16.1",
     "@intlify/unplugin-vue-i18n": "^6.0.8",
-    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue": "^6.0.0",
     "eslint": "^9.29.0",
     "naive-ui": "^2.42.0",
     "rollup-plugin-visualizer": "^6.0.3",
     "typescript": "^5.8.3",
     "vfonts": "^0.0.3",
-    "vite": "7.0.0-beta.2",
+    "vite": "^7.0.0",
     "vite-plugin-vue-devtools": "^7.7.7",
     "vue-tsc": "^2.2.10"
   },
