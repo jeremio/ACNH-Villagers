@@ -19,6 +19,13 @@
   "noContent": "No content",
   "noVillagerWithFilters": "No villager with these filters",
   "reset": "Reset",
+  "error": {
+    "fetch": "Loading Error",
+    "fetchMessage": "Could not load villagers data. Please try again later.",
+    "boundaryTitle": "Oops! An unexpected error occurred.",
+    "boundaryMessage": "Our team has been notified. Please try reloading the page.",
+    "reload": "Reload"
+  },
   "genders": {
     "Male": "Male",
     "Female": "Female"

@@ -19,6 +19,13 @@
   "noContent": "Pas de contenu",
   "noVillagerWithFilters": "Pas de villageois avec ces filtres",
   "reset": "Réinitialiser",
+  "error": {
+    "fetch": "Erreur de chargement",
+    "fetchMessage": "Impossible de charger les données des villageois. Veuillez réessayer plus tard.",
+    "boundaryTitle": "Oups ! Une erreur est survenue.",
+    "boundaryMessage": "Notre équipe a été notifiée. Veuillez essayer de recharger la page.",
+    "reload": "Recharger"
+  },
   "genders": {
     "Male": "Mâle",
     "Female": "Femelle"

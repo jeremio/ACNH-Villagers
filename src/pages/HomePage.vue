@@ -15,12 +15,15 @@
           </div>
         </NLayoutSider>
         <NLayout content-style="padding: 24px;" :native-scrollbar="false">
+          <NAlert v-if="fetchError" :title="t('error.fetch')" type="error">
+            {{ t('error.fetchMessage') }}
+          </NAlert>
           <NSpin :show="loading">
-            <div v-if="!villagers.length && !loading">
+            <div v-if="!villagers.length && !loading && !fetchError">
               {{ t('noContent') }}
             </div>
             <Mosaique v-else-if="filteredVillagers.length" :characters="filteredVillagers" />
-            <div v-else-if="!loading">
+            <div v-else-if="!loading && !fetchError">
               {{ t('noVillagerWithFilters') }}
             </div>
           </NSpin>
@@ -38,6 +41,7 @@ import {
   dateFrFR,
   enUS,
   frFR,
+  NAlert,
   NConfigProvider,
   NLayout,
   NLayoutHeader,
@@ -54,7 +58,7 @@ import { useGlobalStore } from '@/store/global'
 
 const { locale, t } = useI18n()
 const store = useGlobalStore()
-const { villagers, filteredVillagers } = storeToRefs(store)
+const { villagers, filteredVillagers, fetchError } = storeToRefs(store)
 
 const theme = ref<GlobalTheme | null>(darkTheme)
 

@@ -10,6 +10,7 @@ export const useGlobalStore = defineStore('global', () => {
   const selectedPersonality = ref('all')
   const selectedSpecie = ref('all')
   const language = ref('fr')
+  const fetchError = ref<string | null>(null)
 
   // Actions
   async function setVillagers() {
@@ -20,9 +21,11 @@ export const useGlobalStore = defineStore('global', () => {
 
       const data = await response.json()
       villagers.value = data as Character[]
+      fetchError.value = null
     }
     catch (error) {
-      console.error('There has been a problem with your fetch operation:', error)
+      fetchError.value = 'There has been a problem with your fetch operation'
+      console.error(fetchError.value, error)
     }
   }
 
@@ -59,6 +62,7 @@ export const useGlobalStore = defineStore('global', () => {
     selectedHobby,
     selectedSpecie,
     language,
+    fetchError,
     // Actions
     setVillagers,
     resetFilters,
