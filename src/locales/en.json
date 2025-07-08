@@ -18,6 +18,7 @@
   },
   "noContent": "No content",
   "noVillagerWithFilters": "No villager with these filters",
+  "reset": "Reset",
   "genders": {
     "Male": "Male",
     "Female": "Female"

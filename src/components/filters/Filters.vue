@@ -16,15 +16,20 @@
       type="specie"
       :data="species"
     />
+    <NButton @click="reset">
+      {{ t('reset') }}
+    </NButton>
   </NSpace>
 </template>
 
 <script setup lang="ts">
 import type { ComputedRef } from 'vue'
 import type { Character } from '@/interfaces/Character'
-import { NSpace } from 'naive-ui'
+import { NButton, NSpace } from 'naive-ui'
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import GenericFilter from '@/components/filters/GenericFilter.vue'
+import { useGlobalStore } from '@/store/global'
 
 interface FilterableProperties {
   gender: string
@@ -57,4 +62,11 @@ const genders: ComputedRef<string[]> = computed(() => getUniqueValues('gender'))
 const hobbies: ComputedRef<string[]> = computed(() => getUniqueValues('hobby'))
 const personalities: ComputedRef<string[]> = computed(() => getUniqueValues('personality'))
 const species: ComputedRef<string[]> = computed(() => getUniqueValues('specie'))
+
+const { t } = useI18n()
+const store = useGlobalStore()
+
+function reset() {
+  store.resetFilters()
+}
 </script>

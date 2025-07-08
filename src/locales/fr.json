@@ -18,6 +18,7 @@
   },
   "noContent": "Pas de contenu",
   "noVillagerWithFilters": "Pas de villageois avec ces filtres",
+  "reset": "Réinitialiser",
   "genders": {
     "Male": "Mâle",
     "Female": "Femelle"

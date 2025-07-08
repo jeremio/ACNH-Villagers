@@ -1,5 +1,5 @@
 <template>
-  <NSpace>
+  <NSpace vertical>
     <div>{{ t(`filters.${getPlural()}`) }}</div>
     <NRadioGroup v-model:value="selectedValue" :name="type">
       <NGrid cols="2" responsive="screen">

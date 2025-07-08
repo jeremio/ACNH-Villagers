@@ -26,6 +26,13 @@ export const useGlobalStore = defineStore('global', () => {
     }
   }
 
+  function resetFilters() {
+    selectedGender.value = 'all'
+    selectedHobby.value = 'all'
+    selectedPersonality.value = 'all'
+    selectedSpecie.value = 'all'
+  }
+
   // Getters
   const filteredVillagers = computed(() => {
     let array = villagers.value
@@ -54,6 +61,7 @@ export const useGlobalStore = defineStore('global', () => {
     language,
     // Actions
     setVillagers,
+    resetFilters,
     // Getters
     filteredVillagers,
   }
