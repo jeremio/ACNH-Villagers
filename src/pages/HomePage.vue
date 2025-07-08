@@ -15,13 +15,15 @@
           </div>
         </NLayoutSider>
         <NLayout content-style="padding: 24px;" :native-scrollbar="false">
-          <div v-if="!villagers.length">
-            {{ t('noContent') }}
-          </div>
-          <Mosaique v-else-if="filteredVillagers.length" :characters="filteredVillagers" />
-          <div v-else>
-            {{ t('noVillagerWithFilters') }}
-          </div>
+          <NSpin :show="loading">
+            <div v-if="!villagers.length && !loading">
+              {{ t('noContent') }}
+            </div>
+            <Mosaique v-else-if="filteredVillagers.length" :characters="filteredVillagers" />
+            <div v-else-if="!loading">
+              {{ t('noVillagerWithFilters') }}
+            </div>
+          </NSpin>
         </NLayout>
       </NLayout>
     </NLayout>
@@ -40,6 +42,7 @@ import {
   NLayout,
   NLayoutHeader,
   NLayoutSider,
+  NSpin,
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, onMounted, ref } from 'vue'
@@ -61,7 +64,10 @@ const mylocal = computed(() => locale.value === 'fr' ? frFR : enUS)
 
 const mydate = computed(() => locale.value === 'fr' ? dateFrFR : dateEnUS)
 
-onMounted(() => {
-  store.setVillagers()
+const loading = ref(true)
+
+onMounted(async () => {
+  await store.setVillagers()
+  loading.value = false
 })
 </script>

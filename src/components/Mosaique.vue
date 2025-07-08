@@ -79,7 +79,7 @@ function name(villager: Character): string {
 }
 
 function image(villager: Character): string {
-  return villager?.['file-name'] ? `villagers/${villager['file-name']}.png` : ''
+  return villager?.['file-name'] ? `villagers/${villager['file-name']}.webp` : ''
 }
 
 function birthdayString(villager: Character): string {
