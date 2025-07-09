@@ -43,6 +43,15 @@ jobs:
       - name: Run TypeScript type check
         run: pnpm run type-check
 
+      - name: Run unit tests
+        run: pnpm run test:unit
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Run e2e tests
+        run: pnpm run test:e2e
+
       - name: Build project and generate visualizer report
         run: pnpm run build # Utilise votre script qui devrait activer rollup-plugin-visualizer
 

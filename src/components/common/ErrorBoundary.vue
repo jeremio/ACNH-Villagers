@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { NAlert, NButton, NConfigProvider, NLayout, NLayoutHeader, darkTheme } from 'naive-ui'
+import { darkTheme, NAlert, NButton, NConfigProvider, NLayout, NLayoutHeader } from 'naive-ui'
 import { onErrorCaptured, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
