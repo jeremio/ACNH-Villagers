@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { useGlobalStore } from './global'
 
 // Mocking fetch
-global.fetch = vi.fn()
+globalThis.fetch = vi.fn()
 
 describe('global Store', () => {
   beforeEach(() => {
