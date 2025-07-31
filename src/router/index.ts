@@ -17,9 +17,13 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    else {
-      return { top: 0 }
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
     }
+    return { top: 0, behavior: 'smooth' }
   },
 })
 
@@ -42,6 +46,16 @@ router.beforeEach((to, from, next) => {
   metaDescription.setAttribute('content', description)
 
   next()
+})
+
+// Gestion des erreurs de routage
+router.onError((error) => {
+  console.error('Router error:', error)
+
+  // Rediriger vers une page d'erreur si nécessaire
+  if (error.message.includes('Loading chunk')) {
+    window.location.reload()
+  }
 })
 
 export default router
