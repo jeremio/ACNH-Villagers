@@ -30,7 +30,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^5.0.0",
     "@intlify/unplugin-vue-i18n": "^6.0.8",
-    "@playwright/test": "^1.54.1",
+    "@playwright/test": "^1.54.2",
     "@testing-library/vue": "^8.1.0",
     "@types/node": "^24.1.0",
     "@vitejs/plugin-vue": "^6.0.1",
