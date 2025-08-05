@@ -1,19 +1,118 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Meta tags de base -->
+  <title>Répertoire des Villageois ACNH | Animal Crossing New Horizons</title>
+  <meta name="description" content="Répertoire complet des villageois d'Animal Crossing New Horizons avec filtres avancés par espèce, personnalité, hobby et genre." />
+  <meta name="keywords" content="animal crossing, villagers, acnh, nintendo, personnages, habitants, filtres" />
+  <meta name="author" content="ACNH Community" />
+
+  <!-- Favicon et icônes -->
+  <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>
-        We're sorry but application doesn't work properly without JavaScript enabled. Please enable it to
-        continue.
-      </strong>
-    </noscript>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://acnh-villagers.netlify.app/" />
+  <meta property="og:title" content="Répertoire des Villageois ACNH" />
+  <meta property="og:description" content="Découvrez tous les villageois d'Animal Crossing New Horizons avec notre outil de filtrage avancé." />
+  <meta property="og:site_name" content="ACNH Villagers" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://acnh-villagers.netlify.app/" />
+  <meta name="twitter:title" content="Répertoire des Villageois ACNH" />
+  <meta name="twitter:description" content="Découvrez tous les villageois d'Animal Crossing New Horizons avec notre outil de filtrage avancé." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ACNH Villagers Directory",
+      "description": "Complete directory of Animal Crossing New Horizons villagers with advanced filtering",
+      "url": "https://acnh-villagers.netlify.app/",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "ACNH Community"
+      },
+      "keywords": "animal crossing, villagers, acnh, nintendo, game, characters",
+      "genre": "Gaming",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Gamers"
+      },
+      "inLanguage": ["fr-FR", "en-US"],
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+  </script>
+
+  <!-- Préchargement des ressources critiques -->
+  <link rel="preload" href="/villagers.json" as="fetch" type="application/json" crossorigin />
+
+  <!-- DNS Prefetch pour les domaines externes -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+  <!-- Theme color pour les navigateurs mobiles -->
+  <meta name="theme-color" content="#3c817f" />
+  <meta name="msapplication-TileColor" content="#3c817f" />
+
+  <!-- Style critique inline pour éviter le FOUC -->
+  <style>
+    /* CSS critique inline */
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    #app {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Fallback pour les navigateurs sans JavaScript -->
+<noscript>
+  <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+    <h1>JavaScript requis</h1>
+    <p>
+      Cette application nécessite JavaScript pour fonctionner correctement.
+      Veuillez l'activer dans votre navigateur et recharger la page.
+    </p>
+    <p>
+      <strong>We're sorry but this application doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+    </p>
+  </div>
+</noscript>
+
+<!-- Point de montage de l'application -->
+<div id="app"></div>
+
+<!-- Chargement du module principal -->
+<script type="module" src="/src/main.ts"></script>
+
+</body>
 </html>
