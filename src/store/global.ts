@@ -15,17 +15,26 @@ export const useGlobalStore = defineStore('global', () => {
   // Actions
   async function setVillagers() {
     try {
+      fetchError.value = null
       const response = await fetch('/villagers.json')
-      if (!response.ok)
-        throw new Error('Network response was not ok')
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
 
       const data = await response.json()
+
+      // Validation basique des données
+      if (!Array.isArray(data)) {
+        throw new TypeError('Invalid data format: expected array')
+      }
+
       villagers.value = data as Character[]
-      fetchError.value = null
     }
     catch (error) {
-      fetchError.value = 'There has been a problem with your fetch operation'
-      console.error(fetchError.value, error)
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+      fetchError.value = `Failed to load villagers: ${errorMessage}`
+      console.error('Fetch error:', error)
     }
   }
 
@@ -36,23 +45,35 @@ export const useGlobalStore = defineStore('global', () => {
     selectedSpecie.value = 'all'
   }
 
-  // Getters
+  function clearError() {
+    fetchError.value = null
+  }
+
+  // Getters - Version optimisée avec un seul passage
   const filteredVillagers = computed(() => {
-    let array = villagers.value
-    if (selectedGender.value !== 'all')
-      array = array.filter(item => item.gender === selectedGender.value)
+    if (!villagers.value.length)
+      return []
 
-    if (selectedPersonality.value !== 'all')
-      array = array.filter(item => item.personality === selectedPersonality.value)
-
-    if (selectedHobby.value !== 'all')
-      array = array.filter(item => item.hobby === selectedHobby.value)
-
-    if (selectedSpecie.value !== 'all')
-      array = array.filter(item => item.specie === selectedSpecie.value)
-
-    return array
+    return villagers.value.filter((character) => {
+      // Vérification de tous les filtres en une seule passe
+      return (selectedGender.value === 'all' || character.gender === selectedGender.value)
+        && (selectedPersonality.value === 'all' || character.personality === selectedPersonality.value)
+        && (selectedHobby.value === 'all' || character.hobby === selectedHobby.value)
+        && (selectedSpecie.value === 'all' || character.specie === selectedSpecie.value)
+    })
   })
+
+  // Getter pour les statistiques (optionnel, pour debug/info)
+  const filterStats = computed(() => ({
+    total: villagers.value.length,
+    filtered: filteredVillagers.value.length,
+    activeFilters: [
+      selectedGender.value !== 'all' ? 'gender' : null,
+      selectedPersonality.value !== 'all' ? 'personality' : null,
+      selectedHobby.value !== 'all' ? 'hobby' : null,
+      selectedSpecie.value !== 'all' ? 'specie' : null,
+    ].filter(Boolean),
+  }))
 
   return {
     // State
@@ -66,7 +87,9 @@ export const useGlobalStore = defineStore('global', () => {
     // Actions
     setVillagers,
     resetFilters,
+    clearError,
     // Getters
     filteredVillagers,
+    filterStats,
   }
 })
