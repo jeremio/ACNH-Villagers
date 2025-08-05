@@ -1,67 +1,73 @@
 <template>
-  <NSpace>
+  <NSpace vertical>
     <GenericFilter
-      type="gender"
-      :data="genders"
+      v-for="filterConfig in filterConfigs"
+      :key="filterConfig.type"
+      :type="filterConfig.type"
+      :data="getFilterData(filterConfig.type)"
     />
-    <GenericFilter
-      type="hobby"
-      :data="hobbies"
-    />
-    <GenericFilter
-      type="personality"
-      :data="personalities"
-    />
-    <GenericFilter
-      type="specie"
-      :data="species"
-    />
-    <NButton @click="reset">
+    <NButton
+      type="primary"
+      ghost
+      :aria-label="t('reset')"
+      @click="reset"
+    >
       {{ t('reset') }}
     </NButton>
   </NSpace>
 </template>
 
 <script setup lang="ts">
-import type { ComputedRef } from 'vue'
-import type { Character } from '@/interfaces/Character'
+import type { Character, FilterableProperty } from '@/interfaces/Character'
 import { NButton, NSpace } from 'naive-ui'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import GenericFilter from '@/components/filters/GenericFilter.vue'
 import { useGlobalStore } from '@/store/global'
 
-interface FilterableProperties {
-  gender: string
-  hobby: string
-  personality: string
-  specie: string
-}
-
 const props = defineProps<{
   characters: Character[]
 }>()
 
-function getUniqueValues<T extends keyof FilterableProperties>(property: T): string[] {
+const filterConfigs = [
+  { type: 'gender' as const },
+  { type: 'hobby' as const },
+  { type: 'personality' as const },
+  { type: 'specie' as const },
+]
+
+// Fonction optimisée pour extraire les valeurs uniques
+function getUniqueValues<T extends FilterableProperty>(property: T): string[] {
   if (!props.characters?.length) {
     return []
   }
 
-  return [...new Set(
-    props.characters
-      .map(character => character?.[property])
-      .filter((value): value is string =>
-        value !== null
-        && value !== undefined,
-      )
-      .sort((a, b) => a.localeCompare(b)),
-  )]
+  const uniqueValues = new Set<string>()
+
+  for (const character of props.characters) {
+    const value = character[property]
+    if (value != null && value !== '') {
+      uniqueValues.add(value)
+    }
+  }
+
+  return Array.from(uniqueValues)
 }
 
-const genders: ComputedRef<string[]> = computed(() => getUniqueValues('gender'))
-const hobbies: ComputedRef<string[]> = computed(() => getUniqueValues('hobby'))
-const personalities: ComputedRef<string[]> = computed(() => getUniqueValues('personality'))
-const species: ComputedRef<string[]> = computed(() => getUniqueValues('specie'))
+// Mémorisation des données de filtre pour éviter les recalculs
+const filterDataCache = computed(() => {
+  const cache: Record<FilterableProperty, string[]> = {
+    gender: getUniqueValues('gender'),
+    hobby: getUniqueValues('hobby'),
+    personality: getUniqueValues('personality'),
+    specie: getUniqueValues('specie'),
+  }
+  return cache
+})
+
+function getFilterData(type: FilterableProperty): string[] {
+  return filterDataCache.value[type]
+}
 
 const { t } = useI18n()
 const store = useGlobalStore()
