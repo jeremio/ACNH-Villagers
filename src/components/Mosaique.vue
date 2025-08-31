@@ -189,7 +189,7 @@ function getVillagerBirthday(villager: Character): string {
       return date.toLocaleDateString(locale.value)
     }
   }
-  catch (error) {
+  catch (_error) {
     console.warn('Invalid date format:', villager['birthday-string'])
   }
 

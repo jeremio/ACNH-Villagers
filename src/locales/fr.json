@@ -1,26 +1,9 @@
 {
   "loading": "Chargement...",
-  "return": "Retour",
   "title": "Répertoire des Villageois ACNH",
-  "names": "Noms",
   "unknown": "Inconnu",
   "all": "Tous",
-  "retry": "Réessayer",
   "clearFilters": "Effacer les filtres",
-  "pages": {
-    "home": {
-      "title": "Accueil - Villageois ACNH",
-      "description": "Répertoire complet des villageois d'Animal Crossing New Horizons avec options de filtrage avancées."
-    },
-    "villager": {
-      "title": "Détails du Villageois",
-      "description": "Informations détaillées sur le villageois ACNH"
-    },
-    "notFound": {
-      "title": "Page Introuvable",
-      "description": "La page demandée n'a pas pu être trouvée."
-    }
-  },
   "navigation": {
     "main": "Navigation principale"
   },

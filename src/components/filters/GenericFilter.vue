@@ -48,7 +48,7 @@ const { getPlural, selectedValue, onToggle } = useFilter(props.type)
 
 const translationFilterName = t(`filters.${getPlural()}`)
 
-const translationFilterKey = (item: string) => t(`${getPlural()}.${item}`)
+const translationFilterKey = (item: string): string => t(`${getPlural()}.${item}`)
 
 // Mémorisation du tri pour éviter les recalculs
 const sortedData = computed(() =>

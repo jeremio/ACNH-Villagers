@@ -1,26 +1,9 @@
 {
   "loading": "Loading...",
-  "return": "Return",
   "title": "ACNH Villagers Directory",
-  "names": "Names",
   "unknown": "Unknown",
   "all": "All",
-  "retry": "Retry",
   "clearFilters": "Clear filters",
-  "pages": {
-    "home": {
-      "title": "Home - ACNH Villagers",
-      "description": "Complete directory of Animal Crossing New Horizons villagers with advanced filtering options."
-    },
-    "villager": {
-      "title": "Villager Details",
-      "description": "Detailed information about ACNH villager"
-    },
-    "notFound": {
-      "title": "Page Not Found",
-      "description": "The requested page could not be found."
-    }
-  },
   "navigation": {
     "main": "Main navigation"
   },
