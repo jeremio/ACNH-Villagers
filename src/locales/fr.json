@@ -1,11 +1,30 @@
 {
-  "language": "FR",
-  "return": "Retour",
-  "title": "Liste des villageois ACNH",
-  "names": "Noms",
+  "loading": "Chargement...",
+  "title": "Répertoire des Villageois ACNH",
   "unknown": "Inconnu",
   "all": "Tous",
+  "clearFilters": "Effacer les filtres",
+  "navigation": {
+    "main": "Navigation principale"
+  },
+  "language": {
+    "select": "Sélectionner la langue"
+  },
+  "theme": {
+    "dark": "Sombre",
+    "light": "Clair"
+  },
+  "stats": {
+    "totalVillagers": "{count} villageois disponibles"
+  },
+  "villagers": {
+    "grid": "Grille de villageois avec {count} personnages"
+  },
+  "image": {
+    "failed": "Échec du chargement"
+  },
   "filters": {
+    "title": "Filtres",
     "gender": "Genre",
     "genders": "Genres",
     "hobby": "Hobby",
@@ -16,15 +35,20 @@
     "species": "Espèces",
     "birthday": "Naissance"
   },
-  "noContent": "Pas de contenu",
-  "noVillagerWithFilters": "Pas de villageois avec ces filtres",
+  "noContent": "Pas de contenu disponible",
+  "noVillagerWithFilters": "Aucun villageois ne correspond à ces filtres",
   "reset": "Réinitialiser",
   "error": {
     "fetch": "Erreur de chargement",
     "fetchMessage": "Impossible de charger les données des villageois. Veuillez réessayer plus tard.",
-    "boundaryTitle": "Oups ! Une erreur est survenue.",
+    "boundaryTitle": "Oups ! Une erreur inattendue s'est produite",
     "boundaryMessage": "Notre équipe a été notifiée. Veuillez essayer de recharger la page.",
-    "reload": "Recharger"
+    "reload": "Recharger",
+    "tryRecover": "Essayer de récupérer",
+    "showDetails": "Afficher les détails techniques",
+    "hideDetails": "Masquer les détails techniques",
+    "technicalDetails": "Détails techniques",
+    "autoRecovery": "Récupération automatique dans {seconds} secondes..."
   },
   "genders": {
     "Male": "Mâle",

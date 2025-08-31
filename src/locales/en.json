@@ -1,30 +1,54 @@
 {
-  "language": "EN",
-  "return": "Return",
-  "title": "List of villagers ACNH",
-  "names": "Names",
+  "loading": "Loading...",
+  "title": "ACNH Villagers Directory",
   "unknown": "Unknown",
   "all": "All",
+  "clearFilters": "Clear filters",
+  "navigation": {
+    "main": "Main navigation"
+  },
+  "language": {
+    "select": "Select language"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "stats": {
+    "totalVillagers": "{count} villagers available"
+  },
+  "villagers": {
+    "grid": "Villagers grid with {count} characters"
+  },
+  "image": {
+    "failed": "Failed to load"
+  },
   "filters": {
+    "title": "Filters",
     "gender": "Gender",
     "genders": "Genders",
     "hobby": "Hobby",
     "hobbies": "Hobbies",
     "personality": "Personality",
     "personalities": "Personalities",
-    "specie": "Specie",
+    "specie": "Species",
     "species": "Species",
     "birthday": "Birthday"
   },
-  "noContent": "No content",
-  "noVillagerWithFilters": "No villager with these filters",
+  "noContent": "No content available",
+  "noVillagerWithFilters": "No villagers match these filters",
   "reset": "Reset",
   "error": {
     "fetch": "Loading Error",
     "fetchMessage": "Could not load villagers data. Please try again later.",
-    "boundaryTitle": "Oops! An unexpected error occurred.",
+    "boundaryTitle": "Oops! An unexpected error occurred",
     "boundaryMessage": "Our team has been notified. Please try reloading the page.",
-    "reload": "Reload"
+    "reload": "Reload",
+    "tryRecover": "Try to recover",
+    "showDetails": "Show technical details",
+    "hideDetails": "Hide technical details",
+    "technicalDetails": "Technical details",
+    "autoRecovery": "Auto-recovery in {seconds} seconds..."
   },
   "genders": {
     "Male": "Male",

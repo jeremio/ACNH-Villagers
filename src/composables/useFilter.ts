@@ -1,37 +1,33 @@
-import type { Ref } from 'vue'
-import { ref } from 'vue'
+import type { FilterableProperty } from '@/interfaces/Character'
+import { computed } from 'vue'
 import { useGlobalStore } from '@/store/global'
 
-type FilterType = 'gender' | 'hobby' | 'personality' | 'specie'
-
-interface GlobalStoreType {
-  selectedGender: Ref<string>
-  selectedHobby: Ref<string>
-  selectedPersonality: Ref<string>
-  selectedSpecie: Ref<string>
-}
-
-const plurals: Record<FilterType, string> = {
-  gender: 'genders',
-  hobby: 'hobbies',
-  personality: 'personalities',
-  specie: 'species',
-}
-
-export function useFilter(type: FilterType) {
+export function useFilter(type: FilterableProperty) {
   const global = useGlobalStore()
 
-  const getPlural = () => `${plurals[type]}`
+  const pluralMap: Record<FilterableProperty, string> = {
+    gender: 'genders',
+    hobby: 'hobbies',
+    personality: 'personalities',
+    specie: 'species',
+  }
 
-  const key = `selected${type.charAt(0).toUpperCase() + type.slice(1)}` as keyof GlobalStoreType
+  const getPlural = () => pluralMap[type]
 
-  const selectedValue = ref('all')
+  // Création de la clé pour accéder au store global
+  const storeKey = `selected${type.charAt(0).toUpperCase() + type.slice(1)}` as keyof typeof global
+
+  // Utilisation d'un computed pour la synchronisation bidirectionnelle
+  const selectedValue = computed({
+    get: () => global[storeKey] as string,
+    set: (value: string) => {
+      (global[storeKey] as any) = value
+    },
+  })
 
   const onToggle = (event: Event) => {
     const value = (event.target as HTMLInputElement).value
     selectedValue.value = value
-    // Update the global store
-    global[key] = value
   }
 
   return {
