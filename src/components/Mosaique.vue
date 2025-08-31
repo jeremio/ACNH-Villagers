@@ -259,6 +259,9 @@ function handleImageError(event: Event): void {
   border-radius: 8px;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .villager-card:hover {

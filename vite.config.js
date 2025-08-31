@@ -8,7 +8,10 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import { defineConfig } from 'vitest/config'
 
-export default defineConfig(({ mode, command }) => {
+export default defineConfig(({
+  mode,
+  // command
+}) => {
   const isProduction = mode === 'production'
   const isDevelopment = mode === 'development'
   const isAnalyze = mode === 'analyze'
@@ -56,51 +59,8 @@ export default defineConfig(({ mode, command }) => {
       },
     },
 
-    // Configuration de build optimisée
-    build: {
-      // Optimisations de performance
-      target: 'es2020',
-      minify: isProduction ? 'terser' : false,
-
-      // Code splitting intelligent
-      rollupOptions: {
-        output: {
-          // Stratégie de chunking optimisée
-          manualChunks: {
-            // Vendor chunk pour les dépendances stables
-            'vendor-vue': ['vue', 'vue-router', 'pinia'],
-            'vendor-ui': ['naive-ui'],
-            'vendor-i18n': ['vue-i18n'],
-            'vendor-icons': ['lucide-vue-next'],
-          },
-
-          // Nommage des chunks pour le cache busting
-          chunkFileNames: isProduction
-            ? 'assets/js/[name]-[hash].js'
-            : 'assets/js/[name].js',
-          entryFileNames: isProduction
-            ? 'assets/js/[name]-[hash].js'
-            : 'assets/js/[name].js',
-          assetFileNames: isProduction
-            ? 'assets/[ext]/[name]-[hash].[ext]'
-            : 'assets/[ext]/[name].[ext]',
-        },
-      },
-
-      // Limite de taille des chunks
-      chunkSizeWarningLimit: 1000,
-
-      // Source maps en développement uniquement
-      sourcemap: isDevelopment,
-
-      // Optimisations CSS
-      cssCodeSplit: true,
-      cssMinify: isProduction,
-    },
-
     // Configuration du serveur de développement
     server: {
-      port: 3000,
       host: true,
 
       // Configuration CORS pour le développement
@@ -113,7 +73,6 @@ export default defineConfig(({ mode, command }) => {
 
     // Configuration du serveur de preview
     preview: {
-      port: 4173,
       host: true,
     },
 

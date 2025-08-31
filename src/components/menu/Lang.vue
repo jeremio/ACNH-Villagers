@@ -23,7 +23,7 @@ const isChangingLanguage = ref(false)
 // Computed pour la valeur sélectionnée
 const selectedLocale = computed({
   get: () => locale.value,
-  set: (value: string) => {
+  set: (_value: string) => {
     // La logique de changement est gérée dans handleLanguageChange
   },
 })

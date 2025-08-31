@@ -40,11 +40,6 @@
   "image": {
     "failed": "Échec du chargement"
   },
-  "actions": {
-    "addFavorite": "Ajouter aux favoris",
-    "removeFavorite": "Retirer des favoris",
-    "share": "Partager"
-  },
   "filters": {
     "title": "Filtres",
     "gender": "Genre",

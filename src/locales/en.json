@@ -40,11 +40,6 @@
   "image": {
     "failed": "Failed to load"
   },
-  "actions": {
-    "addFavorite": "Add to favorites",
-    "removeFavorite": "Remove from favorites",
-    "share": "Share"
-  },
   "filters": {
     "title": "Filters",
     "gender": "Gender",

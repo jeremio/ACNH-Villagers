@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@intlify/eslint-plugin-vue-i18n':
+        specifier: ^4.1.0
+        version: 4.1.0(eslint@9.34.0)(jsonc-eslint-parser@2.4.0)(vue-eslint-parser@10.2.0(eslint@9.34.0))(yaml-eslint-parser@1.3.0)
       pinia:
         specifier: ^3.0.3
         version: 3.0.3(typescript@5.9.2)(vue@3.5.20(typescript@5.9.2))
@@ -50,7 +53,7 @@ importers:
         version: 18.0.1
       lucide-vue-next:
         specifier: ^0.535.0
-        version: 0.535.0(vue@3.5.18(typescript@5.8.3))
+        version: 0.535.0(vue@3.5.20(typescript@5.9.2))
       naive-ui:
         specifier: ^2.42.0
         version: 2.42.0(vue@3.5.20(typescript@5.9.2))
@@ -562,6 +565,15 @@ packages:
   '@intlify/core-base@11.1.11':
     resolution: {integrity: sha512-1Z0N8jTfkcD2Luq9HNZt+GmjpFe4/4PpZF3AOzoO1u5PTtSuXZcfhwBatywbfE2ieB/B5QHIoOFmCXY2jqVKEQ==}
     engines: {node: '>= 16'}
+
+  '@intlify/eslint-plugin-vue-i18n@4.1.0':
+    resolution: {integrity: sha512-MPAr3LGTrkB5CZBHN5eUf4kASUEiSaDM371jADmxNbTL1Ew7IAyCIBGm3+/1sWcvsfVHe4wz8RFoo6FpeQZ4Nw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      eslint: ^8.0.0 || ^9.0.0-0
+      jsonc-eslint-parser: ^2.3.0
+      vue-eslint-parser: ^10.0.0
+      yaml-eslint-parser: ^1.2.2
 
   '@intlify/message-compiler@11.1.11':
     resolution: {integrity: sha512-7PC6neomoc/z7a8JRjPBbu0T2TzR2MQuY5kn2e049MP7+o32Ve7O8husylkA7K9fQRe4iNXZWTPnDJ6vZdtS1Q==}
@@ -1397,6 +1409,10 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
+  entities@6.0.1:
+    resolution: {integrity: sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==}
+    engines: {node: '>=0.12'}
+
   error-stack-parser-es@1.0.5:
     resolution: {integrity: sha512-5qucVt2XcuGMcEGgWI7i+yZpmpByQ8J1lHhcL7PwqCwu9FPP3VUXzT4ltHe5i2z9dePwEHcDVOAfSnHsOlCXRA==}
 
@@ -1930,6 +1946,9 @@ packages:
     engines: {node: '>=14.16'}
     hasBin: true
 
+  is-language-code@3.1.0:
+    resolution: {integrity: sha512-zJdQ3QTeLye+iphMeK3wks+vXSRFKh68/Pnlw7aOfApFSEIOhYa8P9vwwa6QrImNNBMJTiL1PpYF0f4BxDuEgA==}
+
   is-map@2.0.3:
     resolution: {integrity: sha512-1Qed0/Hr2m+YqxnM09CjA2d/i6YZNfF6R2oRAOj36eUdS6qIV/huPJNSEpKbupewFs+ZsJlxsjjPbc0/afW6Lw==}
     engines: {node: '>= 0.4'}
@@ -2456,6 +2475,9 @@ packages:
   parse-statements@1.0.11:
     resolution: {integrity: sha512-HlsyYdMBnbPQ9Jr/VgJ1YF4scnldvJpJxCVx6KgqPL4dxppsWrJHCIIxQXMJrqGnsRkNPATbeMJ8Yxu7JMsYcA==}
 
+  parse5@7.3.0:
+    resolution: {integrity: sha512-IInvU7fabl34qmi9gY8XOVxhYyMyuH2xUNpb2q8/Y+7552KlejkRvqvD19nMoUW/uQGGbqNpA6Tufu5FL5BZgw==}
+
   path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
 
@@ -2777,6 +2799,10 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
+  synckit@0.10.4:
+    resolution: {integrity: sha512-2SG1TnJGjMkD4+gblONMGYSrwAzYi+ymOitD+Jb/iMYm57nH20PlkVeMQRah3yDMKEa0QQYUF/QPWpdW7C6zNg==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+
   synckit@0.11.11:
     resolution: {integrity: sha512-MeQTA1r0litLUf0Rp/iisCaL8761lKAZHaimlbGK4j0HysC4PLfqygQj9srcs0m2RdtDYnF8UuYyKpbjHYp7Jw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2835,6 +2861,9 @@ packages:
     resolution: {integrity: sha512-EDyGAwH1gO0Ausm9gV6T2nUvBgXT5kGoCMJPllOaooZ+4VvJiKBdZE7wK18N1deEowhcUptS+5GXZK8U/fvpwA==}
     peerDependencies:
       typescript: '>=4.0.0'
+
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -3598,6 +3627,31 @@ snapshots:
     dependencies:
       '@intlify/message-compiler': 11.1.11
       '@intlify/shared': 11.1.11
+
+  '@intlify/eslint-plugin-vue-i18n@4.1.0(eslint@9.34.0)(jsonc-eslint-parser@2.4.0)(vue-eslint-parser@10.2.0(eslint@9.34.0))(yaml-eslint-parser@1.3.0)':
+    dependencies:
+      '@eslint/eslintrc': 3.3.1
+      '@intlify/core-base': 11.1.11
+      '@intlify/message-compiler': 11.1.11
+      debug: 4.4.1
+      eslint: 9.34.0
+      eslint-compat-utils: 0.6.5(eslint@9.34.0)
+      glob: 10.4.5
+      globals: 16.3.0
+      ignore: 7.0.5
+      import-fresh: 3.3.1
+      is-language-code: 3.1.0
+      js-yaml: 4.1.0
+      json5: 2.2.3
+      jsonc-eslint-parser: 2.4.0
+      lodash: 4.17.21
+      parse5: 7.3.0
+      semver: 7.7.2
+      synckit: 0.10.4
+      vue-eslint-parser: 10.2.0(eslint@9.34.0)
+      yaml-eslint-parser: 1.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@intlify/message-compiler@11.1.11':
     dependencies:
@@ -4474,6 +4528,8 @@ snapshots:
 
   entities@4.5.0: {}
 
+  entities@6.0.1: {}
+
   error-stack-parser-es@1.0.5: {}
 
   es-define-property@1.0.1: {}
@@ -5080,6 +5136,10 @@ snapshots:
     dependencies:
       is-docker: 3.0.0
 
+  is-language-code@3.1.0:
+    dependencies:
+      '@babel/runtime': 7.28.3
+
   is-map@2.0.3: {}
 
   is-number-object@1.1.1:
@@ -5270,9 +5330,9 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-vue-next@0.535.0(vue@3.5.18(typescript@5.8.3)):
+  lucide-vue-next@0.535.0(vue@3.5.20(typescript@5.9.2)):
     dependencies:
-      vue: 3.5.18(typescript@5.8.3)
+      vue: 3.5.20(typescript@5.9.2)
 
   lz-string@1.5.0: {}
 
@@ -5758,6 +5818,10 @@ snapshots:
 
   parse-statements@1.0.11: {}
 
+  parse5@7.3.0:
+    dependencies:
+      entities: 6.0.1
+
   path-browserify@1.0.1: {}
 
   path-exists@4.0.0: {}
@@ -6078,6 +6142,11 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
+  synckit@0.10.4:
+    dependencies:
+      '@pkgr/core': 0.2.9
+      tslib: 2.8.1
+
   synckit@0.11.11:
     dependencies:
       '@pkgr/core': 0.2.9
@@ -6121,6 +6190,8 @@ snapshots:
     dependencies:
       picomatch: 4.0.3
       typescript: 5.9.2
+
+  tslib@2.8.1: {}
 
   type-check@0.4.0:
     dependencies:

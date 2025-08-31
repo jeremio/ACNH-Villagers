@@ -231,14 +231,6 @@ function reloadPage() {
   isReloading.value = true
   stopAutoRecovery()
 
-  // Nettoyer le localStorage si nécessaire
-  try {
-    localStorage.removeItem('vue-app-cache')
-  }
-  catch (e) {
-    // Ignore localStorage errors
-  }
-
   window.location.reload()
 }
 
