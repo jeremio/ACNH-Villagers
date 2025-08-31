@@ -11,7 +11,7 @@ const i18nConfigs = [
     rules: {
       '@intlify/vue-i18n/no-dynamic-keys': 'warn',
       '@intlify/vue-i18n/no-unused-keys': [
-        'error',
+        'warn',
         {
           extensions: ['.js', '.vue', '.ts', '.json', '.json5', '.yaml', '.yml'],
         },

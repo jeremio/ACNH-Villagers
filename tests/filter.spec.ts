@@ -3,19 +3,22 @@ import { expect, test } from '@playwright/test'
 test.describe('Filtering functionality', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/')
-    await expect(page.locator('.mosaique img')).toHaveCount(391)
+
+    // Attendre que la mosaïque soit complètement chargée avant de continuer.
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(391)
   })
 
   test('should filter villagers by gender and reset', async ({ page }) => {
-    await page.locator('//div[text()="Mâle"]').click()
-    await expect(page.locator('.mosaique img')).toHaveCount(204)
-    await page.getByRole('button', { name: 'Réinitialiser' }).click()
-    await expect(page.locator('.mosaique img')).toHaveCount(391)
+    await page.getByText(/^(Mâle|Male)$/).click()
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(204)
+
+    await page.getByRole('button', { name: /^(Réinitialiser|Reset)$/ }).click()
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(391)
   })
 
   test('should apply multiple filters', async ({ page }) => {
-    await page.locator('//div[text()="Mâle"]').click()
-    await page.locator('//div[text()="Musique"]').click()
-    await expect(page.locator('.mosaique img')).toHaveCount(30)
+    await page.getByText(/^(Mâle|Male)$/).click()
+    await page.getByText(/^(Musique|Music)$/).click()
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(30)
   })
 })

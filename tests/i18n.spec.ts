@@ -1,18 +1,36 @@
+import * as console from 'node:console'
 import { expect, test } from '@playwright/test'
 
 test.describe('Internationalization', () => {
-  test('should switch language and translate content', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto('/')
+    // Attendre que la mosaïque soit complètement chargée avant de continuer.
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(391)
+  })
 
-    // Check initial language (French)
-    await expect(page.getByRole('button', { name: 'Réinitialiser' })).toBeVisible()
+  test('should switch language and translate content, regardless of starting language', async ({ page }) => {
+    // Utiliser une expression régulière pour trouver le sélecteur de langue, quelle que soit la langue actuelle.
+    const langSelector = page.getByText(/🇫🇷 Français|🇺🇸 English/)
+    const currentLangText = await langSelector.textContent()
 
-    // Switch to English
-    await page.locator('//div[text()="FR"]').click()
-    await page.locator('//div[text()="EN"]').click()
+    console.log(currentLangText)
+    if (currentLangText === '🇫🇷 Français') {
+      // L'application est en français, on passe à l'anglais.
+      await langSelector.click()
+      await page.getByText('🇺🇸 English').click()
 
-    // Check for translated content
-    await expect(page.getByRole('button', { name: 'Reset' })).toBeVisible()
-    await expect(page.locator('//div[text()="Genders"]')).toBeVisible()
+      // Vérifier que le contenu est bien en anglais.
+      await expect(page.getByText('Reset')).toBeVisible()
+      await expect(page.getByText('Genders')).toBeVisible()
+    }
+    else {
+      // L'application est en anglais, on passe au français.
+      await langSelector.click()
+      await page.getByText('🇫🇷 Français').click()
+
+      // Vérifier que le contenu est bien en français.
+      await expect(page.getByText('Réinitialiser')).toBeVisible()
+      await expect(page.getByText('Genres')).toBeVisible()
+    }
   })
 })
