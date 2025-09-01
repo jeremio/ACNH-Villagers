@@ -1,60 +1,72 @@
+# Nom du workflow
 name: CI Checks
 
+# Déclencheurs du workflow
 on:
   push:
-    branches: [master] # ou le nom de votre branche principale si différent
+    branches: [main, master] # On inclut 'main' et 'master' pour être sûr
   pull_request:
-    branches: [master] # ou le nom de votre branche principale si différent
+    branches: [main, master]
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest # Utiliser la dernière version d'Ubuntu disponible
+    # L'environnement d'exécution
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [22.x] # Spécifiez la version de Node.js que vous utilisez. Ajustez si besoin.
+        # Spécifier la version de Node.js.
+        node-version: [22.x]
 
     steps:
+      # 1. Récupération du code du dépôt
       - name: Checkout repository
-        uses: actions/checkout@v4 # Action pour récupérer votre code
+        uses: actions/checkout@v4
 
+      # 2. Configuration de pnpm
       - name: Set up pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10.11.0 # Correspond à votre packageManager
+          version: 10.15.0 # Assurez-vous que cette version correspond à votre packageManager
 
+      # 3. Configuration de Node.js avec le cache pnpm
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm # Important: garder pour le caching des dépendances pnpm
+          cache: pnpm
 
-      - name: Verify pnpm installation
-        run: pnpm --version
-
+      # 4. Installation des dépendances
       - name: Install dependencies
-        run: pnpm install # Utiliser pnpm pour installer les dépendances
-        # En CI, pnpm install utilisera automatiquement le lockfile (pnpm-lock.yaml),
-        # similaire à `npm ci`. L'option --frozen-lockfile est implicite.
+        run: pnpm install --frozen-lockfile
 
+      # 5. Lancement des vérifications statiques (linting, types)
       - name: Run linter
-        run: pnpm run lint # Les scripts npm fonctionnent de la même manière avec pnpm
-
+        run: pnpm run lint
       - name: Run TypeScript type check
         run: pnpm run type-check
 
+      # 6. Lancement des tests unitaires
+      # Le flag --run est spécifique à Vitest pour s'assurer qu'il ne reste pas en mode watch
       - name: Run unit tests
         run: pnpm run test:unit -- --run
 
+      # 7. Installation des navigateurs pour Playwright
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
 
+      # 8. Construction de l'application pour la production
+      # Cette étape est cruciale pour que les tests e2e tournent sur le code final
+      - name: Build project
+        run: pnpm run build
+
+      # 9. Lancement des tests de bout en bout (E2E) sur le build de production
+      # Assurez-vous que votre script "test:e2e" utilise la configuration webServer de Playwright
+      # qui lance `pnpm run preview` pour servir le dossier `dist`.
       - name: Run e2e tests
         run: pnpm run test:e2e
 
-      - name: Build project and generate visualizer report
-        run: pnpm run build # Utilise votre script qui devrait activer rollup-plugin-visualizer
-
+      # 10. Affichage de la taille du build pour information
       - name: Display build folder size
         run: |
           echo "Build output in 'dist/':"
@@ -62,16 +74,12 @@ jobs:
           echo "Total size of 'dist/' folder:"
           du -sh dist/
 
+      # 11. Téléversement du rapport d'analyse du build comme artefact
       - name: Upload visualizer report
         uses: actions/upload-artifact@v4
         with:
           name: visualizer-report
-          # Adaptez le chemin si votre rapport visualizer a un nom différent ou est dans un autre dossier.
-          # rollup-plugin-visualizer génère souvent 'stats.html' ou 'report.html'
-          # à la racine du projet ou dans le répertoire de sortie (dist).
-          path: |
-            stats.html
-            dist/stats.html
-            report.html
-            dist/report.html
-          if-no-files-found: warn # Affiche un avertissement si le fichier n'est pas trouvé, au lieu de faire échouer le job.
+          # Spécifiez le chemin exact de votre rapport.
+          # Il est recommandé de le configurer pour qu'il soit généré dans 'dist/'.
+          path: dist/stats.html
+          if-no-files-found: warn # Ne fait pas échouer le job si le rapport est absent.

@@ -67,7 +67,7 @@ docker-compose.override.yml
 # Vite
 vite.config.*.timestamp-*
 
-bundle-analysis.html
+stats.html
 
 # Playwright
 /test-results/

@@ -44,7 +44,7 @@ export default defineConfig(({
   // Plugin d'analyse de bundle (sécurisé pour CI/CD)
   if (isAnalyze) {
     plugins.push(visualizer({
-      filename: 'dist/bundle-analysis.html',
+      filename: 'dist/stats.html',
       gzipSize: true,
       brotliSize: true,
       template: 'treemap', // Visualisation plus détaillée
