@@ -40,7 +40,7 @@
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.34.0",
-    "happy-dom": "^18.0.1",
+    "happy-dom": "^20.0.0",
     "lucide-vue-next": "^0.535.0",
     "naive-ui": "^2.42.0",
     "oxlint": "^1.14.0",
