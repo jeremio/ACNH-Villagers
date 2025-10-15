@@ -11,9 +11,9 @@
   },
   "env": {
     "builtin": true,
+    "es2026": true,
     "browser": true,
     "commonjs": true,
-    "es2024": true,
     "node": true,
     "shared-node-browser": true
   },
@@ -97,6 +97,14 @@
     "**/components.d.ts"
   ],
   "globals": {
+    "CSSFunctionDeclarations": "readonly",
+    "CSSFunctionDescriptors": "readonly",
+    "CSSFunctionRule": "readonly",
+    "SpeechGrammar": "readonly",
+    "SpeechGrammarList": "readonly",
+    "SpeechRecognition": "readonly",
+    "SpeechRecognitionErrorEvent": "readonly",
+    "SpeechRecognitionEvent": "readonly",
     "computed": "readonly",
     "defineEmits": "readonly",
     "defineExpose": "readonly",
@@ -243,6 +251,7 @@
     "no-useless-backreference": "off",
     "no-useless-call": "error",
     "no-useless-catch": "error",
+    "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-useless-rename": "error",
     "no-var": "error",
@@ -429,10 +438,16 @@
         "**/*.vue"
       ],
       "rules": {
+        "vue/no-export-in-script-setup": "error",
+        "vue/prefer-import-from-vue": "error",
         "vue/valid-define-emits": "error",
+        "vue/valid-define-props": "error",
+        "vue/no-multiple-slot-args": "warn",
+        "vue/no-required-prop-with-default": "warn",
         "@typescript-eslint/explicit-function-return-type": "off"
       },
       "plugins": [
+        "vue",
         "typescript"
       ]
     },
@@ -493,6 +508,17 @@
       "plugins": [
         "typescript"
       ]
+    },
+    {
+      "files": [
+        "*.yaml",
+        "**/*.yaml",
+        "*.yml",
+        "**/*.yml"
+      ],
+      "rules": {
+        "no-irregular-whitespace": "off"
+      }
     }
   ]
 }
