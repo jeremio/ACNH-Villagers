@@ -100,11 +100,16 @@
     "CSSFunctionDeclarations": "readonly",
     "CSSFunctionDescriptors": "readonly",
     "CSSFunctionRule": "readonly",
+    "DigitalCredential": "readonly",
+    "IDBRecord": "readonly",
+    "InterestEvent": "readonly",
+    "NavigationPrecommitController": "readonly",
     "SpeechGrammar": "readonly",
     "SpeechGrammarList": "readonly",
     "SpeechRecognition": "readonly",
     "SpeechRecognitionErrorEvent": "readonly",
     "SpeechRecognitionEvent": "readonly",
+    "SpeechRecognitionPhrase": "readonly",
     "computed": "readonly",
     "defineEmits": "readonly",
     "defineExpose": "readonly",
@@ -147,7 +152,6 @@
       "error",
       "always"
     ],
-    "no-console": "off",
     "no-const-assign": "error",
     "no-control-regex": "error",
     "no-debugger": "error",
@@ -161,7 +165,6 @@
         "allowEmptyCatch": true
       }
     ],
-    "no-empty-character-class": "off",
     "no-empty-pattern": "error",
     "no-eval": "error",
     "no-ex-assign": "error",
@@ -172,7 +175,6 @@
     "no-func-assign": "error",
     "no-global-assign": "error",
     "no-import-assign": "error",
-    "no-invalid-regexp": "off",
     "no-irregular-whitespace": "error",
     "no-iterator": "error",
     "no-labels": [
@@ -248,7 +250,6 @@
         "vars": "all"
       }
     ],
-    "no-useless-backreference": "off",
     "no-useless-call": "error",
     "no-useless-catch": "error",
     "no-useless-computed-key": "error",
