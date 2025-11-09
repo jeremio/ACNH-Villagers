@@ -40,33 +40,38 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # 5. Lancement des vérifications statiques (linting, types)
+      # 5. Audit de sécurité des dépendances
+      - name: Run security audit
+        run: pnpm audit --audit-level=moderate
+        continue-on-error: true
+
+      # 6. Lancement des vérifications statiques (linting, types)
       - name: Run linter
         run: pnpm run lint
       - name: Run TypeScript type check
         run: pnpm run type-check
 
-      # 6. Lancement des tests unitaires
+      # 7. Lancement des tests unitaires
       # Le flag --run est spécifique à Vitest pour s'assurer qu'il ne reste pas en mode watch
       - name: Run unit tests
         run: pnpm run test:unit -- --run
 
-      # 7. Installation des navigateurs pour Playwright
+      # 8. Installation des navigateurs pour Playwright
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps
 
-      # 8. Construction de l'application pour la production
+      # 9. Construction de l'application pour la production
       # Cette étape est cruciale pour que les tests e2e tournent sur le code final
       - name: Build project
         run: pnpm run build
 
-      # 9. Lancement des tests de bout en bout (E2E) sur le build de production
+      # 10. Lancement des tests de bout en bout (E2E) sur le build de production
       # Assurez-vous que votre script "test:e2e" utilise la configuration webServer de Playwright
       # qui lance `pnpm run preview` pour servir le dossier `dist`.
       - name: Run e2e tests
         run: pnpm run test:e2e
 
-      # 10. Affichage de la taille du build pour information
+      # 11. Affichage de la taille du build pour information
       - name: Display build folder size
         run: |
           echo "Build output in 'dist/':"
@@ -74,7 +79,16 @@ jobs:
           echo "Total size of 'dist/' folder:"
           du -sh dist/
 
-      # 11. Téléversement du rapport d'analyse du build comme artefact
+      # 12. Lighthouse CI - Audit de performance
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.13.x
+          lhci autorun
+        continue-on-error: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      # 13. Téléversement du rapport d'analyse du build comme artefact
       - name: Upload visualizer report
         uses: actions/upload-artifact@v4
         with:

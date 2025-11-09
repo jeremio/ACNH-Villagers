@@ -22,6 +22,7 @@
         </NLayoutSider>
 
         <NLayout
+          id="main-content"
           content-style="padding: 24px;"
           :native-scrollbar="false"
           role="main"

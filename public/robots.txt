@@ -1,0 +1,12 @@
+# robots.txt for ACNH Villagers
+# https://acnh-villagers.netlify.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://acnh-villagers.netlify.app/sitemap.xml
+
+# Disallow access to JSON data files (optional, for crawlers efficiency)
+Disallow: /villagers.json
+Disallow: /villagers-init.json

@@ -89,6 +89,22 @@
     #app {
       min-height: 100vh;
     }
+
+    /* Skip link pour l'accessibilité */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
   </style>
 </head>
 
@@ -107,6 +123,9 @@
     </p>
   </div>
 </noscript>
+
+<!-- Skip link pour l'accessibilité -->
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
 <!-- Point de montage de l'application -->
 <div id="app"></div>
