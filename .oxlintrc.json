@@ -1,11 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "node",
-    "jsdoc",
-    "import",
-    "unicorn"
-  ],
+  "plugins": ["node", "jsdoc", "import", "unicorn"],
   "categories": {
     "correctness": "off"
   },
@@ -13,9 +8,7 @@
     "builtin": true,
     "es2026": true,
     "browser": true,
-    "commonjs": true,
-    "node": true,
-    "shared-node-browser": true
+    "node": true
   },
   "ignorePatterns": [
     "**/.DS_Store",
@@ -129,10 +122,7 @@
     "array-callback-return": "error",
     "block-scoped-var": "error",
     "default-case-last": "error",
-    "eqeqeq": [
-      "error",
-      "smart"
-    ],
+    "eqeqeq": ["error", "smart"],
     "new-cap": [
       "error",
       {
@@ -148,10 +138,7 @@
     "no-case-declarations": "error",
     "no-class-assign": "error",
     "no-compare-neg-zero": "error",
-    "no-cond-assign": [
-      "error",
-      "always"
-    ],
+    "no-cond-assign": ["error", "always"],
     "no-const-assign": "error",
     "no-control-regex": "error",
     "no-debugger": "error",
@@ -263,10 +250,7 @@
     "prefer-spread": "error",
     "prefer-template": "error",
     "symbol-description": "error",
-    "unicode-bom": [
-      "error",
-      "never"
-    ],
+    "unicode-bom": ["error", "never"],
     "use-isnan": [
       "error",
       {
@@ -281,10 +265,7 @@
       }
     ],
     "vars-on-top": "error",
-    "yoda": [
-      "error",
-      "never"
-    ],
+    "yoda": ["error", "never"],
     "node/no-exports-assign": "error",
     "node/no-new-require": "error",
     "jsdoc/check-access": "warn",
@@ -297,10 +278,7 @@
     "jsdoc/require-property-description": "warn",
     "jsdoc/require-property-name": "warn",
     "jsdoc/require-returns-description": "warn",
-    "import/consistent-type-specifier-style": [
-      "error",
-      "top-level"
-    ],
+    "import/consistent-type-specifier-style": ["error", "top-level"],
     "import/first": "error",
     "import/no-duplicates": "error",
     "import/no-mutable-exports": "error",
@@ -323,11 +301,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.?([cm])ts",
-        "**/*.?([cm])tsx",
-        "**/*.vue"
-      ],
+      "files": ["**/*.?([cm])ts", "**/*.?([cm])tsx", "**/*.vue"],
       "rules": {
         "no-class-assign": "off",
         "no-const-assign": "off",
@@ -401,10 +375,11 @@
           }
         ],
         "@typescript-eslint/no-import-type-side-effects": "error"
-      },
-      "plugins": [
-        "typescript"
-      ]
+      }
+    },
+    {
+      "files": ["**/*.?([cm])ts", "**/*.?([cm])tsx", "**/*.vue"],
+      "plugins": ["typescript"]
     },
     {
       "files": [
@@ -429,15 +404,10 @@
         "no-unused-expressions": "off",
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": [
-        "vitest",
-        "typescript"
-      ]
+      "plugins": ["vitest", "typescript"]
     },
     {
-      "files": [
-        "**/*.vue"
-      ],
+      "files": ["**/*.vue"],
       "rules": {
         "vue/no-export-in-script-setup": "error",
         "vue/prefer-import-from-vue": "error",
@@ -447,16 +417,10 @@
         "vue/no-required-prop-with-default": "warn",
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": [
-        "vue",
-        "typescript"
-      ]
+      "plugins": ["vue", "typescript"]
     },
     {
-      "files": [
-        "**/*.md/**/*.?([cm])[jt]s?(x)",
-        "**/*.md/**/*.vue"
-      ],
+      "files": ["**/*.md/**/*.?([cm])[jt]s?(x)", "**/*.md/**/*.vue"],
       "rules": {
         "no-alert": "off",
         "no-labels": "off",
@@ -471,32 +435,21 @@
         "unicode-bom": "off",
         "no-redeclare": "off"
       },
-      "plugins": [
-        "typescript"
-      ]
+      "plugins": ["typescript"]
     },
     {
-      "files": [
-        "**/scripts/**/*.?([cm])[jt]s?(x)"
-      ],
+      "files": ["**/scripts/**/*.?([cm])[jt]s?(x)"],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": [
-        "typescript"
-      ]
+      "plugins": ["typescript"]
     },
     {
-      "files": [
-        "**/*.js",
-        "**/*.cjs"
-      ],
+      "files": ["**/*.js", "**/*.cjs"],
       "rules": {
         "@typescript-eslint/no-require-imports": "off"
       },
-      "plugins": [
-        "typescript"
-      ]
+      "plugins": ["typescript"]
     },
     {
       "files": [
@@ -506,17 +459,10 @@
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": [
-        "typescript"
-      ]
+      "plugins": ["typescript"]
     },
     {
-      "files": [
-        "*.yaml",
-        "**/*.yaml",
-        "*.yml",
-        "**/*.yml"
-      ],
+      "files": ["*.yaml", "**/*.yaml", "*.yml", "**/*.yml"],
       "rules": {
         "no-irregular-whitespace": "off"
       }
