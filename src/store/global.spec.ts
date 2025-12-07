@@ -11,6 +11,7 @@ describe('global Store', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
     mockFetch.mockReset()
+    vi.spyOn(console, 'error').mockImplementation(() => {})
   })
 
   describe('initialization', () => {
