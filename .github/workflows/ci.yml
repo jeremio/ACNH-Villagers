@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         # Spécifier la version de Node.js.
-        node-version: [22.x]
+        node-version: [24.x]
 
     steps:
       # 1. Récupération du code du dépôt
