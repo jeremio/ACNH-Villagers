@@ -1,6 +1,11 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["node", "jsdoc", "import", "unicorn"],
+  "plugins": [
+    "node",
+    "jsdoc",
+    "import",
+    "unicorn"
+  ],
   "categories": {
     "correctness": "off"
   },
@@ -90,19 +95,13 @@
     "**/components.d.ts"
   ],
   "globals": {
-    "CSSFunctionDeclarations": "readonly",
-    "CSSFunctionDescriptors": "readonly",
-    "CSSFunctionRule": "readonly",
-    "DigitalCredential": "readonly",
-    "IDBRecord": "readonly",
-    "InterestEvent": "readonly",
-    "NavigationPrecommitController": "readonly",
-    "SpeechGrammar": "readonly",
-    "SpeechGrammarList": "readonly",
-    "SpeechRecognition": "readonly",
-    "SpeechRecognitionErrorEvent": "readonly",
-    "SpeechRecognitionEvent": "readonly",
-    "SpeechRecognitionPhrase": "readonly",
+    "AudioWorkletGlobalScope": "readonly",
+    "AudioWorkletProcessor": "readonly",
+    "currentFrame": "readonly",
+    "currentTime": "readonly",
+    "registerProcessor": "readonly",
+    "sampleRate": "readonly",
+    "WorkletGlobalScope": "readonly",
     "computed": "readonly",
     "defineEmits": "readonly",
     "defineExpose": "readonly",
@@ -119,10 +118,21 @@
     "watchEffect": "readonly"
   },
   "rules": {
+    "accessor-pairs": [
+      "error",
+      {
+        "enforceForClassMembers": true,
+        "setWithoutGet": true
+      }
+    ],
     "array-callback-return": "error",
     "block-scoped-var": "error",
+    "constructor-super": "error",
     "default-case-last": "error",
-    "eqeqeq": ["error", "smart"],
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
     "new-cap": [
       "error",
       {
@@ -138,7 +148,10 @@
     "no-case-declarations": "error",
     "no-class-assign": "error",
     "no-compare-neg-zero": "error",
-    "no-cond-assign": ["error", "always"],
+    "no-cond-assign": [
+      "error",
+      "always"
+    ],
     "no-const-assign": "error",
     "no-control-regex": "error",
     "no-debugger": "error",
@@ -206,6 +219,7 @@
       }
     ],
     "no-self-compare": "error",
+    "no-sequences": "error",
     "no-shadow-restricted-names": "error",
     "no-sparse-arrays": "error",
     "no-template-curly-in-string": "error",
@@ -242,15 +256,26 @@
     "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-useless-rename": "error",
+    "no-useless-return": "error",
     "no-var": "error",
     "no-with": "error",
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": true
+      }
+    ],
     "prefer-exponentiation-operator": "error",
     "prefer-promise-reject-errors": "error",
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
     "symbol-description": "error",
-    "unicode-bom": ["error", "never"],
+    "unicode-bom": [
+      "error",
+      "never"
+    ],
     "use-isnan": [
       "error",
       {
@@ -265,7 +290,10 @@
       }
     ],
     "vars-on-top": "error",
-    "yoda": ["error", "never"],
+    "yoda": [
+      "error",
+      "never"
+    ],
     "node/no-exports-assign": "error",
     "node/no-new-require": "error",
     "jsdoc/check-access": "warn",
@@ -278,7 +306,9 @@
     "jsdoc/require-property-description": "warn",
     "jsdoc/require-property-name": "warn",
     "jsdoc/require-returns-description": "warn",
-    "import/consistent-type-specifier-style": ["error", "top-level"],
+    "import/consistent-type-specifier-style": [
+      "error"
+    ],
     "import/first": "error",
     "import/no-duplicates": "error",
     "import/no-mutable-exports": "error",
@@ -301,8 +331,13 @@
   },
   "overrides": [
     {
-      "files": ["**/*.?([cm])ts", "**/*.?([cm])tsx", "**/*.vue"],
+      "files": [
+        "**/*.?([cm])ts",
+        "**/*.?([cm])tsx",
+        "**/*.vue"
+      ],
       "rules": {
+        "constructor-super": "off",
         "no-class-assign": "off",
         "no-const-assign": "off",
         "no-dupe-keys": "off",
@@ -320,6 +355,13 @@
         "no-this-before-super": "off",
         "no-unsafe-negation": "off",
         "no-with": "off",
+        "prefer-const": [
+          "error",
+          {
+            "destructuring": "all",
+            "ignoreReadBeforeAssign": true
+          }
+        ],
         "@typescript-eslint/ban-ts-comment": [
           "error",
           {
@@ -378,8 +420,14 @@
       }
     },
     {
-      "files": ["**/*.?([cm])ts", "**/*.?([cm])tsx", "**/*.vue"],
-      "plugins": ["typescript"]
+      "files": [
+        "**/*.?([cm])ts",
+        "**/*.?([cm])tsx",
+        "**/*.vue"
+      ],
+      "plugins": [
+        "typescript"
+      ]
     },
     {
       "files": [
@@ -404,12 +452,20 @@
         "no-unused-expressions": "off",
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": ["vitest", "typescript"]
+      "plugins": [
+        "vitest",
+        "typescript"
+      ]
     },
     {
-      "files": ["**/*.vue"],
+      "files": [
+        "**/*.vue"
+      ],
       "rules": {
+        "vue/no-arrow-functions-in-watch": "error",
+        "vue/no-deprecated-destroyed-lifecycle": "error",
         "vue/no-export-in-script-setup": "error",
+        "vue/no-lifecycle-after-await": "error",
         "vue/prefer-import-from-vue": "error",
         "vue/valid-define-emits": "error",
         "vue/valid-define-props": "error",
@@ -417,10 +473,16 @@
         "vue/no-required-prop-with-default": "warn",
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": ["vue", "typescript"]
+      "plugins": [
+        "vue",
+        "typescript"
+      ]
     },
     {
-      "files": ["**/*.md/**/*.?([cm])[jt]s?(x)", "**/*.md/**/*.vue"],
+      "files": [
+        "**/*.md/**/*.?([cm])[jt]s?(x)",
+        "**/*.md/**/*.vue"
+      ],
       "rules": {
         "no-alert": "off",
         "no-labels": "off",
@@ -435,21 +497,32 @@
         "unicode-bom": "off",
         "no-redeclare": "off"
       },
-      "plugins": ["typescript"]
+      "plugins": [
+        "typescript"
+      ]
     },
     {
-      "files": ["**/scripts/**/*.?([cm])[jt]s?(x)"],
+      "files": [
+        "**/scripts/**/*.?([cm])[jt]s?(x)"
+      ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": ["typescript"]
+      "plugins": [
+        "typescript"
+      ]
     },
     {
-      "files": ["**/*.js", "**/*.cjs"],
+      "files": [
+        "**/*.js",
+        "**/*.cjs"
+      ],
       "rules": {
         "@typescript-eslint/no-require-imports": "off"
       },
-      "plugins": ["typescript"]
+      "plugins": [
+        "typescript"
+      ]
     },
     {
       "files": [
@@ -459,10 +532,17 @@
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off"
       },
-      "plugins": ["typescript"]
+      "plugins": [
+        "typescript"
+      ]
     },
     {
-      "files": ["*.yaml", "**/*.yaml", "*.yml", "**/*.yml"],
+      "files": [
+        "*.yaml",
+        "**/*.yaml",
+        "*.yml",
+        "**/*.yml"
+      ],
       "rules": {
         "no-irregular-whitespace": "off"
       }
