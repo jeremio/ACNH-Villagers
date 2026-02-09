@@ -146,17 +146,17 @@ const props = defineProps<{
 }>()
 
 const { t, locale } = useI18n()
-const { popoverColor, boxShadow2, textColor2, borderRadius } = useThemeVars().value
+const themeVars = useThemeVars()
 
 // Configuration
 const imageSize = computed(() => props.imageSize || 100)
 
 // Thème du groupe d'images
 const imageGroupThemeOverrides = computed(() => ({
-  toolbarColor: popoverColor,
-  toolbarBoxShadow: boxShadow2,
-  toolbarIconColor: textColor2,
-  toolbarBorderRadius: borderRadius,
+  toolbarColor: themeVars.value.popoverColor,
+  toolbarBoxShadow: themeVars.value.boxShadow2,
+  toolbarIconColor: themeVars.value.textColor2,
+  toolbarBorderRadius: themeVars.value.borderRadius,
 }))
 
 // Fonctions de récupération des données avec validation et assainissement
