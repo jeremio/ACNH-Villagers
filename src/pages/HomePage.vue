@@ -93,11 +93,9 @@ import { useGlobalStore } from '@/store/global'
 
 const { locale, t } = useI18n()
 const store = useGlobalStore()
-const { villagers, filteredVillagers, fetchError } = storeToRefs(store)
+const { villagers, filteredVillagers, fetchError, loading } = storeToRefs(store)
 
 const theme = ref<GlobalTheme | null>(darkTheme)
-// Le 'loading' local est conservé, car le store n'expose pas son propre état de chargement
-const loading = ref(true)
 
 // *** AMÉLIORATION PRINCIPALE : L'état d'affichage calculé ***
 const viewState = computed(() => {
@@ -136,9 +134,7 @@ onMounted(async () => {
   if (fetchError.value)
     store.clearError()
 
-  loading.value = true
   await store.setVillagers()
-  loading.value = false
 })
 </script>
 

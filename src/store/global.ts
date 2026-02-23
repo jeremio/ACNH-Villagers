@@ -11,10 +11,12 @@ export const useGlobalStore = defineStore('global', () => {
   const selectedSpecie = ref('all')
   const language = ref('fr')
   const fetchError = ref<string | null>(null)
+  const loading = ref(false)
 
   // Actions
   async function setVillagers() {
     try {
+      loading.value = true
       fetchError.value = null
       const response = await fetch('/villagers.json')
 
@@ -35,6 +37,9 @@ export const useGlobalStore = defineStore('global', () => {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
       fetchError.value = `Failed to load villagers: ${errorMessage}`
       console.error('Fetch error:', error)
+    }
+    finally {
+      loading.value = false
     }
   }
 
@@ -84,6 +89,7 @@ export const useGlobalStore = defineStore('global', () => {
     selectedSpecie,
     language,
     fetchError,
+    loading,
     // Actions
     setVillagers,
     resetFilters,
