@@ -51,7 +51,7 @@ function getUniqueValues<T extends FilterableProperty>(property: T): string[] {
     }
   }
 
-  return Array.from(uniqueValues)
+  return [...uniqueValues]
 }
 
 // Mémorisation des données de filtre pour éviter les recalculs

@@ -48,7 +48,7 @@ const { getPlural, selectedValue, onToggle } = useFilter(props.type)
 
 // Mémorisation du tri pour éviter les recalculs
 const sortedData = computed(() =>
-  [...props.data].sort((a, b) => a.localeCompare(b)),
+  props.data.toSorted((a, b) => a.localeCompare(b)),
 )
 </script>
 
