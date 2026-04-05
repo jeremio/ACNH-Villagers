@@ -15,7 +15,7 @@
 import { NSelect, NSpace } from 'naive-ui'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { setLocale } from '@/main'
+import { setLocale } from '@/i18n'
 
 const { locale, t } = useI18n()
 const isChangingLanguage = ref(false)

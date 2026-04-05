@@ -1,18 +1,15 @@
 # ACNH Villagers
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://app.netlify.com/sites/acnh-villagers/deploys)
-[![npm version](https://badge.fury.io/js/list-villagers.svg)](https://badge.fury.io/js/list-villagers)
-
-### VueJS 3 + ViteJS + Pinia + i18n
+## VueJS 3 + ViteJS + Pinia + i18n
 
 ## Introduction:
 
 ACNH Villagers is a web application which list all villagers in animal crossing new horizons.
-You can filter with gender, hobby, specie and personnality.
+You can filter with gender, hobby, specie and personality.
 
 The goal is also to use vue 3, vite, pinia, vue-i18n.
 
-This app uses Composition API script setup with JS.
+This app uses Composition API script setup with TypeScript.
 
 ## Demo
 

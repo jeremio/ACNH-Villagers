@@ -252,42 +252,4 @@ describe('global Store', () => {
       expect(store.filteredVillagers).toHaveLength(2)
     })
   })
-
-  describe('filterStats', () => {
-    it('should compute filter statistics correctly', () => {
-      const store = useGlobalStore()
-      store.villagers = [
-        {
-          'id': 1,
-          'file-name': 'test1',
-          'name': { 'name-EUfr': 'Test1', 'name-EUen': 'Test1' },
-          'gender': 'Male',
-          'personality': 'Lazy',
-          'hobby': 'Music',
-          'specie': 'Cat',
-          'birthday-string': '1/1',
-        },
-        {
-          'id': 2,
-          'file-name': 'test2',
-          'name': { 'name-EUfr': 'Test2', 'name-EUen': 'Test2' },
-          'gender': 'Female',
-          'personality': 'Normal',
-          'hobby': 'Nature',
-          'specie': 'Dog',
-          'birthday-string': '2/2',
-        },
-      ]
-
-      expect(store.filterStats.total).toBe(2)
-      expect(store.filterStats.filtered).toBe(2)
-      expect(store.filterStats.activeFilters).toEqual([])
-
-      store.selectedGender = 'Male'
-      store.selectedHobby = 'Music'
-
-      expect(store.filterStats.filtered).toBe(1)
-      expect(store.filterStats.activeFilters).toEqual(['gender', 'hobby'])
-    })
-  })
 })

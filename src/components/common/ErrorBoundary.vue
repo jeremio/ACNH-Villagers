@@ -1,16 +1,12 @@
 <template>
   <NConfigProvider v-if="hasError" :theme="darkTheme">
     <NLayout style="height: 100vh">
-      <NLayoutHeader
-        style="height: 64px; padding: 24px"
-        bordered
-        role="banner"
-      >
+      <NLayoutHeader style="height: 64px; padding: 24px" bordered role="banner">
         <div class="error-header">
           <NIcon size="24" color="red">
             <AlertCircle />
           </NIcon>
-          ACNH Villagers - {{ t('error.boundaryTitle') }}
+          ACNH Villagers - {{ t("error.boundaryTitle") }}
         </div>
       </NLayoutHeader>
 
@@ -23,14 +19,17 @@
             :title="t('error.boundaryTitle')"
             type="error"
             :show-icon="true"
-            style="max-width: 600px;"
+            style="max-width: 600px"
           >
             <NSpace vertical>
-              <p>{{ t('error.boundaryMessage') }}</p>
+              <p>{{ t("error.boundaryMessage") }}</p>
 
               <div v-if="showDetails" class="error-details">
                 <NCollapse>
-                  <NCollapseItem :title="t('error.technicalDetails')" name="details">
+                  <NCollapseItem
+                    :title="t('error.technicalDetails')"
+                    name="details"
+                  >
                     <pre class="error-stack">{{ errorDetails }}</pre>
                   </NCollapseItem>
                 </NCollapse>
@@ -42,7 +41,7 @@
                   :loading="isReloading"
                   @click="reloadPage"
                 >
-                  {{ t('error.reload') }}
+                  {{ t("error.reload") }}
                 </NButton>
 
                 <NButton
@@ -51,14 +50,15 @@
                   :loading="isRecovering"
                   @click="attemptRecovery"
                 >
-                  {{ t('error.tryRecover') }}
+                  {{ t("error.tryRecover") }}
                 </NButton>
 
-                <NButton
-                  text
-                  @click="toggleDetails"
-                >
-                  {{ showDetails ? t('error.hideDetails') : t('error.showDetails') }}
+                <NButton text @click="toggleDetails">
+                  {{
+                    showDetails
+                      ? t("error.hideDetails")
+                      : t("error.showDetails")
+                  }}
                 </NButton>
               </NSpace>
             </NSpace>
@@ -70,7 +70,9 @@
               :percentage="((5 - autoRecoveryCountdown) / 5) * 100"
               :show-indicator="false"
             />
-            <p>{{ t('error.autoRecovery', { seconds: autoRecoveryCountdown }) }}</p>
+            <p>
+              {{ t("error.autoRecovery", { seconds: autoRecoveryCountdown }) }}
+            </p>
           </div>
         </NLayout>
       </NLayout>
@@ -128,9 +130,7 @@ const recoverableErrors = [
 
 function isRecoverableError(error: Error): boolean {
   const errorMessage = error.message || error.toString()
-  return recoverableErrors.some(pattern =>
-    errorMessage.includes(pattern),
-  )
+  return recoverableErrors.some(pattern => errorMessage.includes(pattern))
 }
 
 function logErrorToService(errorInfo: ErrorInfo) {
@@ -256,7 +256,7 @@ onUnmounted(() => {
 }
 
 .error-stack {
-  background-color: #f5f5f5;
+  background-color: rgba(128, 128, 128, 0.15);
   padding: 12px;
   border-radius: 4px;
   font-size: 12px;

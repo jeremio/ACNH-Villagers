@@ -1,86 +1,12 @@
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-import { createI18n } from 'vue-i18n'
 import App from '@/App.vue'
+import i18n from '@/i18n'
 import router from './router'
 
 // Import des polices critiques
 import 'vfonts/FiraCode.css'
 import '@/styles/variables.css'
-
-// Configuration de l'internationalisation avec lazy loading
-const i18n = createI18n({
-  locale: getInitialLocale(),
-  fallbackLocale: 'en',
-  legacy: false,
-  globalInjection: true,
-  messages: {
-    // Messages de base pour éviter les erreurs de chargement
-    en: {
-      loading: 'Loading...',
-      error: {
-        boundaryTitle: 'An error occurred',
-        boundaryMessage: 'Please try reloading the page.',
-        reload: 'Reload',
-        tryRecover: 'Try to recover',
-        showDetails: 'Show details',
-        hideDetails: 'Hide details',
-        technicalDetails: 'Technical details',
-        autoRecovery: 'Auto-recovery in {seconds} seconds...',
-      },
-    },
-    fr: {
-      loading: 'Chargement...',
-      error: {
-        boundaryTitle: 'Une erreur est survenue',
-        boundaryMessage: 'Veuillez essayer de recharger la page.',
-        reload: 'Recharger',
-        tryRecover: 'Essayer de récupérer',
-        showDetails: 'Afficher les détails',
-        hideDetails: 'Masquer les détails',
-        technicalDetails: 'Détails techniques',
-        autoRecovery: 'Récupération automatique dans {seconds} secondes...',
-      },
-    },
-  },
-})
-
-// Chargement lazy des traductions complètes
-loadLocaleMessages(i18n.global.locale.value)
-
-function getInitialLocale(): string {
-  // Priorité: localStorage > navigateur > défaut
-  const stored = localStorage.getItem('app-locale')
-  if (stored && ['en', 'fr'].includes(stored)) {
-    return stored
-  }
-
-  const browserLocale = navigator.language.substring(0, 2)
-  return ['en', 'fr'].includes(browserLocale) ? browserLocale : 'fr'
-}
-
-async function loadLocaleMessages(locale: string) {
-  try {
-    const messages = await import(`./locales/${locale}.json`)
-    i18n.global.mergeLocaleMessage(locale, messages.default)
-  }
-  catch (error) {
-    console.warn(`Failed to load locale ${locale}:`, error)
-  }
-}
-
-// Fonction pour changer de langue avec chargement lazy
-export async function setLocale(locale: string) {
-  if (!['en', 'fr'].includes(locale))
-    return
-
-  await loadLocaleMessages(locale)
-  i18n.global.locale.value = locale as any
-  localStorage.setItem('app-locale', locale)
-
-  // Mettre à jour l'attribut lang du document
-  document.documentElement.lang = locale
-}
 
 // Configuration de l'application
 const app = createApp(App)
@@ -95,7 +21,7 @@ app.config.errorHandler = (error, instance, info) => {
   }
 }
 
-// Configuration des avertissements en développement
+// Configuration des avertissements en developpement
 if (import.meta.env.DEV) {
   app.config.warnHandler = (msg, instance, trace) => {
     console.warn('Vue warning:', msg, instance, trace)
@@ -122,22 +48,12 @@ catch (error) {
   `
 }
 
-// Gestion des erreurs non capturées
+// Gestion des erreurs non capturees
 window.addEventListener('error', (event) => {
   console.error('Uncaught error:', event.error)
 })
 
 window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled promise rejection:', event.reason)
-  event.preventDefault() // Empêcher l'affichage dans la console du navigateur
+  event.preventDefault()
 })
-
-// Performance monitoring (optionnel)
-if (import.meta.env.PROD && 'performance' in window) {
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      console.log('App load time:', perfData.loadEventEnd - perfData.fetchStart, 'ms')
-    }, 0)
-  })
-}

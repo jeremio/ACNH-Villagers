@@ -9,7 +9,6 @@ export const useGlobalStore = defineStore('global', () => {
   const selectedHobby = ref('all')
   const selectedPersonality = ref('all')
   const selectedSpecie = ref('all')
-  const language = ref('fr')
   const fetchError = ref<string | null>(null)
   const loading = ref(false)
 
@@ -34,7 +33,8 @@ export const useGlobalStore = defineStore('global', () => {
       villagers.value = data as Character[]
     }
     catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+      const errorMessage
+        = error instanceof Error ? error.message : 'Unknown error'
       fetchError.value = `Failed to load villagers: ${errorMessage}`
       console.error('Fetch error:', error)
     }
@@ -61,24 +61,18 @@ export const useGlobalStore = defineStore('global', () => {
 
     return villagers.value.filter((character) => {
       // Vérification de tous les filtres en une seule passe
-      return (selectedGender.value === 'all' || character.gender === selectedGender.value)
-        && (selectedPersonality.value === 'all' || character.personality === selectedPersonality.value)
-        && (selectedHobby.value === 'all' || character.hobby === selectedHobby.value)
-        && (selectedSpecie.value === 'all' || character.specie === selectedSpecie.value)
+      return (
+        (selectedGender.value === 'all'
+          || character.gender === selectedGender.value)
+        && (selectedPersonality.value === 'all'
+          || character.personality === selectedPersonality.value)
+        && (selectedHobby.value === 'all'
+          || character.hobby === selectedHobby.value)
+        && (selectedSpecie.value === 'all'
+          || character.specie === selectedSpecie.value)
+      )
     })
   })
-
-  // Getter pour les statistiques (optionnel, pour debug/info)
-  const filterStats = computed(() => ({
-    total: villagers.value.length,
-    filtered: filteredVillagers.value.length,
-    activeFilters: [
-      selectedGender.value !== 'all' ? 'gender' : null,
-      selectedPersonality.value !== 'all' ? 'personality' : null,
-      selectedHobby.value !== 'all' ? 'hobby' : null,
-      selectedSpecie.value !== 'all' ? 'specie' : null,
-    ].filter(Boolean),
-  }))
 
   return {
     // State
@@ -87,7 +81,6 @@ export const useGlobalStore = defineStore('global', () => {
     selectedPersonality,
     selectedHobby,
     selectedSpecie,
-    language,
     fetchError,
     loading,
     // Actions
@@ -96,6 +89,5 @@ export const useGlobalStore = defineStore('global', () => {
     clearError,
     // Getters
     filteredVillagers,
-    filterStats,
   }
 })

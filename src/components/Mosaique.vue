@@ -47,7 +47,7 @@
                         <ImageOff />
                       </NIcon>
                       <div class="error-text">
-                        {{ t('image.failed') }}
+                        {{ t("image.failed") }}
                       </div>
                       <div class="villager-name">
                         {{ getVillagerName(villager) }}
@@ -74,39 +74,50 @@
                   <NIcon size="16">
                     <Users />
                   </NIcon>
-                  <strong>{{ t('filters.gender') }}:</strong>
-                  <span>{{ getLocalizedText('genders', getVillagerGender(villager)) }}</span>
+                  <strong>{{ t("filters.gender") }}:</strong>
+                  <span>{{
+                    getLocalizedText("genders", getVillagerGender(villager))
+                  }}</span>
                 </div>
 
                 <div class="detail-row">
                   <NIcon size="16">
                     <Gamepad2 />
                   </NIcon>
-                  <strong>{{ t('filters.hobby') }}:</strong>
-                  <span>{{ getLocalizedText('hobbies', getVillagerHobby(villager)) }}</span>
+                  <strong>{{ t("filters.hobby") }}:</strong>
+                  <span>{{
+                    getLocalizedText("hobbies", getVillagerHobby(villager))
+                  }}</span>
                 </div>
 
                 <div class="detail-row">
                   <NIcon size="16">
                     <Smile />
                   </NIcon>
-                  <strong>{{ t('filters.personality') }}:</strong>
-                  <span>{{ getLocalizedText('personalities', getVillagerPersonality(villager)) }}</span>
+                  <strong>{{ t("filters.personality") }}:</strong>
+                  <span>{{
+                    getLocalizedText(
+                      "personalities",
+                      getVillagerPersonality(villager),
+                    )
+                  }}</span>
                 </div>
 
                 <div class="detail-row">
                   <NIcon size="16">
                     <PawPrint />
                   </NIcon>
-                  <strong>{{ t('filters.specie') }}:</strong>
-                  <span>{{ getLocalizedText('species', getVillagerSpecie(villager)) }}</span>
+                  <strong>{{ t("filters.specie") }}:</strong>
+                  <span>{{
+                    getLocalizedText("species", getVillagerSpecie(villager))
+                  }}</span>
                 </div>
 
                 <div class="detail-row">
                   <NIcon size="16">
                     <Calendar />
                   </NIcon>
-                  <strong>{{ t('filters.birthday') }}:</strong>
+                  <strong>{{ t("filters.birthday") }}:</strong>
                   <span>{{ getVillagerBirthday(villager) }}</span>
                 </div>
               </div>
@@ -159,10 +170,12 @@ const imageGroupThemeOverrides = computed(() => ({
   toolbarBorderRadius: themeVars.value.borderRadius,
 }))
 
+const fileNameRegex = /[^\w-]/g
+
 // Fonctions de récupération des données avec validation et assainissement
 function getVillagerImage(villager: Character): string {
   const sanitizedFileName = villager['file-name']
-    .replace(/[^\w-]/g, '')
+    .replace(fileNameRegex, '')
     .substring(0, 50) // Limiter la longueur
 
   return `/villagers/${sanitizedFileName}.webp`
@@ -189,8 +202,7 @@ function getVillagerBirthday(villager: Character): string {
       return date.toLocaleDateString(locale.value)
     }
   }
-  catch (error) {
-    console.log(error)
+  catch {
     console.warn('Invalid date format:', villager['birthday-string'])
   }
 
@@ -258,7 +270,9 @@ function handleImageError(event: Event): void {
 .villager-card {
   position: relative;
   border-radius: 8px;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
   cursor: pointer;
   display: flex;
   justify-content: center;

@@ -42,32 +42,19 @@
   --transition-slow: 0.35s ease-in-out;
 }
 
-/* Variables pour le thème sombre */
-:root[data-theme="dark"] {
-  --primary-color: #4a9d9a;
-  --primary-color-hover: #5bb5b1;
-  --primary-color-pressed: #3c817f;
-
-  --popover-color: #ffffff;
-  --popover-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-
-  --text-color-primary: #ffffff;
-  --text-color-secondary: #cccccc;
-  --text-color-disabled: #666666;
-
-  --background-color: #1a1a1a;
-  --background-color-secondary: #2d2d30;
-  --background-color-tertiary: #363638;
-
-  --border-color: #404040;
-  --border-color-modal: rgba(255, 255, 255, 0.1);
-}
-
 /* Classes utilitaires basées sur les variables */
-.text-primary { color: var(--text-color-primary); }
-.text-secondary { color: var(--text-color-secondary); }
-.bg-primary { background-color: var(--primary-color); }
-.border-primary { border-color: var(--primary-color); }
+.text-primary {
+  color: var(--text-color-primary);
+}
+.text-secondary {
+  color: var(--text-color-secondary);
+}
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.border-primary {
+  border-color: var(--primary-color);
+}
 
 /* =========================================
    SOLUTION 2: Variables via Naive UI Theme

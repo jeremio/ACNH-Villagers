@@ -27,11 +27,10 @@ const router = createRouter({
   },
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to) => {
   if (to.meta.title)
-    document.title = `${to.meta.title as string} | Villagers ANCH`
-  else
-    document.title = 'Villagers ANCH'
+    document.title = `${to.meta.title as string} | Villagers ACNH`
+  else document.title = 'Villagers ACNH'
 
   // Définir ou mettre à jour la description de la page
   let metaDescription = document.querySelector('meta[name="description"]')
@@ -42,10 +41,10 @@ router.beforeEach((to, from, next) => {
     document.head.appendChild(metaDescription)
   }
 
-  const description = (to.meta.metaDesc as string) || 'liste villageois, habitants, animaux, voisins disponibles dans le jeu'
+  const description
+    = (to.meta.metaDesc as string)
+      || 'liste villageois, habitants, animaux, voisins disponibles dans le jeu'
   metaDescription.setAttribute('content', description)
-
-  next()
 })
 
 // Gestion des erreurs de routage
