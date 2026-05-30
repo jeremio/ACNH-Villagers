@@ -14,7 +14,6 @@
             :id="`all-${type}`"
             value="all"
             :label="t('all')"
-            @change="onToggle"
           />
         </NGridItem>
         <NGridItem v-for="item in sortedData" :key="item">
@@ -22,7 +21,6 @@
             :id="`${type}-${item}`"
             :value="item"
             :label="t(`${getPlural()}.${item}`)"
-            @change="onToggle"
           />
         </NGridItem>
       </NGrid>
@@ -44,7 +42,7 @@ const props = defineProps<{
 
 const { t } = useI18n()
 
-const { getPlural, selectedValue, onToggle } = useFilter(props.type)
+const { getPlural, selectedValue } = useFilter(props.type)
 
 // Mémorisation du tri pour éviter les recalculs
 const sortedData = computed(() =>

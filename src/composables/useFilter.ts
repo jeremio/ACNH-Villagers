@@ -24,13 +24,8 @@ export function useFilter(type: FilterableProperty) {
 
   const selectedValue = toRef(global, storeKey)
 
-  const onToggle = (event: Event) => {
-    selectedValue.value = (event.target as HTMLInputElement).value
-  }
-
   return {
     getPlural,
     selectedValue,
-    onToggle,
   }
 }
