@@ -89,11 +89,15 @@ import { useI18n } from 'vue-i18n'
 import Filters from '@/components/filters/Filters.vue'
 import Menu from '@/components/menu/Menu.vue'
 import Mosaique from '@/components/Mosaique.vue'
+import { useFilterUrlSync } from '@/composables/useFilterUrlSync'
 import { useGlobalStore } from '@/store/global'
 
 const { locale, t } = useI18n()
 const store = useGlobalStore()
 const { villagers, filteredVillagers, fetchError, loading } = storeToRefs(store)
+
+// Synchronise les filtres avec l'URL (partage, bookmark, refresh)
+useFilterUrlSync()
 
 const theme = ref<GlobalTheme | null>(darkTheme)
 
