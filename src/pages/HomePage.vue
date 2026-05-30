@@ -67,13 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import type { GlobalTheme } from 'naive-ui'
 import {
-  darkTheme,
-  dateEnUS,
-  dateFrFR,
-  enUS,
-  frFR,
   NAlert,
   NButton,
   NConfigProvider,
@@ -84,50 +78,25 @@ import {
   NSkeleton,
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { computed, onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Filters from '@/components/filters/Filters.vue'
 import Menu from '@/components/menu/Menu.vue'
 import Mosaique from '@/components/Mosaique.vue'
+import { useAppTheme } from '@/composables/useAppTheme'
 import { useFilterUrlSync } from '@/composables/useFilterUrlSync'
+import { useViewState } from '@/composables/useViewState'
 import { useGlobalStore } from '@/store/global'
 
-const { locale, t } = useI18n()
+const { t } = useI18n()
 const store = useGlobalStore()
-const { villagers, filteredVillagers, fetchError, loading } = storeToRefs(store)
+const { villagers, filteredVillagers, loading } = storeToRefs(store)
+
+const { theme, currentLocale, currentDateLocale, handleThemeChange } = useAppTheme()
+const { viewState } = useViewState()
 
 // Synchronise les filtres avec l'URL (partage, bookmark, refresh)
 useFilterUrlSync()
-
-const theme = ref<GlobalTheme | null>(darkTheme)
-
-// *** AMÉLIORATION PRINCIPALE : L'état d'affichage calculé ***
-const viewState = computed(() => {
-  if (loading.value) {
-    return 'loading'
-  }
-  if (fetchError.value) {
-    return 'error'
-  }
-  // Après le chargement et sans erreur, on vérifie les données
-  if (villagers.value.length === 0) {
-    // Le fetch a réussi mais n'a retourné aucune donnée
-    return 'noData'
-  }
-  if (filteredVillagers.value.length === 0) {
-    // On a des données, mais les filtres n'en correspondent à aucune
-    return 'emptyFilters'
-  }
-  // Si tout va bien, on affiche les résultats
-  return 'success'
-})
-
-function handleThemeChange(isDark: boolean) {
-  theme.value = isDark ? darkTheme : null
-}
-
-const currentLocale = computed(() => locale.value === 'fr' ? frFR : enUS)
-const currentDateLocale = computed(() => locale.value === 'fr' ? dateFrFR : dateEnUS)
 
 function clearError() {
   store.clearError()
@@ -135,7 +104,7 @@ function clearError() {
 
 onMounted(async () => {
   // On s'assure que l'état d'erreur est nul avant de fetcher
-  if (fetchError.value)
+  if (store.fetchError)
     store.clearError()
 
   await store.setVillagers()
