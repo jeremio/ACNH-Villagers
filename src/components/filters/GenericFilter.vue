@@ -1,12 +1,12 @@
 <template>
   <NSpace vertical>
     <div class="filter-title">
-      {{ t(`filters.${getPlural()}`) }}
+      {{ t(`filters.${plural}`) }}
     </div>
     <NRadioGroup
       v-model:value="selectedValue"
       :name="type"
-      :aria-label="t(`filters.${getPlural()}`)"
+      :aria-label="t(`filters.${plural}`)"
     >
       <NGrid cols="2" responsive="screen">
         <NGridItem>
@@ -20,7 +20,7 @@
           <NRadio
             :id="`${type}-${item}`"
             :value="item"
-            :label="t(`${getPlural()}.${item}`)"
+            :label="t(`${plural}.${item}`)"
           />
         </NGridItem>
       </NGrid>
@@ -42,7 +42,7 @@ const props = defineProps<{
 
 const { t } = useI18n()
 
-const { getPlural, selectedValue } = useFilter(props.type)
+const { plural, selectedValue } = useFilter(props.type)
 
 // Mémorisation du tri pour éviter les recalculs
 const sortedData = computed(() =>

@@ -6,12 +6,12 @@ import { useGlobalStore } from '@/store/global'
 export function useFilter(type: FilterableProperty) {
   const global = useGlobalStore()
 
-  const getPlural = () => pluralMap[type]
+  const plural = pluralMap[type]
 
   const selectedValue = toRef(global, storeKeyMap[type])
 
   return {
-    getPlural,
+    plural,
     selectedValue,
   }
 }
