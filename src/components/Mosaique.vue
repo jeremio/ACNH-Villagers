@@ -138,7 +138,7 @@ import {
   PawPrint,
   Smile,
   Users,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import {
   NIcon,
   NImage,

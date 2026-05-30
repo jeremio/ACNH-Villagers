@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { Moon, Sun, Users } from 'lucide-vue-next'
+import { Moon, Sun, Users } from '@lucide/vue'
 import { NButton, NButtonGroup, NIcon, NSpace, NTag, NTooltip } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
