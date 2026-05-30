@@ -205,14 +205,6 @@ async function attemptRecovery() {
     // Attendre un peu avant de réessayer
     await new Promise(resolve => setTimeout(resolve, 1000))
 
-    // Nettoyer le cache du module si possible
-    if ('serviceWorker' in navigator) {
-      const registration = await navigator.serviceWorker.getRegistration()
-      if (registration) {
-        await registration.update()
-      }
-    }
-
     // Réinitialiser l'état d'erreur
     hasError.value = false
     isRecoverable.value = false

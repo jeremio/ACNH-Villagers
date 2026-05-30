@@ -1,7 +1,7 @@
 <template>
   <NSpace vertical>
     <NSelect
-      v-model:value="selectedLocale"
+      :value="locale"
       :options="languageOptions"
       :consistent-menu-width="false"
       :loading="isChangingLanguage"
@@ -19,14 +19,6 @@ import { setLocale } from '@/i18n'
 
 const { locale, t } = useI18n()
 const isChangingLanguage = ref(false)
-
-// Computed pour la valeur sélectionnée
-const selectedLocale = computed({
-  get: () => locale.value,
-  set: (_value: string) => {
-    // La logique de changement est gérée dans handleLanguageChange
-  },
-})
 
 // Options de langue avec drapeaux et noms natifs
 const languageOptions = computed(() => [
