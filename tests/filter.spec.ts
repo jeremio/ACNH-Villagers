@@ -21,4 +21,17 @@ test.describe('Filtering functionality', () => {
     await page.getByText(/^(Musique|Music)$/).click()
     await expect(page.locator('.mosaique .villager-card')).toHaveCount(30)
   })
+
+  test('should reflect filters in the URL and restore them on reload', async ({ page }) => {
+    await page.getByText(/^(Mâle|Male)$/).click()
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(204)
+
+    // Le filtre actif est reflete dans les query params
+    await expect(page).toHaveURL(/[?&]gender=Male/)
+
+    // Apres rechargement, l'etat est restaure depuis l'URL
+    await page.reload()
+    await expect(page.locator('.mosaique .villager-card')).toHaveCount(204)
+    await expect(page).toHaveURL(/[?&]gender=Male/)
+  })
 })
