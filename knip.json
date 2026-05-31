@@ -1,5 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["tests/perf/mosaique-perf.mjs"],
   "ignore": ["env.d.ts"],
   "ignoreDependencies": ["@vue/language-server"]
 }

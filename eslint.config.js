@@ -7,6 +7,8 @@ export default antfu(
     pnpm: true,
     vue: true,
     typescript: true,
+    // Script de mesure de perf ad hoc : conventions CLI (console, top-level await)
+    ignores: ['tests/perf/**'],
   },
   {
     files: ['**/*.vue'],
