@@ -226,6 +226,8 @@ const imageGroupThemeOverrides = computed(() => ({
 }))
 
 const fileNameRegex = /[^\w-]/g
+const birthdayRegex = /^([A-Z][a-z]+) (\d{1,2})(?:st|nd|rd|th)$/
+const ENGLISH_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 // Fonctions de récupération des données avec validation et assainissement
 function getVillagerImage(villager: Character): string {
@@ -246,22 +248,22 @@ function getVillagerName(villager: Character): string {
 }
 
 function getVillagerBirthday(villager: Character): string {
-  if (!villager?.['birthday-string']) {
+  const raw = villager?.['birthday-string']
+  if (!raw) {
     return t('unknown')
   }
 
-  // Optionnel: formatter la date selon la locale
-  try {
-    const date = new Date(villager['birthday-string'])
-    if (!Number.isNaN(date.getTime())) {
-      return date.toLocaleDateString(locale.value)
-    }
-  }
-  catch {
-    console.warn('Invalid date format:', villager['birthday-string'])
+  // Format des données : "September 22nd" (mois anglais + jour ordinal)
+  const match = birthdayRegex.exec(raw)
+  const month = match ? ENGLISH_MONTHS.indexOf(match[1]!) : -1
+  if (!match || month === -1) {
+    return raw
   }
 
-  return villager['birthday-string']
+  return new Date(2000, month, Number(match[2])).toLocaleDateString(
+    locale.value,
+    { day: 'numeric', month: 'long' },
+  )
 }
 
 function getVillagerHobby(villager: Character): string {
@@ -365,7 +367,6 @@ function handleImageError(event: Event): void {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 8px;
 }
 
@@ -377,7 +378,7 @@ function handleImageError(event: Event): void {
   margin: 0 auto;
   font-size: 12px;
   text-align: center;
-  color: #666;
+  color: v-bind('themeVars.textColor3');
   max-width: 90px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -491,13 +492,4 @@ function handleImageError(event: Event): void {
 }
 
 /* Mode sombre */
-@media (prefers-color-scheme: dark) {
-  .image-placeholder {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-
-  .placeholder-text {
-    color: #ccc;
-  }
-}
 </style>
