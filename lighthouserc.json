@@ -17,7 +17,13 @@
         "installable-manifest": "off",
         "maskable-icon": "off",
         "splash-screen": "off",
-        "themed-omnibox": "off"
+        "themed-omnibox": "off",
+        "image-delivery-insight": "warn",
+        "lcp-discovery-insight": "warn",
+        "network-dependency-tree-insight": "warn",
+        "unused-javascript": "warn",
+        "uses-responsive-images": "warn",
+        "valid-source-maps": "warn"
       }
     },
     "upload": {
