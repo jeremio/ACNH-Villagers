@@ -1,43 +1,19 @@
+import messages from '@intlify/unplugin-vue-i18n/messages'
 import { createI18n } from 'vue-i18n'
 
+// Les traductions sont integrees au bundle (precompilees par
+// @intlify/unplugin-vue-i18n, ~1,3 Ko gzip par langue). Un chargement
+// asynchrone apres le montage laissait les cles brutes affichees : t() ne
+// suit que la locale, pas l'ajout de messages.
 const i18n = createI18n({
   locale: getInitialLocale(),
   fallbackLocale: 'en',
   legacy: false,
   globalInjection: true,
-  messages: {
-    // Messages de base pour eviter les erreurs de chargement
-    en: {
-      loading: 'Loading...',
-      error: {
-        boundaryTitle: 'An error occurred',
-        boundaryMessage: 'Please try reloading the page.',
-        reload: 'Reload',
-        tryRecover: 'Try to recover',
-        showDetails: 'Show details',
-        hideDetails: 'Hide details',
-        technicalDetails: 'Technical details',
-        autoRecovery: 'Auto-recovery in {seconds} seconds...',
-      },
-    },
-    fr: {
-      loading: 'Chargement...',
-      error: {
-        boundaryTitle: 'Une erreur est survenue',
-        boundaryMessage: 'Veuillez essayer de recharger la page.',
-        reload: 'Recharger',
-        tryRecover: 'Essayer de recuperer',
-        showDetails: 'Afficher les details',
-        hideDetails: 'Masquer les details',
-        technicalDetails: 'Details techniques',
-        autoRecovery: 'Recuperation automatique dans {seconds} secondes...',
-      },
-    },
-  },
+  messages,
 })
 
-// Chargement lazy des traductions completes
-loadLocaleMessages(i18n.global.locale.value)
+document.documentElement.lang = i18n.global.locale.value
 
 function getInitialLocale(): string {
   // Priorite: localStorage > navigateur > defaut
@@ -50,21 +26,10 @@ function getInitialLocale(): string {
   return ['en', 'fr'].includes(browserLocale) ? browserLocale : 'fr'
 }
 
-async function loadLocaleMessages(locale: string) {
-  try {
-    const messages = await import(`./locales/${locale}.json`)
-    i18n.global.mergeLocaleMessage(locale, messages.default)
-  }
-  catch (error) {
-    console.warn(`Failed to load locale ${locale}:`, error)
-  }
-}
-
-export async function setLocale(locale: string) {
+export function setLocale(locale: string): void {
   if (!['en', 'fr'].includes(locale))
     return
 
-  await loadLocaleMessages(locale)
   i18n.global.locale.value = locale as any
   localStorage.setItem('app-locale', locale)
 
