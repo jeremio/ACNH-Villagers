@@ -1,16 +1,16 @@
 <template>
-  <div
-    class="mosaique"
-    role="grid"
-    :aria-label="t('villagers.grid', { count: characters.length })"
-  >
+  <div class="mosaique">
     <NImageGroup :theme-overrides="imageGroupThemeOverrides">
-      <div class="villagers-grid">
+      <div
+        class="villagers-grid"
+        role="list"
+        :aria-label="t('villagers.grid', { count: characters.length })"
+      >
         <div
           v-for="villager in characters"
           :key="villager.id"
           class="villager-card"
-          role="gridcell"
+          role="listitem"
           :tabindex="0"
         >
           <NPopover
