@@ -79,7 +79,7 @@ jobs:
 
       # 12. Lighthouse CI - Audit de performance
       - name: Run Lighthouse CI
-        run: pnpm dlx @lhci/cli@0.15.x autorun
+        run: npx --yes @lhci/cli@0.15.x autorun
         continue-on-error: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
