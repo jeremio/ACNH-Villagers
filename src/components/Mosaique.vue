@@ -73,6 +73,7 @@
       <div
         v-if="activeVillager"
         class="popover-content"
+        :style="popoverStyle"
       >
         <div class="villager-header">
           <h3 class="villager-name">
@@ -185,6 +186,15 @@ onMounted(() => requestAnimationFrame(() => (renderAll.value = true)))
 const renderedCharacters = computed(() =>
   renderAll.value ? props.characters : props.characters.slice(0, 48),
 )
+
+// Couleurs du thème actif, en style inline : le popover est téléporté
+// dans <body>, hors de portée des variables CSS du composant
+const popoverStyle = computed(() => ({
+  'color': themeVars.value.textColor2,
+  'backgroundColor': themeVars.value.popoverColor,
+  'boxShadow': themeVars.value.boxShadow2,
+  '--divider-color': themeVars.value.dividerColor,
+}))
 
 // Popover unique partagé par toutes les cartes : un NPopover par carte
 // coûte cher au montage des 391 cartes.
@@ -408,7 +418,6 @@ function handleImageError(event: Event): void {
   min-width: 250px;
   max-width: 300px;
   padding: 16px;
-  background-color: var(--popover-color);
   border-radius: 8px;
 }
 
@@ -418,7 +427,7 @@ function handleImageError(event: Event): void {
   align-items: center;
   margin-bottom: 12px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--divider-color);
 }
 
 .villager-header h3 {
@@ -488,11 +497,6 @@ function handleImageError(event: Event): void {
   }
 
   .placeholder-text {
-    color: #ccc;
-  }
-
-  .popover-content {
-    background-color: var(--popover-color);
     color: #ccc;
   }
 }

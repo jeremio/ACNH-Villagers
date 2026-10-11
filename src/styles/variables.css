@@ -6,8 +6,6 @@
   --primary-color-suppl: rgba(60, 129, 127, 0.1);
 
   /* Couleurs du popover */
-  --popover-color: #2d2d30;
-  /*--popover-color-dark: #2d2d30;*/
   --popover-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   --popover-border-radius: 8px;
 
