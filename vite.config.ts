@@ -117,16 +117,15 @@ export default defineConfig(({
       __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
     },
 
-    // Configuration ESBuild pour des transformations supplémentaires
-    esbuild: {
-      // Supprimer les console.log en production via esbuild
-      drop: isProduction ? ['console', 'debugger'] : [],
-
-      // Support des décorateurs si nécessaire
-      // experimentalDecorators: true,
-
-      // Optimisations de caractères
-      charset: 'utf8',
+    // Supprimer les console.* et debugger en production (minifier oxc de rolldown)
+    build: {
+      rolldownOptions: {
+        output: {
+          minify: isProduction
+            ? { compress: { dropConsole: true, dropDebugger: true } }
+            : undefined,
+        },
+      },
     },
   }
 })

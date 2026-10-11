@@ -21,16 +21,16 @@ jobs:
     steps:
       # 1. Récupération du code du dépôt
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # 2. Configuration de pnpm
       # La version est lue depuis le champ "packageManager" de package.json
       - name: Set up pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       # 3. Configuration de Node.js avec le cache pnpm
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
@@ -79,19 +79,19 @@ jobs:
 
       # 12. Lighthouse CI - Audit de performance
       - name: Run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.13.x
-          lhci autorun
+        run: pnpm dlx @lhci/cli@0.15.x autorun
         continue-on-error: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
-      # 13. Téléversement du rapport d'analyse du build comme artefact
+      # 13. Génération du rapport d'analyse du bundle (mode analyze)
+      - name: Generate visualizer report
+        run: pnpm run analyze
+
+      # 14. Téléversement du rapport d'analyse du build comme artefact
       - name: Upload visualizer report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: visualizer-report
-          # Spécifiez le chemin exact de votre rapport.
-          # Il est recommandé de le configurer pour qu'il soit généré dans 'dist/'.
           path: dist/stats.html
           if-no-files-found: warn # Ne fait pas échouer le job si le rapport est absent.
