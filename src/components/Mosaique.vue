@@ -233,6 +233,8 @@ function getLocalizedText(category: string, key: string): string {
 
   try {
     const translationKey = `${category}.${key}`
+    // Clé dynamique voulue : catégorie + valeur issue des données du villageois
+    // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
     const translation = t(translationKey)
 
     // Vérifier si la traduction existe (éviter les clés retournées telles quelles)
