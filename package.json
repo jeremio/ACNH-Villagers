@@ -45,7 +45,6 @@
     "@tsconfig/node26": "^26.0.1",
     "@types/node": "^26.6.6",
     "@vitejs/plugin-vue": "^6.0.10",
-    "@vue/language-server": "^3.3.14",
     "@vue/tsconfig": "^0.9.1",
     "eslint": "^10.14.0",
     "happy-dom": "^21.0.4",
