@@ -50,3 +50,9 @@ The documentation for the original API can be found [here](https://acnhapi.com/d
 ACNH Villagers is a fan made API/Website and claims no ownership of any intellectual property associated with Nintendo or Animal Crossing. All assets found on the site and the repository are the sole property of Nintendo and are only used for non-commercial and educational purpose.
 
 Contact: open issue
+
+## License
+
+The source code of this project is released under the [MIT License](LICENSE).
+
+It does not cover third-party content: the villager data comes from the ACNH API (CC BY 4.0, see above), and the images and music remain the sole property of Nintendo.
